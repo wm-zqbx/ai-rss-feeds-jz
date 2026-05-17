@@ -28,6 +28,12 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 | [Claude Blog](https://claude.com/blog) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/claude.xml) | ✅ 15 articles |
 | [Cursor Blog](https://cursor.com/blog) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/cursor-blog.xml) | ✅ 20 articles |
 
+### External RSS (1)
+
+| Blog | Feed | Status |
+|------|------|--------|
+| [www.aihero.dev](https://www.aihero.dev/) | [Subscribe](https://www.aihero.dev/rss.xml) | ✅ native RSS |
+
 ### GitHub Releases (2)
 
 | Project | Feed | Status |
