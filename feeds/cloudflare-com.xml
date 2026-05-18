@@ -4,11 +4,191 @@
         <title>blog.cloudflare.com</title>
         <link>https://blog.cloudflare.com/tag/ai/</link>
         <description>External RSS: https://blog.cloudflare.com/tag/ai/rss</description>
-        <lastBuildDate>Thu, 30 Apr 2026 13:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 May 2026 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/cloudflare-com.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Project Glasswing: what Mythos showed us]]></title>
+            <link>https://blog.cloudflare.com/cyber-frontier-models/</link>
+            <guid>https://blog.cloudflare.com/cyber-frontier-models/</guid>
+            <pubDate>Mon, 18 May 2026 06:00:00 GMT</pubDate>
+            <description><![CDATA[In recent weeks, we pointed Mythos and other security-focused LLMs at live code across critical parts of our infrastructure. We share what we observed, the models’ strengths and weaknesses, and what the work around them needs to look like before any of it can scale.]]></description>
+            <content:encoded><![CDATA[ <p></p><p>For the last few months, we've been testing a range of security-focused LLMs on our own infrastructure. These LLMs  help identify potential vulnerabilities in our own systems, so we can fix them – and they also show us what attackers are going to be able to do with the latest models.</p><p>None of these LLMs has captured more attention than Mythos Preview, from Anthropic. A few weeks ago, we were invited to use Mythos Preview as part of <a href="https://www.anthropic.com/glasswing"><u>Project Glasswing</u></a>. We soon pointed it at more than fifty of our own repositories – to see what it would find, and to see how it works. </p><p>This post shares what we observed, what the models did well and what they didn't, and how the architecture and process around them needs to change, so they can be used at scale.</p>
+    <div>
+      <h2>What changed with Mythos Preview</h2>
+      <a href="#what-changed-with-mythos-preview">
+        
+      </a>
+    </div>
+    <p>Mythos Preview is a real step forward, and it's worth saying that plainly before getting into anything else. We've been running models against our code for a while now, and the jump from what was possible with previous general-purpose frontier models to what Mythos Preview does today is not just a refinement of what came before.</p><p>It's a different kind of tool doing a different kind of work, and that makes a clean apples-to-apples comparison to earlier models difficult. So rather than trying to benchmark Mythos Preview against general-purpose frontier models, it's more useful to describe what it can actually do, and two features that stood out across the work we did with Mythos Preview:</p><ul><li><p><b>Exploit chain construction -</b> A real attack rarely uses one bug. It chains several small attack primitives together into a working exploit. For instance, it might turn a use-after-free bug into an arbitrary read and write primitive, hijack the control flow, and use return-oriented programming (ROP) chains to take full control over a system. Mythos Preview can take several of these primitives and reason about how to combine them into a working proof. The reasoning it shows along the way looks like the work of a senior researcher rather than the output of an automated scanner.</p></li><li><p><b>Proof generation -</b> Finding a bug and proving it's exploitable are two different things, and Mythos Preview can do both. It writes code that would trigger the suspected bug, compiles that code in a scratch environment, and runs it. If the program does what the model expected, that's the proof. If it doesn't, the model reads the failure, adjusts its hypothesis, and tries again. The loop matters as much as the bugs it finds, because a suspected flaw without a working proof is speculation, and Mythos Preview closes that gap on its own.</p></li></ul><p>Some of what we describe above is not entirely unique to Mythos Preview. When we ran other frontier models through the same harness, they found a fair number of the same underlying bugs, and in some cases they got further than we expected on the reasoning side too. Where they fell short was at the point of stitching the pieces together. A model would identify an interesting bug, write a thoughtful description of why it mattered, and then stop, leaving the actual chain unfinished and the question of exploitability open. What changed with Mythos Preview is that a model can now take those low-severity bugs (which would traditionally sit invisible in a backlog) and chain them into a single, more severe exploit. </p>
+    <div>
+      <h2>Model refusals in legitimate vulnerability research</h2>
+      <a href="#model-refusals-in-legitimate-vulnerability-research">
+        
+      </a>
+    </div>
+    <p>The Mythos Preview model provided by Anthropic, as part of Project Glasswing, did not have the additional safeguards that are present in generally available models (like Opus 4.7 or GPT-5.5).</p><p>Despite this, the model organically pushes back on certain requests - much like the cyber capabilities that made it useful for vulnerability hunting, the model has its own emergent guardrails that sometimes cause it to push back on legitimate security research requests. But as we found, these organic refusals aren’t consistent - the same task, framed differently or presented in a different context, could produce completely different outcomes as illustrated in the examples below.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/5St6rLRq9wkuxwmLHZ88CV/b4eb948c917ef7f7b0028ccc8ec0aefe/image2.png" />
+          </figure><p><sup><i>Example of Mythos Preview pushing back on building a working proof of concept </i></sup></p><p>For example, the model initially refused to do vulnerability research on a project, then agreed to perform the same research on the same code after an unrelated change to the project’s environment. Nothing about the code being analyzed had changed. 
+
+In another case, the model found and confirmed several serious memory bugs in a codebase, and then refused to write a demonstration exploit. The same request, framed differently, got a different answer, and even the same request can produce different outcomes across runs due to the probabilistic nature of the model. Semantically equivalent tasks can produce opposite outcomes depending on how and when they’re presented to the model.</p><p>This matters because while the model’s organic refusals/guardrails are real, they aren’t consistent enough to serve as a complete safety boundary on their own. That’s precisely why any capable cyber frontier model made generally available in the future must include additional safeguards on top of this baseline behavior - making it appropriate for broader use outside of a controlled research context like Project Glasswing.</p>
+    <div>
+      <h2>The signal-to-noise problem</h2>
+      <a href="#the-signal-to-noise-problem">
+        
+      </a>
+    </div>
+    <p>One of the hardest parts of triaging security vulnerabilities is deciding which bugs are real, which are exploitable, and which need fixing now. This was a hard problem even in the pre-AI world. AI vulnerability scanners and AI-generated code have made it worse, and at Cloudflare we've built multiple post-validation stages to deal with it.</p><p>Two factors dominate the noise rate:</p><ul><li><p><b>Programming language</b> - C and C++ give you direct memory control and, with it, bug classes - buffer overflows, out-of-bounds reads and writes - that memory-safe languages like Rust eliminate at compile time. We saw consistently more false positives from projects written in memory-unsafe languages.</p></li><li><p><b>Model bias</b> - A good human researcher tells you what they found and how confident they are. Models don't. Ask a model to find bugs, and it will find them, whether the code has any or not. Findings come back hedged with "possibly," "potentially," "could in theory," and the hedged findings vastly outnumber the solid ones. That's a reasonable bias for an exploratory tool. It's a ruinous one for a triage queue, where every speculative finding spends human attention and tokens to dismiss, and that cost compounds across thousands of findings.</p></li></ul><p>Mythos Preview represents a clear improvement here, particularly in its ability to chain primitives - combining multiple vulnerabilities into a working proof of concept rather than reporting them in isolation. A finding that arrives with a PoC is a finding you can act on, and it means far less time spent asking "is this even real?"</p><p>Our harnesses are deliberately tuned to over-report, so we see more (and miss less), which comes with a lot more noise. But at triage time, Mythos Preview's output has noticeably higher quality: fewer hedged findings, clearer reproduction steps, and less work to reach a fix-or-dismiss decision.</p>
+    <div>
+      <h2>Why pointing a generic coding agent at a repo doesn't work</h2>
+      <a href="#why-pointing-a-generic-coding-agent-at-a-repo-doesnt-work">
+        
+      </a>
+    </div>
+    <p>When we first started AI-assisted vulnerability research last year, our instinct was the obvious one: point a generic coding agent at an arbitrary repository and ask it to discover vulnerabilities. This approach works, in the sense that the model will produce findings, but it doesn't work in producing meaningful coverage of a real codebase and identifying findings of value. There are two main reasons for this:</p><ul><li><p><b>Context -</b> Coding agents are tuned for one focused stream of work: building a feature, fixing a bug, writing a refactor. They ingest a lot of source code, hold a single hypothesis at a time, and iterate against it. That's exactly the wrong shape for vulnerability research, which is narrow and parallel by nature. A human researcher picks one specific thing to look at and investigates it thoroughly. That one thing might be a single complex feature, transitions across security boundaries, or a specific vulnerability class like command injections, where attacker input ends up being run as a shell command. Then they do it again, for a different feature, security boundary, or vulnerability class, several thousand times across the codebase. A single agent session (even with subagents) against a hundred-thousand-line repository can cover maybe a tenth of a percent of the surface in a useful way before the model's context window fills up and compaction kicks in - potentially discarding earlier findings that would have mattered.</p></li><li><p><b>Throughput -</b> A single-stream agent does one thing at a time, but real codebases need many hypotheses against many components at once, with the ability to fan out further when something interesting turns up. You can drive a single agent harder, but at some point you stop being limited by the model and start being limited by the shape of the interaction itself. Using the model directly in a coding agent turns out to be fine for manual investigation when a researcher already has a lead and wants a second pair of eyes. However, it's the wrong tool for achieving high coverage. Once we accepted that, we stopped trying to make Mythos Preview do the wrong job and started building the harness around it instead.</p></li></ul>
+    <div>
+      <h2>What a harness actually fixes</h2>
+      <a href="#what-a-harness-actually-fixes">
+        
+      </a>
+    </div>
+    <p>Four lessons came out of running the work at scale, and each one pointed to the need for a harness that manages the overall execution:</p><ul><li><p><b>Narrow scope produces better findings -</b> Telling the model "Find vulnerabilities in this repository" makes it wander. Telling it "Look for command injection in this specific function, with this trust boundary above it, here's the architecture document and here's prior coverage of this area" makes it do something much closer to what a researcher would actually do.</p></li><li><p><b>Adversarial review reduces noise -</b> Adding a second agent between the initial finding and the queue - one with a different prompt, a different model, and no ability to generate its own findings - catches a lot of the noise that the first agent would miss if it just checked its own work. It turns out that putting two agents in deliberate disagreement is way more effective than just telling one agent to be careful.</p></li><li><p><b>Splitting the chain across agents produces better reasoning -</b> Asking "Is this code buggy?" and "Can an attacker actually reach this bug from outside the system?" are two different questions, and the model is better at each one when you ask them separately, because each question is narrower than the combined version.</p></li><li><p><b>Parallel narrow tasks beat one exhaustive agent -</b> Coverage improves when many agents work on tightly scoped questions and we deduplicate the results afterward, rather than asking one agent to be exhaustive.</p></li></ul><p>Each of those observations is about model behavior, and put together they describe something that isn't a chat interface anymore. It's a harness that helps you achieve the final outcomes. The first steps to building a harness are simple, as you can ask the model to help, which is what we did. We used Mythos Preview to build on, tailor, and improve our original harnesses to suit its strengths.
+
+An example of what a harness looks like in practice is described below.</p>
+    <div>
+      <h2>Our vulnerability discovery harness</h2>
+      <a href="#our-vulnerability-discovery-harness">
+        
+      </a>
+    </div>
+    <p>Here's what our vulnerability discovery harness looks like, stage by stage. It was used to scan live code across our runtime, edge data path, protocol stack, control plane, and the open-source projects we depend on.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1OhgJDEeyc5aq8EoF4yFJE/917c9a9d8a92d0920acb96f7d5cb66f6/image6.png" />
+          </figure><figure>
+    <table>
+        <colgroup><col></col><col></col><col></col></colgroup>
+        <tbody>
+            <tr>
+                <td>
+                    <span><strong>Stage</strong></span>
+                </td>
+                <td>
+                    <span><strong>What it does</strong></span>
+                </td>
+                <td>
+                    <span><strong>Why it matters</strong></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/5736CBrNDFnYglaRFUtGp0/2bccdc1e5b5f1b21416c6439cdb63967/BLOG-3301_image7.png" /><br />
+                    Recon</strong></span>
+                </td>
+                <td>
+                    <span>An agent reads the repository from the top down, fans out to subagents responsible for each subsystem, and produces an architecture document covering build commands, trust boundaries, entry points, and likely attack surface. It also generates the initial queue of tasks for the next stage.  </span>
+                </td>
+                <td>
+                    <span>Gives every downstream agent shared context. Cuts the wander problem.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/7wGJ8jmh1gjMevxH31nSfv/b3bd6772cfa57939a1291cae8c4faab3/BLOG-3301_image8.png" /> <br />
+                    Hunt</strong></span>
+                </td>
+                <td>
+                    <span>Each task is one attack class paired with a scope hint. Hunters (the agents that actually look for bugs) run concurrently, typically around fifty at once, each fanning out to a handful of exploration subagents. Each hunter has access to tools that compile and run proof-of-concept code in a per-task scratch directory.</span>
+                </td>
+                <td>
+                    <span>This is where most of the work happens. Many narrow tasks in parallel, not one exhaustive agent.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/7mMu2OOeot8CLuvu2PYAjx/144ecd5ef0785d8c6b0c7c3cd6feccc8/BLOG-3301_image5.png" /><br />
+                    Validate</strong></span>
+                </td>
+                <td>
+                    <span>An independent agent re-reads the code and tries to disprove the original finding. It uses a different prompt and has no ability to emit new findings of its own.</span>
+                </td>
+                <td>
+                    <span>Catches a meaningful fraction of the noise the hunter wouldn't catch when reviewing its own work.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/7f8SJhTAja5bLPvydZkrv4/11a9cf6b0cee030db5f56d0dd46e0b45/BLOG-3301_image11.png" /><br />
+                    Gapfill</strong></span>
+                </td>
+                <td>
+                    <span>Hunters flag areas they touched but didn't cover thoroughly. Those areas get re-queued for another pass.</span>
+                </td>
+                <td>
+                    <span>Counteracts the model's tendency to drift toward attack classes it has already had success with.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/5tbCM9SUgCZlYF0m9e8CY0/c48b7f90e39ddc5bd6060d5067bae0ea/BLOG-3301_image4.png" /><br />
+                    Dedupe</strong></span>
+                </td>
+                <td>
+                    <span>Findings that share the same root cause collapse into a single record.</span>
+                </td>
+                <td>
+                    <span>Variant analysis is a feature, not a way to inflate the queue with duplicates.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/51VLQM1a40KKRdvq2HidRj/c9ad0209a54544fe783d9eb019a6f02b/BLOG-3301_image3.png" /><br />
+                    Trace</strong></span>
+                </td>
+                <td>
+                    <span>For each confirmed finding in a shared library, a tracer agent fans out (one instance per consumer repository), uses a cross-repo symbol index, and decides whether attacker-controlled input actually reaches the bug from outside the system.</span>
+                </td>
+                <td>
+                    <span>Turns "there is a flaw" into "there is a reachable vulnerability." This is the stage that matters most.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/4UhAgIcdpKcWxNG2kO5fIN/6f883a0f993604339b5381b14f63f40d/BLOG-3301_image1.png" /><br />
+                    Feedback</strong></span>
+                </td>
+                <td>
+                    <span>Reachable traces become new hunt tasks in the consumer repositories where the bug is actually exposed.</span>
+                </td>
+                <td>
+                    <span>Closes the loop. The pipeline gets better as it runs.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span><strong><img src="https://images.ctfassets.net/zkvhlag99gkb/558dSiaH5GNrtmKGKbUEUH/8684108e9b99580e5194245a1e20cb79/BLOG-3301_image10.png" /><br />
+                    Report</strong></span>
+                </td>
+                <td>
+                    <span>An agent writes a structured report against a predefined schema, fixes any validation errors against that schema itself, and submits the report to an ingest API.</span>
+                </td>
+                <td>
+                    <span>Output is queryable data, not free-form prose.</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+    <div>
+      <h2>What this means for security teams</h2>
+      <a href="#what-this-means-for-security-teams">
+        
+      </a>
+    </div>
+    <p>The loudest reaction to Mythos Preview from other security leaders has been about speed - scan faster, patch faster, compress the response cycle. More than one team we have spoken with is now operating under a two-hour SLA from CVE release to patch in production. The instinct is understandable: when the attacker timeline shortens, the defender timeline has to shorten with it. Faster is not going to be enough, and we think a lot of teams are about to spend a lot of time, effort, and money learning that the hard way.</p><p>Patching faster does not change the shape of the pipeline that produces the patch. If regression testing takes a day, you cannot get to a two-hour SLA without skipping it, and the bugs you ship when you skip regression testing tend to be worse than the bugs you were trying to patch. We learned a version of this when we tried letting the model write its own patches and watched a few go out that fixed the original bug while quietly breaking something else the code depended on.</p><p>The harder question is what the architecture around the vulnerability should look like. The principle is to make exploitation harder for an attacker even when a bug exists, so that the gap between when a vulnerability is disclosed and when it is patched matters less. That means defenses that sit in front of the application and block the bug from being reached. It means designing the application so that a flaw in one part of the code cannot give an attacker access to other parts. It means being able to roll out a fix to every place the code is running at the same moment, rather than waiting on individual teams to deploy it. </p><p>We also recognize this topic cuts both ways. The same capabilities that helped us find bugs in our own code will, in the wrong hands, accelerate the attack side against every application on the Internet. Cloudflare sits in front of millions of those applications, and the architectural principles described above are exactly the ones our products are built to apply on behalf of customers. We will share more on what that means for customers in the weeks ahead.</p><p>If your team is doing similar work and would like to compare notes, reach out to us at <a href="#"><u>security-ai-research@cloudflare.com</u></a>.</p><p><i>Our research with Mythos Preview was conducted in a controlled environment against our own code; every vulnerability surfaced through this work was triaged, validated, and remediated where action was needed under Cloudflare's formal vulnerability management process.</i></p><p><i>This work was a team effort. Thanks to Albert Pedersen, Craig Strubhart, Dan Jones, Irtefa Fairuz, Martin Schwarzl, and Rohit Chenna Reddy for their contributions to the research, engineering, and analysis behind this blog post.</i></p> ]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Agents can now create Cloudflare accounts, buy domains, and deploy]]></title>
             <link>https://blog.cloudflare.com/agents-stripe-projects/</link>
@@ -3468,152 +3648,6 @@ interface TTSProvider {
           <figure>
           <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1SLeHwqXY0ehOUsy5Nzzq2/c16244f45b8411f8817b9a21b45ed4b8/BLOG-3198_3.png" />
           </figure><p></p> ]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Scaling MCP adoption: Our reference architecture for simpler, safer and cheaper enterprise deployments of MCP]]></title>
-            <link>https://blog.cloudflare.com/enterprise-mcp/</link>
-            <guid>https://blog.cloudflare.com/enterprise-mcp/</guid>
-            <pubDate>Tue, 14 Apr 2026 13:00:10 GMT</pubDate>
-            <description><![CDATA[We share Cloudflare's internal strategy for governing MCP using Access, AI Gateway, and MCP server portals. We also launch Code Mode to slash token costs and recommend new rules for detecting Shadow MCP in Cloudflare Gateway.]]></description>
-            <content:encoded><![CDATA[ <p>We at Cloudflare have aggressively adopted <a href="https://modelcontextprotocol.io/"><u>Model Context Protocol (MCP)</u></a> as a core part of our AI strategy. This shift has moved well beyond our engineering organization, with employees across product, sales, marketing, and finance teams now using agentic workflows to drive efficiency in their daily tasks. But the adoption of agentic workflow with MCP is not without its <a href="https://www.cloudflare.com/learning/ai/what-is-ai-security/">security risks</a>. These range from authorization sprawl, <a href="https://www.cloudflare.com/learning/ai/prompt-injection/"><u>prompt injection</u></a>, and <a href="https://www.cloudflare.com/learning/security/what-is-a-supply-chain-attack/"><u>supply chain risks</u></a>. To secure this broad company-wide adoption, we have integrated a suite of security controls from both our <a href="https://www.cloudflare.com/sase/"><u>Cloudflare One (SASE) platform</u></a> and our <a href="https://workers.cloudflare.com/"><u>Cloudflare Developer platform</u></a>, allowing us to govern AI usage with MCP without slowing down our workforce.  </p><p>In this blog we’ll walk through our own best practices for securing MCP workflows, by putting different parts of our platform together to create a unified security architecture for the era of autonomous AI. We’ll also share two new concepts that support enterprise MCP deployments:</p><ul><li><p>We are launching <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/#code-mode"><u>Code Mode with MCP server portals</u></a>, to drastically reduce token costs associated with MCP usage; </p></li><li><p>We describe how to use <a href="https://developers.cloudflare.com/cloudflare-wan/zero-trust/cloudflare-gateway/"><u>Cloudflare Gateway</u></a> for Shadow MCP detection, to discover use of unauthorized remote MCP servers.</p></li></ul><p>We also talk about how our organization approached deploying MCP, and how we built out our MCP security architecture using Cloudflare products including <a href="https://developers.cloudflare.com/agents/guides/remote-mcp-server/"><u>remote MCP servers</u></a>, <a href="https://www.cloudflare.com/sase/products/access/"><u>Cloudflare Access</u></a>, <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/"><u>MCP server portals</u></a> and <a href="https://www.google.com/search?q=https://www.cloudflare.com/developer-platform/ai-gateway/"><u>AI Gateway</u></a>. </p>
-    <div>
-      <h2>Remote MCP servers provide better visibility and control</h2>
-      <a href="#remote-mcp-servers-provide-better-visibility-and-control">
-        
-      </a>
-    </div>
-    <p><a href="https://www.cloudflare.com/learning/ai/what-is-model-context-protocol-mcp/"><u>MCP</u></a> is an open standard that enables developers to build a two-way connection between AI applications and the data sources they need to access. In this architecture, the MCP client is the integration point with the <a href="https://www.cloudflare.com/learning/ai/what-is-large-language-model/"><u>LLM</u></a> or other <a href="https://www.cloudflare.com/learning/ai/what-is-agentic-ai/"><u>AI agent</u></a>, and the MCP server sits between the <a href="https://www.cloudflare.com/learning/ai/mcp-client-and-server/"><u>MCP client</u></a> and the corporate resources.</p>
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/73kpNxOQIlM0UOnty9qGXS/53fe1b92e299b52363ac1870df52f2e9/BLOG-3252_2.png" />
-          </figure><p>The separation between MCP clients and MCP servers allows agents to autonomously pursue goals and take actions while maintaining a clear boundary between the AI (integrated at the MCP client) and the credentials and APIs of the corporate resource (integrated at the MCP server). </p><p>Our workforce at Cloudflare is constantly using MCP servers to access information in various internal resources, including our project management platform, our internal wiki, documentation and code management platforms, and more. </p><p>Very early on, we realized that locally-hosted MCP servers were a security liability. Local MCP server deployments may rely on unvetted software sources and versions, which increases the risk of <a href="https://owasp.org/www-project-mcp-top-10/2025/MCP04-2025%E2%80%93Software-Supply-Chain-Attacks&amp;Dependency-Tampering"><u>supply chain attacks</u></a> or <a href="https://owasp.org/www-community/attacks/MCP_Tool_Poisoning"><u>tool injection attacks</u></a>. They prevent IT and security administrators from administrating these servers, leaving it up to individual employees and developers to choose which MCP servers they want to run and how they want to keep them up to date. This is a losing game.</p>
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4mngDeTGrsah2DiN7IAnrf/575075096e72d6b967df4327a99c35fc/BLOG-3252_3.png" />
-          </figure><p>Instead, we have a centralized team at Cloudflare that manages our MCP server deployment across the enterprise. This team built a shared MCP platform inside our monorepo that provides governed infrastructure out of the box. When an employee wants to expose an internal resource via MCP, they first get approval from our AI governance team, and then they copy a template, write their tool definitions, and deploy, all the while inheriting default-deny write controls with audit logging, auto-generated <a href="https://www.cloudflare.com/learning/serverless/glossary/what-is-ci-cd/"><u>CI/CD pipelines</u></a>, and <a href="https://www.cloudflare.com/learning/security/glossary/secrets-management/"><u>secrets management</u></a> for free. This means standing up a new governed MCP server is minutes of scaffolding. The governance is baked into the platform itself, which is what allowed adoption to spread so quickly. </p><p>Our CI/CD pipeline deploys them as <a href="https://developers.cloudflare.com/agents/guides/remote-mcp-server/"><u>remote MCP servers</u></a> on custom domains on <a href="https://www.cloudflare.com/developer-platform/"><u>Cloudflare’s developer platform</u></a>. This gives us visibility into which MCPs servers are being used by our employees, while maintaining control over software sources. As an added bonus, every remote MCP server on the Cloudflare developer platform is automatically deployed across our global network of data centers, so MCP servers can be accessed by our employees with low latency, regardless of where they might be in the world.</p>
-    <div>
-      <h3>Cloudflare Access provides authentication</h3>
-      <a href="#cloudflare-access-provides-authentication">
-        
-      </a>
-    </div>
-    <p>Some of our MCP servers sit in front of public resources, like our <a href="https://docs.mcp.cloudflare.com/mcp"><u>Cloudflare documentation MCP server</u></a> or <a href="https://radar.mcp.cloudflare.com/mcp"><u>Cloudflare Radar MCP server</u></a>, and thus we want them to be accessible to anyone. But many of the MCP servers used by our workforce are sitting in front of our private corporate resources. These MCP servers require user authentication to ensure that they are off limits to everyone but authorized Cloudflare employees. To achieve this, our monorepo template for MCP servers integrates <a href="https://www.cloudflare.com/sase/products/access/"><u>Cloudflare Access</u></a> as the OAuth provider. Cloudflare Access secures login flows and issues access tokens to resources, while acting as an identity aggregator that verifies end user <a href="https://www.cloudflare.com/learning/access-management/what-is-sso/"><u>single-sign on (SSO)</u></a>, <a href="https://www.cloudflare.com/learning/access-management/what-is-multi-factor-authentication/"><u>multifactor authentication (MFA)</u></a>, and a variety of contextual attributes such as IP addresses, location, or device certificates. </p>
-    <div>
-      <h2>MCP server portals centralize discovery and governance</h2>
-      <a href="#mcp-server-portals-centralize-discovery-and-governance">
-        
-      </a>
-    </div>
-    
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/70s5yIwdzoaYQIoRF4L0mH/018dae32529c30639a2af48ee4031bc6/BLOG-3252_4.png" />
-          </figure><p><sup><i>MCP server portals unify governance and control for all AI activity.</i></sup></p><p>As the number of our remote MCP servers grew, we hit a new wall: discovery. We wanted to make it easy for every employee (especially those that are new to MCP) to find and work with all the MCP servers that are available to them. Our MCP server portals product provided a convenient solution. The employee simply connects their MCP client to the MCP server portal, and the portal immediately reveals every internal and third-party MCP servers they are authorized to use. </p><p>Beyond this, our MCP server portals provide centralized logging, consistent policy enforcement and <a href="https://www.cloudflare.com/learning/access-management/what-is-dlp/"><u>data loss prevention</u></a> (DLP guardrails). Our administrators can see who logged into what MCP portal and create DLP rules that prevent certain data, like personally identifiable data (PII), from being shared with certain MCP servers.</p><p>We can also create policies that control who has access to the portal itself, and what tools from each MCP server should be exposed. For example, we could set up one MCP server portal that is only accessible to employees that are part of our <i>finance </i>group that exposes just the read-only tools for the MCP server in front of our internal code repository. Meanwhile, a different MCP server portal, accessible only to employees on their corporate laptops that are in our <i>engineering </i>team, could expose more powerful read/write tools to our code repository MCP server.</p><p>An overview of our MCP server portal architecture is shown above. The portal supports both remote MCP servers hosted on Cloudflare, and third-party MCP servers hosted anywhere else. What makes this architecture uniquely performant is that all these security and networking components run on the same physical machine within our global network. When an employee's request moves through the MCP server portal, a Cloudflare-hosted remote MCP server, and Cloudflare Access, their traffic never needs to leave the same physical machine. </p>
-    <div>
-      <h2>Code Mode with MCP server portals reduces costs</h2>
-      <a href="#code-mode-with-mcp-server-portals-reduces-costs">
-        
-      </a>
-    </div>
-    <p>After months of high-volume MCP deployments, we’ve paid out our fair share of tokens. We’ve also started to think most people are doing MCP wrong.</p><p>The standard approach to MCP requires defining a separate tool for every API operation that is exposed via an MCP server. But this static and exhaustive approach quickly exhausts an agent’s context window, especially for large platforms with thousands of endpoints.</p><p>We previously wrote about how we used server-side <a href="https://blog.cloudflare.com/code-mode-mcp/"><u>Code Mode to power Cloudflare’s MCP server</u></a>, allowing us to expose <a href="https://developers.cloudflare.com/api/?cf_target_id=C3927C0A6A2E9B823D2DF3F28E5F0D30"><u>the thousands of end-points in Cloudflare API</u></a> while reducing token use by 99.9%. The Cloudflare MCP server exposes just two tools: a <code>search</code> tool lets the model write JavaScript to explore what’s available, and an <code>execute</code> tool lets it write JavaScript to call the tools it finds. The model discovers what it needs on demand, rather than receiving everything upfront.</p><p>We like this pattern so much, we had to make it available for everyone. So we have now launched the ability to use the “Code Mode” pattern with <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/"><u>MCP server portals</u></a>. Now you can front all of your MCP servers with a centralized portal that performs audit controls and progressive tool disclosure, in order to reduce token costs.</p><p>Here is how it works. Instead of exposing every tool definition to a client, all of your underlying MCP servers collapse into just two MCP portal tools: <code>portal_codemode_search</code> and <code>portal_codemode_execute</code>. The <code>search</code> tool gives the model access to a <code>codemode.tools()</code> function that returns all the tool definitions from every connected upstream MCP server. The model then writes JavaScript to filter and explore these definitions, finding exactly the tools it needs without every schema being loaded into context. The <code>execute</code> tool provides a <code>codemode</code> proxy object where each upstream tool is available as a callable function. The model writes JavaScript that calls these tools directly, chaining multiple operations, filtering results, and handling errors in code. All of this runs in a sandboxed environment on the MCP server portal powered by <a href="https://developers.cloudflare.com/dynamic-workers/"><u>Dynamic Workers</u></a>. </p><p>Here is an example of an agent that needs to find a Jira ticket and update it with information from Google Drive. It first searches for the right tools:</p>
-            <pre><code>// portal_codemode_search
-async () =&gt; {
- const tools = await codemode.tools();
- return tools
-  .filter(t =&gt; t.name.includes("jira") || t.name.includes("drive"))
-  .map(t =&gt; ({ name: t.name, params: Object.keys(t.inputSchema.properties || {}) }));
-}
-</code></pre>
-            <p> The model now knows the exact tool names and parameters it needs, without the full schemas of tools ever entering its context. It then writes a single <code>execute</code> call to chain the operations together:</p>
-            <pre><code>// portal_codemode_execute
-async () =&gt; {
- const tickets = await codemode.jira_search_jira_with_jql({
-  jql: ‘project = BLOG AND status = “In Progress”’,
-  fields: [“summary”, “description”]
- });
- const doc = await codemode.google_workspace_drive_get_content({
-  fileId: “1aBcDeFgHiJk”
- });
- await codemode.jira_update_jira_ticket({
-  issueKey: tickets[0].key,
-  fields: { description: tickets[0].description + “\n\n” + doc.content }
- });
- return { updated: tickets[0].key };
-}
-</code></pre>
-            <p>This is just two tool calls. The first discovers what's available, the second does the work. Without Code Mode, this same workflow would have required the model to receive the full schemas of every tool from both MCP servers upfront, and then make three separate tool invocations.</p><p>Let’s put the savings in perspective: when our internal MCP server portal is connected to just four of our internal MCP servers, it exposes 52 tools that consume approximately 9,400 tokens of context just for their definitions. With Code Mode enabled, those 52 tools collapse into 2 portal tools consuming roughly 600 tokens, a 94% reduction. And critically, this cost stays fixed. As we connect more MCP servers to the portal, the token cost of Code Mode doesn’t grow.</p><p>Code Mode can be activated on an MCP server portal by adding a query parameter to the URL. Instead of connecting to your portal over its usual URL (e.g. <code>https://myportal.example.com/mcp</code>), you attach <code>?codemode=search_and_execute</code> to the URL (e.g. <code>https://myportal.example.com/mcp?codemode=search_and_execute</code>).</p>
-    <div>
-      <h2>AI Gateway provides extensibility and cost controls</h2>
-      <a href="#ai-gateway-provides-extensibility-and-cost-controls">
-        
-      </a>
-    </div>
-    <p>We aren’t done yet. We plug <a href="https://www.cloudflare.com/developer-platform/products/ai-gateway/"><u>AI Gateway</u></a> into our architecture by positioning it on the connection between the MCP client and the LLM. This allows us to quickly switch between various LLM providers (to prevent vendor lock-in) and to enforce cost controls (by limiting the number of tokens each employee can burn through). The full architecture is shown below. </p>
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3epLuGydMO1YxkdhkcqGPG/74c26deb712d383942e79699b4fb71da/BLOG-3252_5.png" />
-          </figure>
-    <div>
-      <h2>Cloudflare Gateway discovers and blocks shadow MCP</h2>
-      <a href="#cloudflare-gateway-discovers-and-blocks-shadow-mcp">
-        
-      </a>
-    </div>
-    <p>Now that we’ve provided governed access to authorized MCP servers, let’s look into dealing with unauthorized MCP servers. We can perform shadow MCP discovery using <a href="https://developers.cloudflare.com/cloudflare-wan/zero-trust/cloudflare-gateway/"><u>Cloudflare Gateway</u></a>. Cloudflare Gateway is our comprehensive secure web gateway that provides enterprise security teams with visibility and control over their employees’ Internet traffic.</p><p>We can use the Cloudflare Gateway API to perform a multi-layer scan to find remote MCP servers that are not being accessed via an MCP server portal. This is possible using a variety of existing Gateway and Data Loss Prevention (DLP) selectors, including:</p><ul><li><p>Using the Gateway <code>httpHost</code> selector to scan for </p><ul><li><p>known MCP server hostnames using (like <a href="http://mcp.stripe.com"><u>mcp.stripe.com</u></a>)</p></li><li><p>mcp.* subdomains using wildcard hostname patterns </p></li></ul></li><li><p>Using the Gateway <code>httpRequestURI</code> selector to scan for MCP-specific URL paths like /mcp and /mcp/sse </p></li><li><p>Using DLP-based body inspection to find MCP traffic, even if that traffic uses URI that do not contain the telltale mentions of <code>mcp</code> or <code>sse</code>. Specifically, we use the fact that MCP uses JSON-RPC over HTTP, which means every request contains a "method" field with values like "tools/call", "prompts/get", or "initialize." Here are some regex rules that can be used to detect MCP traffic in the HTTP body:</p></li></ul>
-            <pre><code>const DLP_REGEX_PATTERNS = [
-  {
-    name: "MCP Initialize Method",
-    regex: '"method"\\s{0,5}:\\s{0,5}"initialize"',
-  },
-  {
-    name: "MCP Tools Call",
-    regex: '"method"\\s{0,5}:\\s{0,5}"tools/call"',
-  },
-  {
-    name: "MCP Tools List",
-    regex: '"method"\\s{0,5}:\\s{0,5}"tools/list"',
-  },
-  {
-    name: "MCP Resources Read",
-    regex: '"method"\\s{0,5}:\\s{0,5}"resources/read"',
-  },
-  {
-    name: "MCP Resources List",
-    regex: '"method"\\s{0,5}:\\s{0,5}"resources/list"',
-  },
-  {
-    name: "MCP Prompts List",
-    regex: '"method"\\s{0,5}:\\s{0,5}"prompts/(list|get)"',
-  },
-  {
-    name: "MCP Sampling Create Message",
-    regex: '"method"\\s{0,5}:\\s{0,5}"sampling/createMessage"',
-  },
-  {
-    name: "MCP Protocol Version",
-    regex: '"protocolVersion"\\s{0,5}:\\s{0,5}"202[4-9]',
-  },
-  {
-    name: "MCP Notifications Initialized",
-    regex: '"method"\\s{0,5}:\\s{0,5}"notifications/initialized"',
-  },
-  {
-    name: "MCP Roots List",
-    regex: '"method"\\s{0,5}:\\s{0,5}"roots/list"',
-  },
-];
-</code></pre>
-            <p>The Gateway API supports additional automation. For example, one can use the custom DLP profile we defined above to block traffic, or redirect it, or just to log and inspect MCP payloads. Put this together, and Gateway can be used to provide comprehensive detection of unauthorized remote MCP servers accessed via an enterprise network. </p><p>For more information on how to build this out, see this <a href="https://developers.cloudflare.com/cloudflare-one/tutorials/detect-mcp-traffic-gateway-logs/"><u>tutorial</u></a>. </p>
-    <div>
-      <h2>Public-facing MCP Servers are protected with AI Security for Apps</h2>
-      <a href="#public-facing-mcp-servers-are-protected-with-ai-security-for-apps">
-        
-      </a>
-    </div>
-    <p>So far, we’ve been focused on protecting our workforce’s access to our internal MCP servers. But, like many other organizations, we also have public-facing MCP servers that our customers can use to agentically administer and operate Cloudflare products. These MCP servers are hosted on Cloudflare’s developer platform. (You can find a list of individual MCPs for specific products <a href="https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"><u>here</u></a>, or refer back to our new approach for providing more efficient access to the entire Cloudflare API using <a href="https://blog.cloudflare.com/code-mode/"><u>Code Mode</u></a>.)</p><p>We believe that every organization should publish official, first-party MCP servers for their products. The alternative is that your customers source unvetted servers from public repositories where packages may contain <a href="https://www.docker.com/blog/mcp-horror-stories-the-supply-chain-attack/"><u>dangerous trust assumptions</u></a>, undisclosed data collection, and any range of unsanctioned behaviors. By publishing your own MCP servers, you control the code, update cadence, and security posture of the tools your customers use.</p><p>Since every remote MCP server is an HTTP endpoint, we can put it behind the <a href="https://www.cloudflare.com/application-services/products/waf/"><u>Cloudflare Web Application Firewall (WAF)</u></a>. Customers can enable the <a href="https://developers.cloudflare.com/waf/detections/ai-security-for-apps/"><u>AI Security for Apps</u></a> feature within the WAF to automatically inspect inbound MCP traffic for prompt injection attempts, sensitive data leakage, and topic classification. Public facing MCPs are protected just as any other web API.  </p>
-    <div>
-      <h2>The future of MCP in the enterprise</h2>
-      <a href="#the-future-of-mcp-in-the-enterprise">
-        
-      </a>
-    </div>
-    <p>We hope our experience, products, and reference architectures will be useful to other organizations as they continue along their own journey towards broad enterprise-wide adoption of MCP.</p><p>We’ve secured our own MCP workflows by: </p><ul><li><p>Offering our developers a templated framework for building and deploying remote MCP servers on our developer platform using Cloudflare Access for authentication</p></li><li><p>Ensuring secure, identity-based access to authorized MCP servers by connecting our entire workforce to MCP server portals</p></li><li><p>Controlling costs using AI Gateway to mediate access to the LLMs powering our workforce’s MCP clients, and using Code Mode in MCP server portals to reduce token consumption and context bloat</p></li><li><p><a href="https://developers.cloudflare.com/cloudflare-one/tutorials/detect-mcp-traffic-gateway-logs/"><u>Discovering</u></a> shadow MCP usage by Cloudflare Gateway </p></li></ul><p>For organizations advancing on their own enterprise MCP journeys, we recommend starting by putting your existing remote and third-party MCP servers behind <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/"><u> Cloudflare MCP server portals</u></a> and enabling Code Mode to start benefitting for cheaper, safer and simpler enterprise deployments of MCP.   </p><p><sub><i>Acknowledgements:  This reference architecture and blog represents this work of many people across many different roles and business units at Cloudflare. This is just a partial list of contributors: Ann Ming Samborski,  Kate Reznykova, Mike Nomitch, James Royal, Liam Reese, Yumna Moazzam, Simon Thorpe, Rian van der Merwe, Rajesh Bhatia, Ayush Thakur, Gonzalo Chavarri, Maddy Onyehara, and Haley Campbell.</i></sub></p><div>  </div><p></p> ]]></content:encoded>
         </item>
     </channel>
 </rss>
