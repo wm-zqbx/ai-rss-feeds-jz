@@ -4,11 +4,23 @@
         <title>El Fintualist</title>
         <link>https://fintualist.com/chile/</link>
         <description>En Fintualist te contamos cada semana noticias interesantes e historias sobre economía, política, inversiones, ciencia, tecnología y finanzas.</description>
-        <lastBuildDate>Mon, 18 May 2026 15:48:43 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 May 2026 14:45:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>es</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/fintualist.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Nuevos fondos de Fintual: invierte con el beneficio tributario 107 LIR]]></title>
+            <link>https://fintualist.com/chile/educacion-financiera/nuevos-fondos-de-fintual-invierte-con-el-beneficio-tributario-107-lir/</link>
+            <guid>https://fintualist.com/chile/educacion-financiera/nuevos-fondos-de-fintual-invierte-con-el-beneficio-tributario-107-lir/</guid>
+            <pubDate>Tue, 19 May 2026 14:45:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[La Fed cambia de mando, pero no de dueño]]></title>
+            <link>https://fintualist.com/chile/educacion-financiera/la-fed-cambia-de-mando-pero-no-de-dueno/</link>
+            <guid>https://fintualist.com/chile/educacion-financiera/la-fed-cambia-de-mando-pero-no-de-dueno/</guid>
+            <pubDate>Mon, 18 May 2026 16:11:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Artista de la semana | Pedro Lira 🇨🇱]]></title>
             <link>https://fintualist.com/chile/cultura/artista-de-la-semana-pedro-lira/</link>
@@ -20,12 +32,6 @@
             <link>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</link>
             <guid>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</guid>
             <pubDate>Mon, 18 May 2026 12:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Guía para entender el Plan de Reconstrucción]]></title>
-            <link>https://fintualist.com/chile/newsletters/guia-para-entender-el-plan-de-reconstruccion/</link>
-            <guid>https://fintualist.com/chile/newsletters/guia-para-entender-el-plan-de-reconstruccion/</guid>
-            <pubDate>Wed, 13 May 2026 20:28:33 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[¿Por qué a las inversiones en Fintual les ha ido tan bien este año?]]></title>
@@ -122,12 +128,6 @@
             <link>https://fintualist.com/chile/educacion-financiera/a-que-distancia-esta-chile-de-una-estanflacion/</link>
             <guid>https://fintualist.com/chile/educacion-financiera/a-que-distancia-esta-chile-de-una-estanflacion/</guid>
             <pubDate>Mon, 20 Apr 2026 22:11:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Nuevos máximos - Mercados al 17 de abril]]></title>
-            <link>https://fintualist.com/chile/economia/mercados/nuevos-maximos-mercados-al-17-de-abril-2/</link>
-            <guid>https://fintualist.com/chile/economia/mercados/nuevos-maximos-mercados-al-17-de-abril-2/</guid>
-            <pubDate>Fri, 17 Apr 2026 14:49:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

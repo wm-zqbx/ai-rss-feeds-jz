@@ -4,11 +4,119 @@
         <title>blog.cloudflare.com</title>
         <link>https://blog.cloudflare.com/tag/ai/</link>
         <description>External RSS: https://blog.cloudflare.com/tag/ai/rss</description>
-        <lastBuildDate>Mon, 18 May 2026 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 May 2026 13:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/cloudflare-com.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Announcing Claude Managed Agents on Cloudflare]]></title>
+            <link>https://blog.cloudflare.com/claude-managed-agents/</link>
+            <guid>https://blog.cloudflare.com/claude-managed-agents/</guid>
+            <pubDate>Tue, 19 May 2026 13:00:00 GMT</pubDate>
+            <description><![CDATA[Cloudflare has integrated with Anthropic's Claude Managed Agents to provide a fast, isolated execution environment for autonomous code delivery. This means builders can scale agent workflows globally while strictly controlling access to private backends and easily customizing their agent’s tools and runtimes.]]></description>
+            <content:encoded><![CDATA[ <p></p><p>Cloudflare and Anthropic have collaborated to integrate Claude Managed Agents with Cloudflare Sandboxes. Our <a href="https://developers.cloudflare.com/sandbox/tutorials/claude-managed-agents/"><u>new integration</u></a> gives you more control over your agent sandboxes, secures connections to private services, and improves observability.</p><p>In the past year, Cloudflare’s Developer Platform has expanded to give more developers the tools they need to run agents at scale. This includes:</p><ul><li><p><a href="https://developers.cloudflare.com/sandbox/"><u>Sandboxes</u></a> for full stateful Linux microVMs at scale</p></li><li><p><a href="https://developers.cloudflare.com/agents/"><u>Agents SDK</u></a>, providing simple and customizable agent framework</p></li><li><p><a href="https://developers.cloudflare.com/browser-run/"><u>Browser Run</u></a>, which gives agents fully programmable and observable browsers</p></li><li><p><a href="https://developers.cloudflare.com/dynamic-workers/"><u>Dynamic Workers</u></a>, allowing for dynamic sandboxed code execution at massive scale</p></li></ul><p>Our goal is to make Cloudflare the simplest, most secure, and most programmable cloud for agents.</p><p>Integrating with Claude Managed Agents is another step in this direction. You can run your agent loop on the Claude Platform, while using Cloudflare to execute code, secure connections, and run custom tool calls.</p><p>To get going in just minutes, we’ve created a <a href="https://github.com/cloudflare/claude-managed-agents"><u>default deployment template </u></a>that gives you the following:</p><ul><li><p><b>Enhanced security</b> - Run all agent traffic through customizable proxies. This allows you to securely inject credentials, prevent data exfiltration, and better observe how your agents interact with the outside world.</p></li><li><p><b>Sandbox control and observability</b> - Get detailed sandbox metrics and logs. SSH into running machines. Customize sandbox images.</p></li><li><p><b>Lightweight sandboxes</b> - Writing and executing untrusted code can be done in a traditional microVM or a <a href="https://blog.cloudflare.com/dynamic-workers/"><u>lightweight isolate</u></a>. This lets you hit massive scale, boot sandboxes in milliseconds, and minimize infrastructure spend.</p></li><li><p><b>Private service connectivity</b> - Connect agents to private internal services without ever exposing them to the Internet.</p></li><li><p><b>Browser Control and Observability</b> - Get an audit trail of every agent’s browser sessions, including session recording and human-in-the-loop flows.</p></li><li><p><b>Email </b>- Give each of your agents its own email address and ability to send emails.</p></li><li><p><b>Custom tools</b> - Extend your agents with tools without needing additional infrastructure. Just write functions and deploy.</p></li></ul><p>You get all of this out of the box when deploying the integration, and you can easily customize if you need more.</p><p>Let’s take a brief look at Claude Managed Agents, see how to integrate a Cloudflare-based environment, then explore how to get the most out of Claude on Cloudflare.</p>
+    <div>
+      <h2>An overview of Claude Managed Agents</h2>
+      <a href="#an-overview-of-claude-managed-agents">
+        
+      </a>
+    </div>
+    <p><a href="https://www.anthropic.com/engineering/managed-agents"><u>Claude Managed Agents</u></a> allow developers to easily define and run agents on the Anthropic platform. In these managed environments, Claude can read files, run commands, browse the web, and execute code. The harness supports built-in prompt caching, compaction, and various agent-first performance optimizations.</p><p>Until now, using Claude Managed Agents has meant running the entire stack on Anthropic-provided infrastructure. While this is great for some developers, others may need more control over their infrastructure choice, whether this is for security, compliance, or performance reasons. Self-managed environments for Claude Agents provide just that.</p><p>Anthropic describes this as “decoupling the brain from the hands.” The core agent loop runs in Anthropic (the “brain”), but the infrastructure for running and executing code (the “hands”) can be run anywhere, including Cloudflare.</p>
+    <div>
+      <h2>The Cloudflare environment</h2>
+      <a href="#the-cloudflare-environment">
+        
+      </a>
+    </div>
+    <p>Our new integration gives your agents a Cloudflare-based environment for running and executing code within minutes.</p><p>Follow <a href="https://github.com/cloudflare/claude-managed-agents#onboarding-guide"><u>the onboarding guide</u></a> to get started. Then fork the repo and customize your integration as you see fit.</p><p>After setup, when a Claude Agent starts a session, it sends a message to your new Cloudflare-based control plane. The <a href="https://developers.cloudflare.com/workers/"><u>Workers</u></a>-based control plane gives each agent session a sandboxed environment for executing code, developing applications, running CLI tools, and more. State is automatically persisted across session sleeps.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/6nYyreZYWyaKo6Xf2XjmtM/5cc21576a83e223a2cf67e8ed3fde928/image5.png" />
+          </figure><p><sup><i>Sandboxes write files and execute code in response to the Claude-based Agent loop</i></sup></p><p>You can optionally configure sandbox instance sizes or customize the container image that runs within VM-based sandboxes. Each sandbox can be observed in the Cloudflare dashboard, sandbox logs can be queried or shipped to external providers like Datadog or Splunk, and the control plane ships with a built-in UI, making it easy to track the state of sandboxes or SSH into specific machines.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/46pEZh7MeAt27wLi7c9e6S/889b269b94db32c3188e3dff5b6cbd75/image3.png" />
+          </figure><p><sup><i>Get interactive shell sessions into your agent’s sandbox</i></sup></p>
+    <div>
+      <h2>Enabling agents at Internet scale</h2>
+      <a href="#enabling-agents-at-internet-scale">
+        
+      </a>
+    </div>
+    <p>What if your agent backend booted in a few milliseconds, and you didn’t have to pay for the resources of a full VM when running the agent?</p><p>The industry needs <a href="https://blog.cloudflare.com/dynamic-workers/#dynamic-worker-loader-a-lean-sandbox"><u>a lightweight primitive for sandboxing</u></a> as we adopt agents at scale, and we’re building just that.</p><p>But as models get better, we expect more and more workflows to be managed by agents. Each of your customers should be able to run many agents simultaneously; each of your employees should have tens of agents running at once. If we’re constantly running a full microVM per agent, we’ll be unnecessarily burning a ton of resources and money to enable this scale.</p><p>That’s why we’re providing a faster and cheaper sandbox for your Claude Agents. This sandbox is based on the <a href="https://developers.cloudflare.com/agents/"><u>AgentsSDK</u></a>. You can execute arbitrary code in <a href="https://developers.cloudflare.com/dynamic-workers/"><u>Dynamic Workers</u></a> using <a href="https://developers.cloudflare.com/agents/api-reference/codemode/"><u>Codemode</u></a>, and you still <a href="https://developers.cloudflare.com/sandbox/bridge/http-api/#workspace-persistence"><u>get a file system</u></a>, but your agent is doing all of this within a <a href="https://developers.cloudflare.com/workers/reference/how-workers-works/#isolates"><u>V8 isolate</u></a> instead of a microVM.</p><p>If you need agents to act as a developer, building full applications and running Linux-based tools, you can still reach for a microVM-based sandbox. For this, we provide <a href="https://developers.cloudflare.com/containers/"><u>Cloudflare Containers</u></a>, which Claude Managed Agents can also use.</p><p>But if you want a faster, cheaper, and more scalable alternative you can use isolates instead of microVMs easily. Just select “isolate” for backend type when setting up an Agent.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/MZ8cQ2UTYcbe2hFv7IUYw/f7b55a65b6a670651bf30a0e24a6f509/image1.png" />
+          </figure><p><sup><i>Setting up an “isolate” backend gives you a lightweight V8 isolate sandbox instead of a microVM</i></sup></p><p>If you want to handle bursts of tens of thousands of concurrent agents or more, running with isolates will allow you to scale in a way that no VM-based solution allows.</p>
+    <div>
+      <h2>Securing your agentic workloads</h2>
+      <a href="#securing-your-agentic-workloads">
+        
+      </a>
+    </div>
+    <p>Agents are far more powerful when they connect to your organization’s context. This usually means accessing private services and data.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1LXewj3QO0QZMiEYNEMVxk/08cf093a16e67c8fb48514b1ce744319/image9.png" />
+          </figure><p>As <a href="https://blog.cloudflare.com/sandbox-auth/"><u>we’ve written before</u></a>, sandboxed workloads on Cloudflare can use an outbound proxy for fully dynamic, customizable, and zero-trust authentication between sandboxes and external services. This lets you inject secrets into requests outside the sandbox, so the agent never has access to them. This protects against exfiltration attacks.</p><p>And sometimes internal services shouldn’t ever be exposed to the open Internet. We recently launched <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-mesh/"><u>Cloudflare Mesh</u></a> and <a href="https://developers.cloudflare.com/workers-vpc/"><u>Cloudflare Workers VPC</u></a> to better connect to these private services, whether they’re running on a cloud provider like AWS or on-premises. This allows you to connect to internal services using post-quantum encrypted networking without a VPN or bastion host.</p><p>Claude Managed Agents can easily connect to private services with header injection or private VPC/Mesh tunnels. This is done via customizable outbound proxies. You can define egress policies that expose only the services you choose to the agent sandboxes that you choose. You can allowlist specific endpoints, perform zero-trust injection of encrypted credentials, access private services via Cloudflare Mesh, and even write custom proxy middleware.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/2728IFBEK7MUx4YDuIldFj/2e28b1fd510abf49dd3a5ad6604b7709/image4.png" />
+          </figure><p><sup><i>The integration uses outbound Workers to handle egress however you see fit</i></sup></p><p>You’re able to apply policies per tenant, per agent, or based on whatever metadata is useful. This gives you full control over how your agents connect to external services.</p>
+    <div>
+      <h2>Doing more with the Cloudflare Developer Platform</h2>
+      <a href="#doing-more-with-the-cloudflare-developer-platform">
+        
+      </a>
+    </div>
+    <p>Agents need more than just a code execution environment. Cloudflare’s Developer Platform provides the tools you need by default to let your agents do more.</p>
+          <figure>
+          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/7GkOWWKBsbnBYeaIcrbHrm/e385f4fa3d8ca2fff13a92a92854f94d/image7.png" />
+          </figure><p><sup><i>Sandboxes can make tool calls on Cloudflare and safely access external services.</i></sup></p><p>Here are a few of the tools you’ll find most useful as you deploy agents on Cloudflare:</p>
+    <div>
+      <h3>Browser Run via Claude</h3>
+      <a href="#browser-run-via-claude">
+        
+      </a>
+    </div>
+    <p>One of the most common tools agents need is a browser. While <code>curl</code> can get you pretty far, when you want an agent to act like a human, this often means interacting with the web like one: rendering JS-heavy applications, taking screenshots for QA validation, filling out forms, etc. <a href="https://blog.cloudflare.com/browser-run-for-ai-agents/"><u>Browser Run</u></a> is Cloudflare’s tool to give agents browsers.</p><div>
+  
+</div>
+<p></p><p><sup><i>A Browser Run session recording lets you watch how your agents used a browser. One of many built-in tools.</i></sup></p><p>The Claude Managed Agents integration ships with multiple browser-related tools that can be enabled immediately. These include <code>browser_search</code>, <code>browser_execute</code>, <code>screenshot</code>, <code>browse</code>, <code>fetch_to_markdown</code>, and a Cloudflare-specific implementation of <code>web_fetch</code> allows your agent to control a browser that runs on Cloudflare infrastructure. This not only lets your agent do more, but it also makes it easy to audit every action your agent’s browser is taking on the web, apply allowlists and denylist to browser sessions, and save recordings of browser sessions for future debugging.</p>
+    <div>
+      <h3>Agent inboxes</h3>
+      <a href="#agent-inboxes">
+        
+      </a>
+    </div>
+    <p>The integration also comes with built-in support for email with the <code>send_email</code>, <code>email_read</code>, and <code>email_list</code> tools.</p><p>You can also kick off new sessions via email, or configure the agent to send emails using any domain and address configured with the <a href="https://blog.cloudflare.com/email-for-agents/"><u>Cloudflare Email Service</u></a>. This allows the agent to act on your behalf when it needs to, reply to context in forwarded emails, and autonomously interact with others via email.</p>
+    <div>
+      <h3>Custom tools and more</h3>
+      <a href="#custom-tools-and-more">
+        
+      </a>
+    </div>
+    <p>Other built-in tools include <code>call_service</code>, which uses Cloudflare Mesh or Workers VPC to connect to private services, and <code>image_generate</code>, which uses <a href="https://www.cloudflare.com/developer-platform/products/workers-ai/"><u>Workers AI</u></a> to generate images on Cloudflare. This pairs well with Claude providing text-based inference.</p><p>Additionally, we encourage forking the repo to easily add customized tools. For example, you could add a custom tool to host a public file on <a href="https://www.cloudflare.com/developer-platform/r2/"><u>Cloudflare’s R2 object storage</u></a>. Just add the relevant binding in wrangler config, write a <a href="https://zod.dev/"><code><u>zod</u></code></a> definition, and short function in <code>custom-tools.js</code>:</p>
+            <pre><code>defineTool({
+  name: "r2_host_file",
+  description: "Upload from sandbox to R2 and get a public URL.",
+  inputSchema: z.object({
+    key: z.string().describe("Object key"),
+    content: z.string().describe("UTF-8 file body"),
+    contentType: z.string().describe("MIME type"),
+  }),
+  run: async ({ key, content, contentType }, { env }) =&gt; {
+    await env.PUBLIC_BUCKET.put(
+      key, content, { httpMetadata: { contentType }}
+    );
+    return `${env.PUB_R2_URL.replace(/\/$/, "")}/${encodeURI(key)}`;
+  }
+}),</code></pre>
+            <p>The Cloudflare Developer Platform provides all sorts of possibilities for extending your agents: give each agent session a git-backed repo with <a href="https://blog.cloudflare.com/artifacts-git-for-agents-beta/"><u>Artifacts</u></a>, run edge inference with <a href="https://workers.cloudflare.com/products/workers-ai/"><u>Workers AI</u></a>, host applications written on the fly with <a href="https://developers.cloudflare.com/dynamic-workers/"><u>Dynamic Workers</u></a>, and more.</p><p>You don’t have to worry about infrastructure or scaling – just write a few lines of code and hit deploy.</p>
+    <div>
+      <h2>Claude + Cloudflare</h2>
+      <a href="#claude-cloudflare">
+        
+      </a>
+    </div>
+    <p>We’re excited to be working together with Anthropic to bring Cloudflare’s flexibility, scale, and security to more users. Whether you want to run tens of millions of agents using isolates, securely connect to private services with Workers VPC, or write custom tools that take advantage of all of Cloudflare, our new integration makes it easy.</p><p>See the <a href="https://developers.cloudflare.com/sandbox/claude-managed-agents/"><u>Getting Started with Managed Agents guide</u></a> to get Claude Managed Agents set up with Cloudflare in just minutes.</p> ]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Project Glasswing: what Mythos showed us]]></title>
             <link>https://blog.cloudflare.com/cyber-frontier-models/</link>
@@ -3236,417 +3344,6 @@ curl -X POST 'https://api.cloudflare.com/client/v4/accounts/{account_id}/browser
     <p>Browser Run is available today on both the Workers Free and Workers Paid plans. Everything we shipped today — Live View, Human in the Loop, Session Recordings, and higher concurrency limits — is ready to use. </p><p>If you were already using Browser Rendering, everything works the same, just with a new name and more features.  </p><p>Check out the <a href="https://developers.cloudflare.com/browser-rendering/"><u>documentation</u></a> to get started. </p>
           <figure>
           <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/6mQq5rxfDK3oU80JCRUL7P/7842cac72f0f4170cc697011230146ab/BLOG-3221_3.png" />
-          </figure><p></p> ]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Add voice to your agent]]></title>
-            <link>https://blog.cloudflare.com/voice-agents/</link>
-            <guid>https://blog.cloudflare.com/voice-agents/</guid>
-            <pubDate>Wed, 15 Apr 2026 13:00:00 GMT</pubDate>
-            <description><![CDATA[An experimental voice pipeline for the Agents SDK enables real-time voice interactions over WebSockets. Developers can now build agents with continuous STT and TTS in just ~30 lines of server-side code.]]></description>
-            <content:encoded><![CDATA[ <p>For many of us, our first experiences with AI agents have been through typing into a chat box. And for those of us using agents day to day, we have likely gotten very good at writing detailed prompts or markdown files to guide them.</p><p>But some of the moments where agents would be most useful are not always text-first. You might be on a long commute, juggling a few open sessions, or just wanting to speak naturally to an agent, have it speak back, and continue the interaction.</p><p>Adding voice to an agent should not require moving that agent into a separate voice framework. Today, we are releasing an experimental voice pipeline for the <a href="https://developers.cloudflare.com/agents/api-reference/voice/"><u>Agents SDK</u></a>.</p><p>With <code>@cloudflare/voice</code>, you can add real-time voice to the same Agent architecture you already use. Voice just becomes another way you can talk to the same Durable Object, with the same tools, persistence, and WebSocket connection model that the Agents SDK already provides. </p><p><code>@cloudflare/voice</code> is an experimental package for the Agents SDK that provides: </p><ul><li><p><code>withVoice(Agent)</code> for full conversation voice agents</p></li><li><p><code>withVoiceInput(Agent)</code> for speech-to-text-only use cases, like dictation or voice search </p></li><li><p><code>useVoiceAgent</code> and <code>useVoiceInput</code> hooks for React apps </p></li><li><p><code>VoiceClient</code> for framework-agnostic clients </p></li><li><p>Built-in <a href="https://developers.cloudflare.com/workers-ai/"><u>Workers AI</u></a> providers, so that you can get started without external API keys: </p><ul><li><p>Continuous STT with <a href="https://developers.cloudflare.com/workers-ai/models/flux/"><u>Deepgram Flux</u></a></p></li><li><p>Continuous STT with<a href="https://developers.cloudflare.com/workers-ai/models/nova-3/"><u> Deepgram Nova 3</u></a></p></li><li><p>Text-to-speech with <a href="https://developers.cloudflare.com/workers-ai/models/aura-1/"><u>Deepgram Aura</u></a></p></li></ul></li></ul><p>This means you can now build an agent that users can talk to in real time over a single WebSocket connection, while keeping the same Agent class, Durable Object instance, and the same SQLite-backed conversation history. </p><p>Just as importantly, we want this to be bigger than one fixed default stack. The provider interfaces in <code>@cloudflare/voice</code> are intentionally small, and we want speech, telephony, and transport providers to build with us, so developers can mix and match the right components for their use case, instead of being locked into a single voice architecture.</p>
-    <div>
-      <h2>Get started with voice</h2>
-      <a href="#get-started-with-voice">
-        
-      </a>
-    </div>
-    <p>Here’s the minimal server-side pattern for a voice agent in the Agents SDK: </p>
-            <pre><code>import { Agent, routeAgentRequest } from "agents";
-import {
-  withVoice,
-  WorkersAIFluxSTT,
-  WorkersAITTS,
-  type VoiceTurnContext
-} from "@cloudflare/voice";
-
-const VoiceAgent = withVoice(Agent);
-
-export class MyAgent extends VoiceAgent&lt;Env&gt; {
-  transcriber = new WorkersAIFluxSTT(this.env.AI);
-  tts = new WorkersAITTS(this.env.AI);
-
-  async onTurn(transcript: string, context: VoiceTurnContext) {
-    return `You said: ${transcript}`;
-  }
-}
-
-export default {
-  async fetch(request: Request, env: Env) {
-    return (
-      (await routeAgentRequest(request, env)) ??
-      new Response("Not found", { status: 404 })
-    );
-  }
-} satisfies ExportedHandler&lt;Env&gt;;
-
-</code></pre>
-            <p>That’s the whole server. You add a continuous transcriber, a text-to-speech provider, and implement <code>onTurn()</code>. 
-
-On the client side, you can connect to it with a React hook: </p>
-            <pre><code>import { useVoiceAgent } from "@cloudflare/voice/react";
-
-function App() {
-  const {
-    status,
-    transcript,
-    interimTranscript,
-    startCall,
-    endCall,
-    toggleMute
-  } = useVoiceAgent({ agent: "my-agent" });
-
-  return (
-    &lt;div&gt;
-      &lt;p&gt;Status: {status}&lt;/p&gt;
-      {interimTranscript &amp;&amp; &lt;p&gt;&lt;em&gt;{interimTranscript}&lt;/em&gt;&lt;/p&gt;}
-      &lt;ul&gt;
-        {transcript.map((msg, i) =&gt; (
-          &lt;li key={i}&gt;
-            &lt;strong&gt;{msg.role}:&lt;/strong&gt; {msg.text}
-          &lt;/li&gt;
-        ))}
-      &lt;/ul&gt;
-      &lt;button onClick={startCall}&gt;Start Call&lt;/button&gt;
-      &lt;button onClick={endCall}&gt;End Call&lt;/button&gt;
-      &lt;button onClick={toggleMute}&gt;Mute / Unmute&lt;/button&gt;
-    &lt;/div&gt;
-  );
-}
-</code></pre>
-            <p>If you are not using React, you can use <code>VoiceClient</code> directly from <code>@cloudflare/voice/client</code>. </p>
-    <div>
-      <h2>How the voice pipeline works</h2>
-      <a href="#how-the-voice-pipeline-works">
-        
-      </a>
-    </div>
-    <p>With the <a href="https://github.com/cloudflare/agents"><u>Agents SDK</u></a>, every agent is a <a href="https://developers.cloudflare.com/durable-objects/"><u>Durable Object</u></a> — a stateful, addressable server instance with its own <a href="https://developers.cloudflare.com/agents/api-reference/store-and-sync-state/"><u>SQLite database</u></a>, <a href="https://developers.cloudflare.com/agents/api-reference/websockets/"><u>WebSocket connections</u></a>, and application logic. The voice pipeline extends this model instead of replacing it. </p><p>At a high level, the flow looks like this:</p>
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/5IBi8TsQiJ18Um47zpqAIr/d284d47a8653c35bc7c027438a5a7a2c/unnamed__55_.png" />
-          </figure><p>Here’s how the pipeline breaks down, step by step: </p><ol><li><p><b>Audio transport: </b>The browser captures microphone audio and streams 16 kHz mono PCM over the same WebSocket connection the agent already uses. </p></li><li><p><b>STT session setup:  </b>When the call starts, the agent creates a continuous transcriber session that lives for the duration of the call. </p></li><li><p><b>STT input: </b>Audio streams continuously into that session.</p></li><li><p><b>STT turn detection: </b>The speech-to-text model itself decides when the user has finished an utterance and emits a stable transcript for that turn. </p></li><li><p><b>LLM/application logic: </b>The voice pipeline passes that transcript to your <code>onTurn(</code>) method. </p></li><li><p><b>TTS output: </b>Your response is synthesized to audio and sent back to the client. If <code>onTurn()</code> returns a stream, the pipeline sentence-chunks it and starts sending audio as sentences are ready. </p></li><li><p><b>Persistence: </b>The user and agent messages are persisted in SQLite, so conversation history survives reconnections and deployments.  </p></li></ol>
-    <div>
-      <h2>Why voice should grow with the rest of your agent</h2>
-      <a href="#why-voice-should-grow-with-the-rest-of-your-agent">
-        
-      </a>
-    </div>
-    <p>Many voice frameworks focus on the voice loop itself: audio in, transcription, model response, audio out. Those are important primitives, but there’s a lot more to an agent than just voice. </p><p>Real agents running in production will grow. They need state, scheduling, persistence, tools, workflows, telephony, and ways to keep all of that consistent across channels. As your agent grows in complexity, voice stops being a standalone feature and becomes part of a larger system. </p><p>We wanted voice in the Agents SDK to start from that assumption. Instead of building voice as a separate stack, we built it on top of the same Durable Object-based agent platform, so you can pull in the rest of the primitives you need without re-architecting the application later.</p>
-    <div>
-      <h3>Voice and text share the same state</h3>
-      <a href="#voice-and-text-share-the-same-state">
-        
-      </a>
-    </div>
-    <p>A user might start by typing, switch to voice, and go back to text. With Agents SDK, these are all just different inputs to the same agent. The same conversation history lives in SQLite, and the same tools are available. This gives you both a cleaner mental model and a much simpler application architecture to reason about. </p>
-    <div>
-      <h2>Lower latency comes from...</h2>
-      <a href="#lower-latency-comes-from">
-        
-      </a>
-    </div>
-    
-    <div>
-      <h3>a shorter network path </h3>
-      <a href="#a-shorter-network-path">
-        
-      </a>
-    </div>
-    <p>Voice experiences feel good or bad very quickly. Once a user stops speaking, the system needs to transcribe, think, and start speaking back fast enough to feel conversational. </p><p>A lot of voice latency is not pure model time. It’s the cost of bouncing audio and text between different services in different places. Audio needs to go to STT, transcripts go to an LLM, and responses go to a TTS model – and each handoff adds network overhead. </p><p>With the Agents SDK voice pipeline, the agent runs on Cloudflare’s network, and the built-in providers use Workers AI bindings. That keeps the pipeline tighter and reduces the amount of infrastructure you have to stitch together yourself. </p>
-    <div>
-      <h3>built-in streaming</h3>
-      <a href="#built-in-streaming">
-        
-      </a>
-    </div>
-    <p>A voice agent interaction feels much more natural if it speaks the first sentence quickly (also called Time-to-First Audio). When <code>onTurn()</code> returns a stream, the pipeline chunks it into sentences and starts synthesis as sentences complete. That means the user can hear the beginning of the answer while the rest is still being generated. </p>
-    <div>
-      <h2>A more realistic backend </h2>
-      <a href="#a-more-realistic-backend">
-        
-      </a>
-    </div>
-    <p>Here is a fuller example that streams an LLM response and starts speaking it back, sentence by sentence:</p>
-            <pre><code>import { Agent, routeAgentRequest } from "agents";
-import {
-  withVoice,
-  WorkersAIFluxSTT,
-  WorkersAITTS,
-  type VoiceTurnContext
-} from "@cloudflare/voice";
-import { streamText } from "ai";
-import { createWorkersAI } from "workers-ai-provider";
-
-const VoiceAgent = withVoice(Agent);
-
-export class MyAgent extends VoiceAgent&lt;Env&gt; {
-  transcriber = new WorkersAIFluxSTT(this.env.AI);
-  tts = new WorkersAITTS(this.env.AI);
-
-  async onTurn(transcript: string, context: VoiceTurnContext) {
-    const ai = createWorkersAI({ binding: this.env.AI });
-
-    const result = streamText({
-      model: ai("@cf/cloudflare/gpt-oss-20b"),
-      system: "You are a helpful voice assistant. Be concise.",
-      messages: [
-        ...context.messages.map((m) =&gt; ({
-          role: m.role as "user" | "assistant",
-          content: m.content
-        })),
-        { role: "user" as const, content: transcript }
-      ],
-      abortSignal: context.signal
-    });
-
-    return result.textStream;
-  }
-}
-
-export default {
-  async fetch(request: Request, env: Env) {
-    return (
-      (await routeAgentRequest(request, env)) ??
-      new Response("Not found", { status: 404 })
-    );
-  }
-} satisfies ExportedHandler&lt;Env&gt;;
-</code></pre>
-            <p><code>Context.messages</code> gives you recent SQLite-backed conversation history, and <code>context.signal</code> lets the pipeline abort the LLM call if the user interrupts. </p>
-    <div>
-      <h2>Voice as an input: <code>withVoiceInput</code></h2>
-      <a href="#voice-as-an-input-withvoiceinput">
-        
-      </a>
-    </div>
-    <p>Not every speech interface needs to speak back. Sometimes you might want dictation, transcription, or voice search. For these use cases, you can use <code>withVoiceInput</code></p>
-            <pre><code>import { Agent, type Connection } from "agents";
-import { withVoiceInput, WorkersAINova3STT } from "@cloudflare/voice";
-
-const InputAgent = withVoiceInput(Agent);
-
-export class DictationAgent extends InputAgent&lt;Env&gt; {
-  transcriber = new WorkersAINova3STT(this.env.AI);
-
-  onTranscript(text: string, _connection: Connection) {
-    console.log("User said:", text);
-  }
-}
-</code></pre>
-            <p>On the client, <code>useVoiceInput</code> gives you a lightweight interface centered on transcriptions: </p>
-            <pre><code>import { useVoiceInput } from "@cloudflare/voice/react";
-
-const { transcript, interimTranscript, isListening, start, stop, clear } =
-  useVoiceInput({ agent: "DictationAgent" });
-</code></pre>
-            <p>This is useful when speech is an input method, and you don’t need a full conversational loop. </p>
-    <div>
-      <h2>Voice and text on the same connection</h2>
-      <a href="#voice-and-text-on-the-same-connection">
-        
-      </a>
-    </div>
-    <p>The same client can call <code>sendText(“What’s the weather?”)</code>, which bypasses STT and sends the text directly to <code>onTurn()</code>. During an active call, the response can be spoken and shown as text. Outside a call, it can remain text-only. </p><p>This gives you a genuinely multimodal agent, without splitting the implementation into different code paths. </p>
-    <div>
-      <h2>What else can you build? </h2>
-      <a href="#what-else-can-you-build">
-        
-      </a>
-    </div>
-    <p>Because a voice agent is still an agent, all the normal Agents SDK capabilities still apply. </p>
-    <div>
-      <h3>Tools and scheduling</h3>
-      <a href="#tools-and-scheduling">
-        
-      </a>
-    </div>
-    <p>You can greet a caller when a session starts: </p>
-            <pre><code>import { Agent, type Connection } from "agents";
-import { withVoice, WorkersAIFluxSTT, WorkersAITTS } from "@cloudflare/voice";
-
-const VoiceAgent = withVoice(Agent);
-
-export class MyAgent extends VoiceAgent&lt;Env&gt; {
-  transcriber = new WorkersAIFluxSTT(this.env.AI);
-  tts = new WorkersAITTS(this.env.AI);
-
-  async onTurn(transcript: string) {
-    return `You said: ${transcript}`;
-  }
-
-  async onCallStart(connection: Connection) {
-    await this.speak(connection, "Hi! How can I help you today?");
-  }
-}
-</code></pre>
-            <p>You can schedule spoken reminders and expose tools to your LLM just like any other agent: </p>
-            <pre><code>import { Agent } from "agents";
-import {
-  withVoice,
-  WorkersAIFluxSTT,
-  WorkersAITTS,
-  type VoiceTurnContext
-} from "@cloudflare/voice";
-import { streamText, tool } from "ai";
-import { createWorkersAI } from "workers-ai-provider";
-import { z } from "zod";
-
-const VoiceAgent = withVoice(Agent);
-
-export class MyAgent extends VoiceAgent&lt;Env&gt; {
-  transcriber = new WorkersAIFluxSTT(this.env.AI);
-  tts = new WorkersAITTS(this.env.AI);
-
-  async speakReminder(payload: { message: string }) {
-    await this.speakAll(`Reminder: ${payload.message}`);
-  }
-
-  async onTurn(transcript: string, context: VoiceTurnContext) {
-    const ai = createWorkersAI({ binding: this.env.AI });
-
-    const result = streamText({
-      model: ai("@cf/cloudflare/gpt-oss-20b"),
-      messages: [
-        ...context.messages.map((m) =&gt; ({
-          role: m.role as "user" | "assistant",
-          content: m.content
-        })),
-        { role: "user" as const, content: transcript }
-      ],
-      tools: {
-        set_reminder: tool({
-          description: "Set a spoken reminder after a delay",
-          inputSchema: z.object({
-            message: z.string(),
-            delay_seconds: z.number()
-          }),
-          execute: async ({ message, delay_seconds }) =&gt; {
-            await this.schedule(delay_seconds, "speakReminder", { message });
-            return { confirmed: true };
-          }
-        })
-      },
-      abortSignal: context.signal
-    });
-
-    return result.textStream;
-  }
-}
-</code></pre>
-            
-    <div>
-      <h3>Runtime model switching</h3>
-      <a href="#runtime-model-switching">
-        
-      </a>
-    </div>
-    <p>The voice pipeline also lets you choose a transcription model dynamically per connection. </p><p>For example, you might prefer Flux for conversational turn-taking and Nova 3 for higher-accuracy dictation. You can switch at runtime by overriding <code>createTranscriber()</code>: </p>
-            <pre><code>import { Agent, type Connection } from "agents";
-import {
-  withVoice,
-  WorkersAIFluxSTT,
-  WorkersAINova3STT,
-  WorkersAITTS,
-  type Transcriber
-} from "@cloudflare/voice";
-
-export class MyAgent extends VoiceAgent&lt;Env&gt; {
-  tts = new WorkersAITTS(this.env.AI);
-
-  createTranscriber(connection: Connection): Transcriber {
-    const url = new URL(connection.url ?? "http://localhost");
-    const model = url.searchParams.get("model");
-    if (model === "nova-3") {
-      return new WorkersAINova3STT(this.env.AI);
-    }
-    return new WorkersAIFluxSTT(this.env.AI);
-  }
-}
-</code></pre>
-            <p>On the client, you can pass query parameters through the hook: </p>
-            <pre><code>const voiceAgent = useVoiceAgent({
-  agent: "my-voice-agent",
-  query: { model: "nova-3" }
-});
-</code></pre>
-            
-    <div>
-      <h2>Pipeline hooks</h2>
-      <a href="#pipeline-hooks">
-        
-      </a>
-    </div>
-    <p>You can also intercept data between stages: </p><ul><li><p><code>afterTranscribe(transcript, connection)</code></p></li><li><p><code>beforeSynthesize(text, connection)</code></p></li><li><p><code>afterSynthesize(audio, text, connection)</code></p></li></ul><p>These hooks are useful for content filtering, text normalization, language-specific transformations, or custom logging. </p>
-    <div>
-      <h2>Telephone and transport options</h2>
-      <a href="#telephone-and-transport-options">
-        
-      </a>
-    </div>
-    <p>By default, the voice pipeline uses a single WebSocket connection as the simplest path for 1:1 voice agents. But that’s not the only option. </p>
-    <div>
-      <h3>Phone calls via Twilio</h3>
-      <a href="#phone-calls-via-twilio">
-        
-      </a>
-    </div>
-    <p>You can connect phone calls to the same agent using the Twilio adapter:</p>
-            <pre><code>import { TwilioAdapter } from "@cloudflare/voice-twilio";
-
-export default {
-  async fetch(request: Request, env: Env) {
-    if (new URL(request.url).pathname === "/twilio") {
-      return TwilioAdapter.handleRequest(request, env, "MyAgent");
-    }
-
-    return (
-      (await routeAgentRequest(request, env)) ??
-      new Response("Not found", { status: 404 })
-    );
-  }
-};
-</code></pre>
-            <p>This lets the same agent handle web voice, text input, and phone calls. </p><p>One caveat: the default Workers AI TTS provider returns MP3, while Twilio expects mulaw 8kHz audio. For production telephony, you may want to use a TTS provider that outputs PCM or mulaw directly. </p>
-    <div>
-      <h3>WebRTC</h3>
-      <a href="#webrtc">
-        
-      </a>
-    </div>
-    <p>If you need a transport that is better suited to difficult network conditions or will include multiple participants, the voice package also includes SFU utilities and supports custom transports. The default model is WebSocket-native today, but we plan to develop more adapters to connect to our <a href="https://developers.cloudflare.com/realtime/sfu/"><u>global SFU infrastructure</u></a>. </p>
-    <div>
-      <h2>Build with us </h2>
-      <a href="#build-with-us">
-        
-      </a>
-    </div>
-    <p>The voice pipeline is provider-agnostic by design. </p><p>Under the hood, each stage is defined by a small interface: a transcriber opens a continuous session and accepts audio frames as they arrive, while a TTS provider takes text and returns audio. If a provider can stream audio output, the pipeline can use that too.</p>
-            <pre><code>interface Transcriber {
-  createSession(options?: TranscriberSessionOptions): TranscriberSession;
-}
-
-interface TranscriberSession {
-  feed(chunk: ArrayBuffer): void;
-  close(): void;
-}
-
-interface TTSProvider {
-  synthesize(text: string, signal?: AbortSignal): Promise&lt;ArrayBuffer | null&gt;;
-}
-</code></pre>
-            <p>We didn’t want voice support in Agents SDK to only work with one fixed combination of models and transports. We wanted the default path to be simple, while still making it easy to plug in other providers as the ecosystem grows. </p><p>The built-in providers use Workers AI, so you can get started without external API keys:</p><ul><li><p><code>WorkersAIFluxSTT</code> for conversational streaming STT</p></li><li><p><code>WorkersAINova3STT</code> for dictation-style streaming STT</p></li><li><p><code>WorkersAITTS</code> for text-to-speech</p></li></ul><p>But the bigger goal is interoperability. If you maintain a speech or voice service, these interfaces are small enough to implement without needing to understand the rest of the SDK internals. If your STT provider accepts streaming audio and can detect utterance boundaries, it can satisfy the transcriber interface. If your TTS provider can stream audio output, even better. </p><p>We would love to work on interoperability with:</p><ul><li><p>STT providers like AssemblyAI, Rev.ai, Speechmatics, or any service with a real-time transcription API</p></li><li><p>TTS providers like PlayHT, LMNT, Cartesia, Coqui, Amazon Polly, or Google Cloud TTS</p></li><li><p>telephony adapters for platforms like Vonage, Telnyx, or Bandwidth</p></li><li><p>transport implementations for WebRTC data channels, SFU bridges, and other audio transport layers</p></li></ul><p>We are also interested in collaborations that go beyond individual providers:</p><ul><li><p>latency benchmarking across STT + LLM + TTS combinations</p></li><li><p>multilingual support and better documentation for non-English voice agents</p></li><li><p>accessibility work, especially around multimodal interfaces and speech impairments</p></li></ul><p>If you are building voice infrastructure and want to see a first-class integration, <a href="https://github.com/cloudflare/agents/pulls"><u>open a PR</u></a> or reach out.</p>
-    <div>
-      <h2>Try it now</h2>
-      <a href="#try-it-now">
-        
-      </a>
-    </div>
-    <p>The voice pipeline is available today as an experimental package:</p>
-            <pre><code>npm create cloudflare@latest -- --template cloudflare/agents-starter
-</code></pre>
-            <p>Add <code>@cloudflare/voice</code>, give your agent a transcriber and a TTS provider, deploy it, and start talking to it. You can also read the <a href="https://developers.cloudflare.com/agents/api-reference/voice/"><u>API reference</u></a>. </p><p>If you build something interesting, open an issue or PR on <a href="https://github.com/cloudflare/agents"><u>github.com/cloudflare/agents</u></a>. Voice should not require a separate stack, and we think the best voice agents will be the ones built on the same durable application model as everything else.</p>
-          <figure>
-          <img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1SLeHwqXY0ehOUsy5Nzzq2/c16244f45b8411f8817b9a21b45ed4b8/BLOG-3198_3.png" />
           </figure><p></p> ]]></content:encoded>
         </item>
     </channel>
