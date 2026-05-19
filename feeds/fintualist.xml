@@ -4,11 +4,17 @@
         <title>El Fintualist</title>
         <link>https://fintualist.com/chile/</link>
         <description>En Fintualist te contamos cada semana noticias interesantes e historias sobre economía, política, inversiones, ciencia, tecnología y finanzas.</description>
-        <lastBuildDate>Tue, 19 May 2026 14:45:37 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 May 2026 16:34:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>es</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/fintualist.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Pa’ ninis no: el álbum más caro de la historia]]></title>
+            <link>https://fintualist.com/chile/opinion/pa-ninis-no-el-album-mas-caro-de-la-historia-2/</link>
+            <guid>https://fintualist.com/chile/opinion/pa-ninis-no-el-album-mas-caro-de-la-historia-2/</guid>
+            <pubDate>Tue, 19 May 2026 16:34:35 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Nuevos fondos de Fintual: invierte con el beneficio tributario 107 LIR]]></title>
             <link>https://fintualist.com/chile/educacion-financiera/nuevos-fondos-de-fintual-invierte-con-el-beneficio-tributario-107-lir/</link>
@@ -26,12 +32,6 @@
             <link>https://fintualist.com/chile/cultura/artista-de-la-semana-pedro-lira/</link>
             <guid>https://fintualist.com/chile/cultura/artista-de-la-semana-pedro-lira/</guid>
             <pubDate>Mon, 18 May 2026 15:48:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[📍 Mercados en vivo - La inflación pausó el rally]]></title>
-            <link>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</link>
-            <guid>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</guid>
-            <pubDate>Mon, 18 May 2026 12:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[¿Por qué a las inversiones en Fintual les ha ido tan bien este año?]]></title>
