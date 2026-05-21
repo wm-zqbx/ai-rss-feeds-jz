@@ -10,13 +10,6 @@
         <language>zh</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/wenweipo-hongkong.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[現場直擊（有片多圖）│大維修中的佐敦文苑樓發生火警  1死4傷逾200人疏散]]></title>
-            <link>https://www.wenweipo.com/a/202605/22/AP6a0f2c5ae4b0b49ad1bc148f.html</link>
-            <guid>https://www.wenweipo.com/a/202605/22/AP6a0f2c5ae4b0b49ad1bc148f.html</guid>
-            <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[今日（21日）晚上約10時49分，警方接報指佐敦文苑街1至23號文苑樓一高層單位發生火警，單位窗口不斷冒出火舌和濃煙，由於現場正進行樓宇大維修，大廈外牆搭有棚架和圍網，消防接報後即將火警列為二級，到場立即出動雲梯灌救。香港文匯報記者現場所見，起火單位冒出的火舌一度波及棚架上的圍網，幸火勢並未因此快速蔓延，消防很快將火救熄，期間至少2人吸入濃煙不適送院，現場一度吸引大批途人圍觀。火警原因仍正調查。]]></description>
-        </item>
-        <item>
             <title><![CDATA[百年醮影系列│ 長洲文化地圖 走入7大地標 解鎖隱藏傳奇]]></title>
             <link>https://www.wenweipo.com/a/202605/22/AP6a0ee1ece4b0b49ad1bc0a8e.html</link>
             <guid>https://www.wenweipo.com/a/202605/22/AP6a0ee1ece4b0b49ad1bc0a8e.html</guid>
@@ -115,6 +108,13 @@
             <guid>https://www.wenweipo.com/a/202605/21/AP6a0ee4f9e4b0b49ad1bc0b08.html</guid>
             <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[香港特別行政區（特區）政府今日（21日）宣布，基於公共衞生考慮，決定對剛果民主共和國發出紅色外遊警示，市民如非必要，應避免前赴當地。有關詳情可參閱保安局外遊警示網頁（www.sb.gov.hk/chi/ota/index.html）。此外，特區政府已於5月17日啓動特區政府的埃博拉（伊波拉）病毒病準備及應變計劃下的戒備應變級別，各相關部門已做好充分準備，一旦發現疑似個案，會即時按機制進行檢測及全方位防控措施，防止病毒在本港傳播，保障公眾健康。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[元朗朗屏邨單位玻璃窗疑遭BB彈射爆 遺鋼珠及彈孔警方跟進]]></title>
+            <link>https://www.wenweipo.com/a/202605/21/AP6a0ee0cbe4b0b49ad1bc09fb.html</link>
+            <guid>https://www.wenweipo.com/a/202605/21/AP6a0ee0cbe4b0b49ad1bc09fb.html</guid>
+            <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[今日（21日）中午12時半，警方接獲一名64歲女子報案，指於本周一（18日）在其元朗朗屏邨石屏樓寓所，發現一粒約兩毫米鋼珠，其後亦發現一扇玻璃窗爆裂，且遺下一個兩毫米的彈孔。]]></description>
         </item>
     </channel>
 </rss>
