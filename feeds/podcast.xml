@@ -10,13 +10,19 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[ステランティス、クアルコムと車載技術で提携拡大]]></title>
+            <link>https://www.youtube.com/watch?v=QfZ17X6m6i4</link>
+            <guid>https://www.youtube.com/watch?v=QfZ17X6m6i4</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[ジョー・ローガン・エクスペリエンス #2504 - スカイラー・グレイ]]></title>
             <link>https://www.youtube.com/watch?v=fOTMWZNYg9g</link>
             <guid>https://www.youtube.com/watch?v=fOTMWZNYg9g</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why do GPUs, TPUs, & the human brain look the way they do? – Reiner Pope]]></title>
+            <title><![CDATA[なぜGPU、TPU、人間の脳はあのような形をしているのか？ – ライナー・ポープ]]></title>
             <link>https://www.youtube.com/watch?v=oIk3R-sMX5o</link>
             <guid>https://www.youtube.com/watch?v=oIk3R-sMX5o</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -46,13 +52,13 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[How The Best Companies Defend Against Mediocrity And Rot]]></title>
+            <title><![CDATA[優れた企業はいかにして凡庸さと腐敗から身を守るか]]></title>
             <link>https://www.youtube.com/watch?v=7VKliOQXQ9M</link>
             <guid>https://www.youtube.com/watch?v=7VKliOQXQ9M</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Forget S&P, Bitcoin & AI, here’s where Mohnish Pabrai is putting his money in 2026]]></title>
+            <title><![CDATA[S&PもビットコインもAIも忘れろ、モーニッシュ・パブライが2026年に投資する場所はここだ]]></title>
             <link>https://www.youtube.com/watch?v=FjWY1-gZ0Cs</link>
             <guid>https://www.youtube.com/watch?v=FjWY1-gZ0Cs</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -76,7 +82,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why David sold ALL of his ETH]]></title>
+            <title><![CDATA[デイビッドが保有する全ETHを売却した理由]]></title>
             <link>https://www.youtube.com/watch?v=0KLHV_zttys</link>
             <guid>https://www.youtube.com/watch?v=0KLHV_zttys</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -121,12 +127,6 @@
             <title><![CDATA[デイビッド・フレンチ：「一人で戦争を始めることはできない」| Prof G Conversations]]></title>
             <link>https://www.youtube.com/watch?v=ZcuA7K0Xm1I</link>
             <guid>https://www.youtube.com/watch?v=ZcuA7K0Xm1I</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CerebrasのIPO、プレミアムトークン、Neo Cloud、そしてオングストローム時代]]></title>
-            <link>https://www.youtube.com/watch?v=WfnVAK0QQUc</link>
-            <guid>https://www.youtube.com/watch?v=WfnVAK0QQUc</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
