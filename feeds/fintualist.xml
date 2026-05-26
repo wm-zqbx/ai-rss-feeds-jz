@@ -4,11 +4,23 @@
         <title>El Fintualist</title>
         <link>https://fintualist.com/chile/</link>
         <description>En Fintualist te contamos cada semana noticias interesantes e historias sobre economía, política, inversiones, ciencia, tecnología y finanzas.</description>
-        <lastBuildDate>Mon, 25 May 2026 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 May 2026 14:55:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>es</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/fintualist.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[¿El dinero compra la felicidad? En busca de la respuesta definitiva (parte II)]]></title>
+            <link>https://fintualist.com/chile/educacion-financiera/el-dinero-compra-la-felicidad-en-busca-de-la-respuesta-definitiva-parte-ii-cl/</link>
+            <guid>https://fintualist.com/chile/educacion-financiera/el-dinero-compra-la-felicidad-en-busca-de-la-respuesta-definitiva-parte-ii-cl/</guid>
+            <pubDate>Tue, 26 May 2026 14:55:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Artista de la semana | Mary Cassatt]]></title>
+            <link>https://fintualist.com/chile/cultura/artista-de-la-semana-mary-cassatt/</link>
+            <guid>https://fintualist.com/chile/cultura/artista-de-la-semana-mary-cassatt/</guid>
+            <pubDate>Mon, 25 May 2026 15:45:11 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[📍 Mercados en vivo - Se reabre la esperanza en Ormuz]]></title>
             <link>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</link>
@@ -22,16 +34,10 @@
             <pubDate>Wed, 20 May 2026 12:09:39 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Fintualist en Cannes: el tras bambalinas del festival de cine más grande del mundo]]></title>
-            <link>https://fintualist.com/chile/cultura/cine-series/fintualist-en-cannes/</link>
-            <guid>https://fintualist.com/chile/cultura/cine-series/fintualist-en-cannes/</guid>
-            <pubDate>Tue, 19 May 2026 20:08:49 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Pa’ ninis no: el álbum más caro de la historia]]></title>
-            <link>https://fintualist.com/chile/opinion/pa-ninis-no-el-album-mas-caro-de-la-historia-2/</link>
-            <guid>https://fintualist.com/chile/opinion/pa-ninis-no-el-album-mas-caro-de-la-historia-2/</guid>
-            <pubDate>Tue, 19 May 2026 16:34:35 GMT</pubDate>
+            <title><![CDATA[Nuevos fondos de Fintual: invierte con el beneficio tributario 107 LIR]]></title>
+            <link>https://fintualist.com/chile/educacion-financiera/nuevos-fondos-de-fintual-invierte-con-el-beneficio-tributario-107-lir/</link>
+            <guid>https://fintualist.com/chile/educacion-financiera/nuevos-fondos-de-fintual-invierte-con-el-beneficio-tributario-107-lir/</guid>
+            <pubDate>Tue, 19 May 2026 14:45:37 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[La Fed cambia de mando, pero no de dueño]]></title>
@@ -122,12 +128,6 @@
             <link>https://fintualist.com/chile/educacion-financiera/el-dinero-compra-la-felicidad-en-busca-de-la-respuesta-definitiva-parte-i-cl/</link>
             <guid>https://fintualist.com/chile/educacion-financiera/el-dinero-compra-la-felicidad-en-busca-de-la-respuesta-definitiva-parte-i-cl/</guid>
             <pubDate>Sat, 25 Apr 2026 00:52:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Tutorial de la declaración de renta y algunos trucos para optimizar impuestos]]></title>
-            <link>https://fintualist.com/chile/educacion-financiera/tutorial-de-la-declaracion-de-renta-y-algunos-hacks-para-ahorrar-en-impuestos/</link>
-            <guid>https://fintualist.com/chile/educacion-financiera/tutorial-de-la-declaracion-de-renta-y-algunos-hacks-para-ahorrar-en-impuestos/</guid>
-            <pubDate>Tue, 21 Apr 2026 22:18:51 GMT</pubDate>
         </item>
     </channel>
 </rss>

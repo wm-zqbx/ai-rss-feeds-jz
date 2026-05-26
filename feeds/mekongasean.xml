@@ -4,22 +4,22 @@
         <title>Mekong ASEAN</title>
         <link>https://mekongasean.vn/</link>
         <description>Tạp chí điện tử MEKONG - ASEAN</description>
-        <lastBuildDate>Tue, 26 May 2026 02:20:13 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 May 2026 08:02:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>vi</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/mekongasean.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Khuyến nghị của UNDP về hỗ trợ doanh nghiệp ứng dụng khoa học công nghệ]]></title>
+            <link>https://mekongasean.vn/khuyen-nghi-cua-undp-ve-ho-tro-doanh-nghiep-ung-dung-khoa-hoc-cong-nghe-55579.html</link>
+            <guid>https://mekongasean.vn/khuyen-nghi-cua-undp-ve-ho-tro-doanh-nghiep-ung-dung-khoa-hoc-cong-nghe-55579.html</guid>
+            <pubDate>Tue, 26 May 2026 08:02:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA['Nhà ở cho thuê là phân khúc chiến lược, phục vụ người dân']]></title>
             <link>https://mekongasean.vn/nha-o-cho-thue-la-phan-khuc-chien-luoc-phuc-vu-nguoi-dan-55569.html</link>
             <guid>https://mekongasean.vn/nha-o-cho-thue-la-phan-khuc-chien-luoc-phuc-vu-nguoi-dan-55569.html</guid>
             <pubDate>Tue, 26 May 2026 02:20:13 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Mở ra giai đoạn mới cho quan hệ Việt Nam – Singapore]]></title>
-            <link>https://mekongasean.vn/mo-ra-giai-doan-moi-cho-quan-he-viet-nam-singapore-55559.html</link>
-            <guid>https://mekongasean.vn/mo-ra-giai-doan-moi-cho-quan-he-viet-nam-singapore-55559.html</guid>
-            <pubDate>Mon, 25 May 2026 12:24:07 GMT</pubDate>
         </item>
     </channel>
 </rss>
