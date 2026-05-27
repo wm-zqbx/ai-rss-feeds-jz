@@ -10,7 +10,13 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Prosus CEO：AIはまだ過小評価されている、そしてどう対処すべきか | ポッドキャスト | In Good Company]]></title>
+            <title><![CDATA[細胞ストレス生物学のマッピングによる創薬困難な標的への挑戦]]></title>
+            <link>https://www.youtube.com/watch?v=i31wEmhCNBk</link>
+            <guid>https://www.youtube.com/watch?v=i31wEmhCNBk</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Prosus CEO: 大きな夢を抱き、AIで消費者テクノロジーを再発明する | ポッドキャスト | In Good Company]]></title>
             <link>https://www.youtube.com/watch?v=yU68BbLp1Y0</link>
             <guid>https://www.youtube.com/watch?v=yU68BbLp1Y0</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -121,12 +127,6 @@
             <title><![CDATA[Claude Code vs Codex vs Cursor（正直な比較）]]></title>
             <link>https://www.youtube.com/watch?v=JMYspR42HFM</link>
             <guid>https://www.youtube.com/watch?v=JMYspR42HFM</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[なぜ中国は米国債を売り続けるのか | チャイナ・デコード]]></title>
-            <link>https://www.youtube.com/watch?v=fN6AGGhDp5s</link>
-            <guid>https://www.youtube.com/watch?v=fN6AGGhDp5s</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
