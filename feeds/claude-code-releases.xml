@@ -4,11 +4,91 @@
         <title>claude-code Releases</title>
         <link>https://github.com/anthropics/claude-code/releases</link>
         <description>GitHub releases for anthropics/claude-code</description>
-        <lastBuildDate>Sat, 23 May 2026 04:03:51 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 27 May 2026 01:30:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/claude-code-releases.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[v2.1.152]]></title>
+            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.152</link>
+            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.152</guid>
+            <pubDate>Wed, 27 May 2026 01:30:59 GMT</pubDate>
+            <description><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li><code>/code-review --fix</code> now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; <code>/simplify</code> now invokes <code>/code-review --fix</code></li>
+<li>Skills and slash commands can now set <code>disallowed-tools</code> in frontmatter to remove tools from the model while the skill is active</li>
+<li>Added <code>/reload-skills</code> command to re-scan skill directories without restarting the session</li>
+<li><code>SessionStart</code> hooks can now return <code>reloadSkills: true</code> to re-scan skill directories, making skills installed by the hook available in the same session</li>
+<li><code>SessionStart</code> hooks can now set the session title via <code>hookSpecificOutput.sessionTitle</code> on startup and resume</li>
+<li>Added a <code>MessageDisplay</code> hook event that lets hooks transform or hide assistant message text as it is displayed</li>
+<li>Added <code>pluginSuggestionMarketplaces</code> managed setting: admins can allowlist org marketplaces whose plugins may be suggested via context-aware tips</li>
+<li><code>claude plugin marketplace remove</code> now accepts <code>--scope user|project|local</code> for symmetry with <code>marketplace add</code>, <code>install</code>, and <code>uninstall</code></li>
+<li>Claude Code now switches to your configured <code>--fallback-model</code> for the rest of the session when the primary model is not found, instead of failing every request</li>
+<li>Auto mode no longer requires opt-in consent</li>
+<li>Vim mode: <code>/</code> in NORMAL mode now opens reverse history search (like Ctrl+R), matching bash/zsh vi-mode</li>
+<li>The <code>/usage</code> breakdown now includes large session files; files are scanned with a streaming read so memory usage stays flat</li>
+<li>Thinking summaries in the collapsed group now stay readable for at least 3 seconds, render as markdown, and cap at 10 lines (<code>Ctrl+O</code> shows the full thinking)</li>
+<li>In fullscreen mode, the &quot;Thinking for Ns&quot; indicator now counts up live while the model is thinking, and keeps its value if you interrupt mid-thought</li>
+<li>Simplified the Workflow tool&#39;s inline progress display — live agent counts now show only in the persistent workflow status row below the prompt</li>
+<li>The post-response timer now shows &quot;Waiting for N background agents/workflows to finish&quot; when backgrounded agents or workflows are still running, and reports the cumulative time once their results are processed</li>
+<li>Added the session entrypoint as an OpenTelemetry metric attribute (<code>app.entrypoint</code>, opt-in via <code>OTEL_METRICS_INCLUDE_ENTRYPOINT=true</code>)</li>
+<li>Fixed terminal styling degrading in very long sessions by recycling the renderer&#39;s style pool</li>
+<li>Fixed the sandbox-enabled warning not appearing in condensed startup mode — it now shows in every layout</li>
+<li>Fixed the loading spinner showing &quot;still thinking&quot;/&quot;almost done thinking&quot; while a tool is running, and reset the thinking status to &quot;thinking&quot; after each tool</li>
+<li>Fixed focus mode showing a spurious &quot;N messages hidden&quot; count on turns with no hidden activity</li>
+<li>Fixed clicking a link inside an expanded tool result collapsing the section instead of opening the link</li>
+<li>Fixed markdown table cell borders inheriting the color of inline code, wrapped continuation lines losing their style, and empty header cells showing a label in the narrow-terminal stacked layout</li>
+<li>Fixed plugin MCP servers with the same command but different environment variables being incorrectly deduplicated</li>
+<li>Fixed <code>/doctor</code> reporting &quot;marketplace not found&quot; or &quot;plugin not found&quot; for stale <code>enabledPlugins</code> entries referencing removed marketplaces or dropped plugins</li>
+<li>Fixed plugins that track a git branch silently no longer receiving updates after the plugin registry was rebuilt</li>
+<li>Fixed remote MCP servers failing to connect in Claude Code Remote sessions when the egress proxy is enabled</li>
+<li>Fixed the effort-change confirmation dialog appearing when the conversation has no messages or when switching between effort levels that resolve to the same underlying value</li>
+<li>Fixed the Agent tool description referencing an agent list that is never delivered when running with <code>--bare</code> or with attachments disabled</li>
+<li>Fixed a background worker crash in <code>claude agents</code> when accepting a stale permission prompt after a subagent was cancelled</li>
+<li>Fixed <code>cache_creation_input_tokens</code> reporting as 0 in transcript and result usage when the API reports cache writes only via the nested <code>cache_creation</code> breakdown</li>
+<li>Fixed the PushNotification tool incorrectly reporting &quot;Mobile push not sent (Remote Control inactive)&quot; in SDK-hosted sessions when Remote Control is enabled</li>
+<li>Fixed sessions getting stuck after a model or login switch left stale thinking-block signatures in history; now stripped proactively with a retry safety-net</li>
+</ul>
+]]></description>
+            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li><code>/code-review --fix</code> now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; <code>/simplify</code> now invokes <code>/code-review --fix</code></li>
+<li>Skills and slash commands can now set <code>disallowed-tools</code> in frontmatter to remove tools from the model while the skill is active</li>
+<li>Added <code>/reload-skills</code> command to re-scan skill directories without restarting the session</li>
+<li><code>SessionStart</code> hooks can now return <code>reloadSkills: true</code> to re-scan skill directories, making skills installed by the hook available in the same session</li>
+<li><code>SessionStart</code> hooks can now set the session title via <code>hookSpecificOutput.sessionTitle</code> on startup and resume</li>
+<li>Added a <code>MessageDisplay</code> hook event that lets hooks transform or hide assistant message text as it is displayed</li>
+<li>Added <code>pluginSuggestionMarketplaces</code> managed setting: admins can allowlist org marketplaces whose plugins may be suggested via context-aware tips</li>
+<li><code>claude plugin marketplace remove</code> now accepts <code>--scope user|project|local</code> for symmetry with <code>marketplace add</code>, <code>install</code>, and <code>uninstall</code></li>
+<li>Claude Code now switches to your configured <code>--fallback-model</code> for the rest of the session when the primary model is not found, instead of failing every request</li>
+<li>Auto mode no longer requires opt-in consent</li>
+<li>Vim mode: <code>/</code> in NORMAL mode now opens reverse history search (like Ctrl+R), matching bash/zsh vi-mode</li>
+<li>The <code>/usage</code> breakdown now includes large session files; files are scanned with a streaming read so memory usage stays flat</li>
+<li>Thinking summaries in the collapsed group now stay readable for at least 3 seconds, render as markdown, and cap at 10 lines (<code>Ctrl+O</code> shows the full thinking)</li>
+<li>In fullscreen mode, the &quot;Thinking for Ns&quot; indicator now counts up live while the model is thinking, and keeps its value if you interrupt mid-thought</li>
+<li>Simplified the Workflow tool&#39;s inline progress display — live agent counts now show only in the persistent workflow status row below the prompt</li>
+<li>The post-response timer now shows &quot;Waiting for N background agents/workflows to finish&quot; when backgrounded agents or workflows are still running, and reports the cumulative time once their results are processed</li>
+<li>Added the session entrypoint as an OpenTelemetry metric attribute (<code>app.entrypoint</code>, opt-in via <code>OTEL_METRICS_INCLUDE_ENTRYPOINT=true</code>)</li>
+<li>Fixed terminal styling degrading in very long sessions by recycling the renderer&#39;s style pool</li>
+<li>Fixed the sandbox-enabled warning not appearing in condensed startup mode — it now shows in every layout</li>
+<li>Fixed the loading spinner showing &quot;still thinking&quot;/&quot;almost done thinking&quot; while a tool is running, and reset the thinking status to &quot;thinking&quot; after each tool</li>
+<li>Fixed focus mode showing a spurious &quot;N messages hidden&quot; count on turns with no hidden activity</li>
+<li>Fixed clicking a link inside an expanded tool result collapsing the section instead of opening the link</li>
+<li>Fixed markdown table cell borders inheriting the color of inline code, wrapped continuation lines losing their style, and empty header cells showing a label in the narrow-terminal stacked layout</li>
+<li>Fixed plugin MCP servers with the same command but different environment variables being incorrectly deduplicated</li>
+<li>Fixed <code>/doctor</code> reporting &quot;marketplace not found&quot; or &quot;plugin not found&quot; for stale <code>enabledPlugins</code> entries referencing removed marketplaces or dropped plugins</li>
+<li>Fixed plugins that track a git branch silently no longer receiving updates after the plugin registry was rebuilt</li>
+<li>Fixed remote MCP servers failing to connect in Claude Code Remote sessions when the egress proxy is enabled</li>
+<li>Fixed the effort-change confirmation dialog appearing when the conversation has no messages or when switching between effort levels that resolve to the same underlying value</li>
+<li>Fixed the Agent tool description referencing an agent list that is never delivered when running with <code>--bare</code> or with attachments disabled</li>
+<li>Fixed a background worker crash in <code>claude agents</code> when accepting a stale permission prompt after a subagent was cancelled</li>
+<li>Fixed <code>cache_creation_input_tokens</code> reporting as 0 in transcript and result usage when the API reports cache writes only via the nested <code>cache_creation</code> breakdown</li>
+<li>Fixed the PushNotification tool incorrectly reporting &quot;Mobile push not sent (Remote Control inactive)&quot; in SDK-hosted sessions when Remote Control is enabled</li>
+<li>Fixed sessions getting stuck after a model or login switch left stale thinking-block signatures in history; now stripped proactively with a retry safety-net</li>
+</ul>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[v2.1.150]]></title>
             <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.150</link>
@@ -3030,72 +3110,6 @@
             <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
 <ul>
 <li>Fixed messages in Cowork Dispatch not getting delivered</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[v2.1.86]]></title>
-            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.86</link>
-            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.86</guid>
-            <pubDate>Fri, 27 Mar 2026 21:42:09 GMT</pubDate>
-            <description><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added <code>X-Claude-Code-Session-Id</code> header to API requests so proxies can aggregate requests by session without parsing the body</li>
-<li>Added <code>.jj</code> and <code>.sl</code> to VCS directory exclusion lists so Grep and file autocomplete don&#39;t descend into Jujutsu or Sapling metadata</li>
-<li>Fixed <code>--resume</code> failing with &quot;tool_use ids were found without tool_result blocks&quot; on sessions created before v2.1.85</li>
-<li>Fixed Write/Edit/Read failing on files outside the project root (e.g., <code>~/.claude/CLAUDE.md</code>) when conditional skills or rules are configured</li>
-<li>Fixed unnecessary config disk writes on every skill invocation that could cause performance issues and config corruption on Windows</li>
-<li>Fixed potential out-of-memory crash when using <code>/feedback</code> on very long sessions with large transcript files</li>
-<li>Fixed <code>--bare</code> mode dropping MCP tools in interactive sessions and silently discarding messages enqueued mid-turn</li>
-<li>Fixed the <code>c</code> shortcut copying only ~20 characters of the OAuth login URL instead of the full URL</li>
-<li>Fixed masked input (e.g., OAuth code paste) leaking the start of the token when wrapping across multiple lines on narrow terminals</li>
-<li>Fixed official marketplace plugin scripts failing with &quot;Permission denied&quot; on macOS/Linux since v2.1.83</li>
-<li>Fixed statusline showing another session&#39;s model when running multiple Claude Code instances and using <code>/model</code> in one of them</li>
-<li>Fixed scroll not following new messages after wheel scroll or click-to-select at the bottom of a long conversation</li>
-<li>Fixed <code>/plugin</code> uninstall dialog: pressing <code>n</code> now correctly uninstalls the plugin while preserving its data directory</li>
-<li>Fixed a regression where pressing Enter after clicking could leave the transcript blank until the response arrived</li>
-<li>Fixed <code>ultrathink</code> hint lingering after deleting the keyword</li>
-<li>Fixed memory growth in long sessions from markdown/highlight render caches retaining full content strings</li>
-<li>Reduced startup event-loop stalls when many claude.ai MCP connectors are configured (macOS keychain cache extended from 5s to 30s)</li>
-<li>Reduced token overhead when mentioning files with <code>@</code> — raw string content no longer JSON-escaped</li>
-<li>Improved prompt cache hit rate for Bedrock, Vertex, and Foundry users by removing dynamic content from tool descriptions</li>
-<li>Memory filenames in the &quot;Saved N memories&quot; notice now highlight on hover and open on click</li>
-<li>Skill descriptions in the <code>/skills</code> listing are now capped at 250 characters to reduce context usage</li>
-<li>Changed <code>/skills</code> menu to sort alphabetically for easier scanning</li>
-<li>Auto mode now shows &quot;unavailable for your plan&quot; when disabled by plan restrictions (was &quot;temporarily unavailable&quot;)</li>
-<li>[VSCode] Fixed extension incorrectly showing &quot;Not responding&quot; during long-running operations</li>
-<li>[VSCode] Fixed extension defaulting Max plan users to Sonnet after the OAuth token refreshes (8 hours after login)</li>
-<li>Read tool now uses compact line-number format and deduplicates unchanged re-reads, reducing token usage</li>
-</ul>
-]]></description>
-            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added <code>X-Claude-Code-Session-Id</code> header to API requests so proxies can aggregate requests by session without parsing the body</li>
-<li>Added <code>.jj</code> and <code>.sl</code> to VCS directory exclusion lists so Grep and file autocomplete don&#39;t descend into Jujutsu or Sapling metadata</li>
-<li>Fixed <code>--resume</code> failing with &quot;tool_use ids were found without tool_result blocks&quot; on sessions created before v2.1.85</li>
-<li>Fixed Write/Edit/Read failing on files outside the project root (e.g., <code>~/.claude/CLAUDE.md</code>) when conditional skills or rules are configured</li>
-<li>Fixed unnecessary config disk writes on every skill invocation that could cause performance issues and config corruption on Windows</li>
-<li>Fixed potential out-of-memory crash when using <code>/feedback</code> on very long sessions with large transcript files</li>
-<li>Fixed <code>--bare</code> mode dropping MCP tools in interactive sessions and silently discarding messages enqueued mid-turn</li>
-<li>Fixed the <code>c</code> shortcut copying only ~20 characters of the OAuth login URL instead of the full URL</li>
-<li>Fixed masked input (e.g., OAuth code paste) leaking the start of the token when wrapping across multiple lines on narrow terminals</li>
-<li>Fixed official marketplace plugin scripts failing with &quot;Permission denied&quot; on macOS/Linux since v2.1.83</li>
-<li>Fixed statusline showing another session&#39;s model when running multiple Claude Code instances and using <code>/model</code> in one of them</li>
-<li>Fixed scroll not following new messages after wheel scroll or click-to-select at the bottom of a long conversation</li>
-<li>Fixed <code>/plugin</code> uninstall dialog: pressing <code>n</code> now correctly uninstalls the plugin while preserving its data directory</li>
-<li>Fixed a regression where pressing Enter after clicking could leave the transcript blank until the response arrived</li>
-<li>Fixed <code>ultrathink</code> hint lingering after deleting the keyword</li>
-<li>Fixed memory growth in long sessions from markdown/highlight render caches retaining full content strings</li>
-<li>Reduced startup event-loop stalls when many claude.ai MCP connectors are configured (macOS keychain cache extended from 5s to 30s)</li>
-<li>Reduced token overhead when mentioning files with <code>@</code> — raw string content no longer JSON-escaped</li>
-<li>Improved prompt cache hit rate for Bedrock, Vertex, and Foundry users by removing dynamic content from tool descriptions</li>
-<li>Memory filenames in the &quot;Saved N memories&quot; notice now highlight on hover and open on click</li>
-<li>Skill descriptions in the <code>/skills</code> listing are now capped at 250 characters to reduce context usage</li>
-<li>Changed <code>/skills</code> menu to sort alphabetically for easier scanning</li>
-<li>Auto mode now shows &quot;unavailable for your plan&quot; when disabled by plan restrictions (was &quot;temporarily unavailable&quot;)</li>
-<li>[VSCode] Fixed extension incorrectly showing &quot;Not responding&quot; during long-running operations</li>
-<li>[VSCode] Fixed extension defaulting Max plan users to Sonnet after the OAuth token refreshes (8 hours after login)</li>
-<li>Read tool now uses compact line-number format and deduplicates unchanged re-reads, reducing token usage</li>
 </ul>
 ]]></content:encoded>
         </item>
