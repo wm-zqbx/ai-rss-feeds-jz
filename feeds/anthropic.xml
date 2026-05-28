@@ -10,6 +10,12 @@
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/anthropic.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Anthropic raises $65B in Series H funding at $965B post-money valuation]]></title>
+            <link>https://www.anthropic.com/news/series-h</link>
+            <guid>https://www.anthropic.com/news/series-h</guid>
+            <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Introducing Claude Opus 4.8]]></title>
             <link>https://www.anthropic.com/news/claude-opus-4-8</link>
             <guid>https://www.anthropic.com/news/claude-opus-4-8</guid>
@@ -61,12 +67,6 @@
             <title><![CDATA[PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients]]></title>
             <link>https://www.anthropic.com/news/pwc-expanded-partnership</link>
             <guid>https://www.anthropic.com/news/pwc-expanded-partnership</guid>
-            <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Anthropic forms $200 million partnership with the Gates Foundation]]></title>
-            <link>https://www.anthropic.com/news/gates-foundation-partnership</link>
-            <guid>https://www.anthropic.com/news/gates-foundation-partnership</guid>
             <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>

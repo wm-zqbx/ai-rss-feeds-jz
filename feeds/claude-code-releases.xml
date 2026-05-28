@@ -4,11 +4,113 @@
         <title>claude-code Releases</title>
         <link>https://github.com/anthropics/claude-code/releases</link>
         <description>GitHub releases for anthropics/claude-code</description>
-        <lastBuildDate>Thu, 28 May 2026 00:52:08 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 May 2026 18:00:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/claude-code-releases.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[v2.1.154]]></title>
+            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.154</link>
+            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.154</guid>
+            <pubDate>Thu, 28 May 2026 18:00:55 GMT</pubDate>
+            <description><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Opus 4.8 is here! Now defaults to high effort · /effort xhigh for your hardest tasks</li>
+<li>Introducing dynamic workflows: ask Claude to create a workflow and it orchestrates work across tens to hundreds of agents in the background, so you can take on larger, more complex tasks. Run <code>/workflows</code> to view your runs</li>
+<li>Fast mode on Opus 4.8 is now available at a fraction of its previous cost: 2x the standard rate for 2.5x the speed</li>
+<li>The lean system prompt is now the default for all models except Haiku, Sonnet, and Opus 4.7 and earlier</li>
+<li>Claude now reserves the multiple-choice question prompt for decisions it genuinely cannot make itself, instead of asking when it already has enough context to proceed</li>
+<li><code>/simplify</code> now runs a cleanup-only review (reuse, simplification, efficiency, altitude) and applies the fixes, instead of running the full <code>/code-review --fix</code> bug-hunting review</li>
+<li>Renamed the <code>/effort</code> slider labels from &quot;Speed&quot;/&quot;Intelligence&quot; to &quot;Faster&quot;/&quot;Smarter&quot; for clarity</li>
+<li><code>claude agents</code>: type <code>! &lt;command&gt;</code> to run a shell command as a background session you can attach to and detach from. Also available as <code>claude --bg --exec &#39;&lt;command&gt;&#39;</code></li>
+<li><code>claude agents</code>: <code>/logout</code> now signs you out instead of being sent to a background session</li>
+<li><code>←←</code> to open the agents view now works on Bedrock, Vertex, Foundry, and with telemetry disabled</li>
+<li>Claude in Chrome: pick which connected browser to use via <code>/chrome</code> → &quot;Select browser…&quot;, or in-chat when a browser action runs with multiple connected</li>
+<li>Plugins can now declare <code>defaultEnabled: false</code> in <code>plugin.json</code> or a marketplace entry; enable them with <code>/plugin</code> or <code>claude plugin enable</code>. Dependencies of enabled plugins are still enabled automatically</li>
+<li>The <code>/plugin</code> Discover tab now pins plugins whose relevance signals match the current directory with a &quot;suggested for this directory&quot; annotation</li>
+<li>Streaming tool execution is now always enabled, including when telemetry is disabled or on Bedrock/Vertex/Foundry (previously behind a feature flag)</li>
+<li>Stdio MCP server subprocesses now receive <code>CLAUDE_CODE_SESSION_ID</code> and <code>CLAUDECODE=1</code> in their environment</li>
+<li><code>claude mcp list</code>/<code>get</code> now show unapproved <code>.mcp.json</code> servers as <code>⏸ Pending approval</code> instead of auto-approving and connecting when output is piped</li>
+<li><code>/remote-control</code> autocomplete now shows &quot;Disconnect Remote Control&quot; when Remote Control is already active</li>
+<li>Added Claude Opus 4.8 support and 4.7 → 4.8 migration guidance to the <code>/claude-api</code> skill</li>
+<li>Deprecated <code>CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE</code> (will be removed on 06/01). To use fast mode on Opus 4.6, switch with <code>/model claude-opus-4-6[1m]</code> and then <code>/fast on</code></li>
+<li>Improved the auto-mode classifier&#39;s detection of data exfiltration, particularly bulk transfers of repository contents</li>
+<li>Fixed <code>rm -rf $HOME</code> not being blocked as a dangerous path when <code>HOME</code> has a trailing slash</li>
+<li>Fixed <code>$TMPDIR</code> resolving to different directories in sandboxed vs unsandboxed Bash commands within the same session</li>
+<li>Fixed unreadable highlighted-row text in <code>claude agents</code> when the Claude Code theme doesn&#39;t match the terminal background</li>
+<li>Fixed background-agent completion notifications triggering premature &quot;out of context&quot; behavior on some 1M-context models</li>
+<li>Fixed background-session classifier losing the user&#39;s goal when a scheduled <code>/command</code> fires</li>
+<li>Fixed pinned background sessions respawning every minute after a Claude Code update, causing repeated agent-start notifications and process churn at idle</li>
+<li>Fixed background sessions stuck at &quot;blocked&quot;, &quot;running&quot;, or &quot;working&quot; not retiring after the idle grace period</li>
+<li>Fixed subagents in background sessions bypassing the worktree-isolation guard and writing to the shared checkout</li>
+<li>Fixed orphaned <code>claude --bg-pty-host</code> processes spinning at 100% CPU after the daemon exits on macOS</li>
+<li>Fixed number key shortcuts not working for options shown below the divider in option dialogs</li>
+<li>Fixed <code>worktree.baseRef: &quot;head&quot;</code> resolving to the main checkout&#39;s HEAD instead of the current worktree&#39;s HEAD when spawning subagents or calling <code>EnterWorktree</code> from inside a linked worktree</li>
+<li>Fixed a stray leading space on wrapped lines when the previous line ended exactly at the terminal width</li>
+<li>Fixed intermittent terminal rendering corruption in VS Code by capping the number of distinct colors the thinking spinner produces</li>
+<li>Fixed plan file names including <code>[Image #N]</code> / <code>[Pasted text #N]</code> placeholders when a plan-mode prompt starts with pasted images or text</li>
+<li>Fixed a phantom expand/click affordance on colored tool output: short ANSI-colored lines that fit on screen no longer show a &quot;ctrl+o to expand&quot; hint</li>
+<li>Fixed a single invalid <code>allowedMcpServers</code>/<code>deniedMcpServers</code> entry in managed settings discarding all managed-settings policy; the bad entry is now dropped with a <code>claude doctor</code> warning</li>
+<li>Fixed API 400 errors on models that don&#39;t support the effort parameter when <code>CLAUDE_CODE_ALWAYS_ENABLE_EFFORT</code> is set</li>
+<li>Windows: Fixed update failures caused by <code>claude.exe</code> being in use showing a generic error instead of telling you to close other sessions and retry</li>
+<li>Removed the stale &quot;&amp; for background&quot; hint from the shortcuts help panel</li>
+<li>[VSCode] Auto mode no longer requires the bypass-permissions setting to appear in the mode picker, and a dismissable notice on the new-session screen explains auto mode the first time it&#39;s active</li>
+<li>Fixed the task panel below the prompt showing a stray unselectable &quot;main&quot; row when only a workflow is running</li>
+<li>Fixed /mcp tools list and tool detail rendering when MCP servers have long or multi-line tool names or long descriptions</li>
+<li>Fixed the /model picker not showing fast mode pricing on the Default option for API (pay-as-you-go) users when fast mode is on</li>
+<li>Fixed auto mode incorrectly blocking actions with &quot;could not evaluate this action&quot; when the safety classifier ran out of output tokens while reasoning</li>
+</ul>
+]]></description>
+            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Opus 4.8 is here! Now defaults to high effort · /effort xhigh for your hardest tasks</li>
+<li>Introducing dynamic workflows: ask Claude to create a workflow and it orchestrates work across tens to hundreds of agents in the background, so you can take on larger, more complex tasks. Run <code>/workflows</code> to view your runs</li>
+<li>Fast mode on Opus 4.8 is now available at a fraction of its previous cost: 2x the standard rate for 2.5x the speed</li>
+<li>The lean system prompt is now the default for all models except Haiku, Sonnet, and Opus 4.7 and earlier</li>
+<li>Claude now reserves the multiple-choice question prompt for decisions it genuinely cannot make itself, instead of asking when it already has enough context to proceed</li>
+<li><code>/simplify</code> now runs a cleanup-only review (reuse, simplification, efficiency, altitude) and applies the fixes, instead of running the full <code>/code-review --fix</code> bug-hunting review</li>
+<li>Renamed the <code>/effort</code> slider labels from &quot;Speed&quot;/&quot;Intelligence&quot; to &quot;Faster&quot;/&quot;Smarter&quot; for clarity</li>
+<li><code>claude agents</code>: type <code>! &lt;command&gt;</code> to run a shell command as a background session you can attach to and detach from. Also available as <code>claude --bg --exec &#39;&lt;command&gt;&#39;</code></li>
+<li><code>claude agents</code>: <code>/logout</code> now signs you out instead of being sent to a background session</li>
+<li><code>←←</code> to open the agents view now works on Bedrock, Vertex, Foundry, and with telemetry disabled</li>
+<li>Claude in Chrome: pick which connected browser to use via <code>/chrome</code> → &quot;Select browser…&quot;, or in-chat when a browser action runs with multiple connected</li>
+<li>Plugins can now declare <code>defaultEnabled: false</code> in <code>plugin.json</code> or a marketplace entry; enable them with <code>/plugin</code> or <code>claude plugin enable</code>. Dependencies of enabled plugins are still enabled automatically</li>
+<li>The <code>/plugin</code> Discover tab now pins plugins whose relevance signals match the current directory with a &quot;suggested for this directory&quot; annotation</li>
+<li>Streaming tool execution is now always enabled, including when telemetry is disabled or on Bedrock/Vertex/Foundry (previously behind a feature flag)</li>
+<li>Stdio MCP server subprocesses now receive <code>CLAUDE_CODE_SESSION_ID</code> and <code>CLAUDECODE=1</code> in their environment</li>
+<li><code>claude mcp list</code>/<code>get</code> now show unapproved <code>.mcp.json</code> servers as <code>⏸ Pending approval</code> instead of auto-approving and connecting when output is piped</li>
+<li><code>/remote-control</code> autocomplete now shows &quot;Disconnect Remote Control&quot; when Remote Control is already active</li>
+<li>Added Claude Opus 4.8 support and 4.7 → 4.8 migration guidance to the <code>/claude-api</code> skill</li>
+<li>Deprecated <code>CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE</code> (will be removed on 06/01). To use fast mode on Opus 4.6, switch with <code>/model claude-opus-4-6[1m]</code> and then <code>/fast on</code></li>
+<li>Improved the auto-mode classifier&#39;s detection of data exfiltration, particularly bulk transfers of repository contents</li>
+<li>Fixed <code>rm -rf $HOME</code> not being blocked as a dangerous path when <code>HOME</code> has a trailing slash</li>
+<li>Fixed <code>$TMPDIR</code> resolving to different directories in sandboxed vs unsandboxed Bash commands within the same session</li>
+<li>Fixed unreadable highlighted-row text in <code>claude agents</code> when the Claude Code theme doesn&#39;t match the terminal background</li>
+<li>Fixed background-agent completion notifications triggering premature &quot;out of context&quot; behavior on some 1M-context models</li>
+<li>Fixed background-session classifier losing the user&#39;s goal when a scheduled <code>/command</code> fires</li>
+<li>Fixed pinned background sessions respawning every minute after a Claude Code update, causing repeated agent-start notifications and process churn at idle</li>
+<li>Fixed background sessions stuck at &quot;blocked&quot;, &quot;running&quot;, or &quot;working&quot; not retiring after the idle grace period</li>
+<li>Fixed subagents in background sessions bypassing the worktree-isolation guard and writing to the shared checkout</li>
+<li>Fixed orphaned <code>claude --bg-pty-host</code> processes spinning at 100% CPU after the daemon exits on macOS</li>
+<li>Fixed number key shortcuts not working for options shown below the divider in option dialogs</li>
+<li>Fixed <code>worktree.baseRef: &quot;head&quot;</code> resolving to the main checkout&#39;s HEAD instead of the current worktree&#39;s HEAD when spawning subagents or calling <code>EnterWorktree</code> from inside a linked worktree</li>
+<li>Fixed a stray leading space on wrapped lines when the previous line ended exactly at the terminal width</li>
+<li>Fixed intermittent terminal rendering corruption in VS Code by capping the number of distinct colors the thinking spinner produces</li>
+<li>Fixed plan file names including <code>[Image #N]</code> / <code>[Pasted text #N]</code> placeholders when a plan-mode prompt starts with pasted images or text</li>
+<li>Fixed a phantom expand/click affordance on colored tool output: short ANSI-colored lines that fit on screen no longer show a &quot;ctrl+o to expand&quot; hint</li>
+<li>Fixed a single invalid <code>allowedMcpServers</code>/<code>deniedMcpServers</code> entry in managed settings discarding all managed-settings policy; the bad entry is now dropped with a <code>claude doctor</code> warning</li>
+<li>Fixed API 400 errors on models that don&#39;t support the effort parameter when <code>CLAUDE_CODE_ALWAYS_ENABLE_EFFORT</code> is set</li>
+<li>Windows: Fixed update failures caused by <code>claude.exe</code> being in use showing a generic error instead of telling you to close other sessions and retry</li>
+<li>Removed the stale &quot;&amp; for background&quot; hint from the shortcuts help panel</li>
+<li>[VSCode] Auto mode no longer requires the bypass-permissions setting to appear in the mode picker, and a dismissable notice on the new-session screen explains auto mode the first time it&#39;s active</li>
+<li>Fixed the task panel below the prompt showing a stray unselectable &quot;main&quot; row when only a workflow is running</li>
+<li>Fixed /mcp tools list and tool detail rendering when MCP servers have long or multi-line tool names or long descriptions</li>
+<li>Fixed the /model picker not showing fast mode pricing on the Default option for API (pay-as-you-go) users when fast mode is on</li>
+<li>Fixed auto mode incorrectly blocking actions with &quot;could not evaluate this action&quot; when the safety classifier ran out of output tokens while reasoning</li>
+</ul>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[v2.1.153]]></title>
             <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.153</link>
@@ -3062,124 +3164,6 @@
 <li>Improved <code>/resume</code> all-projects view to load project sessions in parallel, improving load times for users with many projects</li>
 <li>Changed <code>--resume</code> picker to no longer show sessions created by <code>claude -p</code> or SDK invocations</li>
 <li>Removed <code>Get-DnsClientCache</code> and <code>ipconfig /displaydns</code> from auto-allow (DNS cache privacy)</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[v2.1.89]]></title>
-            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.89</link>
-            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.89</guid>
-            <pubDate>Wed, 01 Apr 2026 01:07:06 GMT</pubDate>
-            <description><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added <code>&quot;defer&quot;</code> permission decision to <code>PreToolUse</code> hooks — headless sessions can pause at a tool call and resume with <code>-p --resume</code> to have the hook re-evaluate</li>
-<li>Added <code>CLAUDE_CODE_NO_FLICKER=1</code> environment variable to opt into flicker-free alt-screen rendering with virtualized scrollback</li>
-<li>Added <code>PermissionDenied</code> hook that fires after auto mode classifier denials — return <code>{retry: true}</code> to tell the model it can retry</li>
-<li>Added named subagents to <code>@</code> mention typeahead suggestions</li>
-<li>Added <code>MCP_CONNECTION_NONBLOCKING=true</code> for <code>-p</code> mode to skip the MCP connection wait entirely, and bounded <code>--mcp-config</code> server connections at 5s instead of blocking on the slowest server</li>
-<li>Auto mode: denied commands now show a notification and appear in <code>/permissions</code> → Recent tab where you can retry with <code>r</code></li>
-<li>Fixed <code>Edit(//path/**)</code> and <code>Read(//path/**)</code> allow rules to check the resolved symlink target, not just the requested path</li>
-<li>Fixed voice push-to-talk not activating for some modifier-combo bindings, and voice mode on Windows failing with &quot;WebSocket upgrade rejected with HTTP 101&quot;</li>
-<li>Fixed Edit/Write tools doubling CRLF on Windows and stripping Markdown hard line breaks (two trailing spaces)</li>
-<li>Fixed <code>StructuredOutput</code> schema cache bug causing ~50% failure rate when using multiple schemas</li>
-<li>Fixed memory leak where large JSON inputs were retained as LRU cache keys in long-running sessions</li>
-<li>Fixed a crash when removing a message from very large session files (over 50MB)</li>
-<li>Fixed LSP server zombie state after crash — server now restarts on next request instead of failing until session restart</li>
-<li>Fixed prompt history entries containing CJK or emoji being silently dropped when they fall on a 4KB boundary in <code>~/.claude/history.jsonl</code></li>
-<li>Fixed <code>/stats</code> undercounting tokens by excluding subagent usage, and losing historical data beyond 30 days when the stats cache format changes</li>
-<li>Fixed <code>-p --resume</code> hangs when the deferred tool input exceeds 64KB or no deferred marker exists, and <code>-p --continue</code> not resuming deferred tools</li>
-<li>Fixed <code>claude-cli://</code> deep links not opening on macOS</li>
-<li>Fixed MCP tool errors truncating to only the first content block when the server returns multi-element error content</li>
-<li>Fixed skill reminders and other system context being dropped when sending messages with images via the SDK</li>
-<li>Fixed PreToolUse/PostToolUse hooks to receive <code>file_path</code> as an absolute path for Write/Edit/Read tools, matching the documented behavior</li>
-<li>Fixed autocompact thrash loop — now detects when context refills to the limit immediately after compacting three times in a row and stops with an actionable error instead of burning API calls</li>
-<li>Fixed prompt cache misses in long sessions caused by tool schema bytes changing mid-session</li>
-<li>Fixed nested CLAUDE.md files being re-injected dozens of times in long sessions that read many files</li>
-<li>Fixed <code>--resume</code> crash when transcript contains a tool result from an older CLI version or interrupted write</li>
-<li>Fixed misleading &quot;Rate limit reached&quot; message when the API returned an entitlement error — now shows the actual error with actionable hints</li>
-<li>Fixed hooks <code>if</code> condition filtering not matching compound commands (<code>ls &amp;&amp; git push</code>) or commands with env-var prefixes (<code>FOO=bar git push</code>)</li>
-<li>Fixed collapsed search/read group badges duplicating in terminal scrollback during heavy parallel tool use</li>
-<li>Fixed notification <code>invalidates</code> not clearing the currently-displayed notification immediately</li>
-<li>Fixed prompt briefly disappearing after submit when background messages arrived during processing</li>
-<li>Fixed Devanagari and other combining-mark text being truncated in assistant output</li>
-<li>Fixed rendering artifacts on main-screen terminals after layout shifts</li>
-<li>Fixed voice mode failing to request microphone permission on macOS Apple Silicon</li>
-<li>Fixed Shift+Enter submitting instead of inserting a newline on Windows Terminal Preview 1.25</li>
-<li>Fixed periodic UI jitter during streaming in iTerm2 when running inside tmux</li>
-<li>Fixed PowerShell tool incorrectly reporting failures when commands like <code>git push</code> wrote progress to stderr on Windows PowerShell 5.1</li>
-<li>Fixed a potential out-of-memory crash when the Edit tool was used on very large files (&gt;1 GiB)</li>
-<li>Improved collapsed tool summary to show &quot;Listed N directories&quot; for <code>ls</code>/<code>tree</code>/<code>du</code> instead of &quot;Read N files&quot;</li>
-<li>Improved Bash tool to warn when a formatter/linter command modifies files you have previously read, preventing stale-edit errors</li>
-<li>Improved <code>@</code>-mention typeahead to rank source files above MCP resources with similar names</li>
-<li>Improved PowerShell tool prompt with version-appropriate syntax guidance (5.1 vs 7+)</li>
-<li>Changed <code>Edit</code> to work on files viewed via <code>Bash</code> with <code>sed -n</code> or <code>cat</code>, without requiring a separate <code>Read</code> call first</li>
-<li>Changed hook output over 50K characters to be saved to disk with a file path + preview instead of being injected directly into context</li>
-<li>Changed <code>cleanupPeriodDays: 0</code> in settings.json to be rejected with a validation error — it previously silently disabled transcript persistence</li>
-<li>Changed thinking summaries to no longer be generated by default in interactive sessions — set <code>showThinkingSummaries: true</code> in settings.json to restore</li>
-<li>Documented <code>TaskCreated</code> hook event and its blocking behavior</li>
-<li>Preserved task notifications when backgrounding a running command with Ctrl+B</li>
-<li>PowerShell tool on Windows: external-command arguments containing both a double-quote and whitespace now prompt instead of auto-allowing (PS 5.1 argument-splitting hardening)</li>
-<li><code>/env</code> now applies to PowerShell tool commands (previously only affected Bash)</li>
-<li><code>/usage</code> now hides redundant &quot;Current week (Sonnet only)&quot; bar for Pro and Enterprise plans</li>
-<li>Image paste no longer inserts a trailing space</li>
-<li>Pasting <code>!command</code> into an empty prompt now enters bash mode, matching typed <code>!</code> behavior</li>
-<li><code>/buddy</code> is here for April 1st — hatch a small creature that watches you code</li>
-</ul>
-]]></description>
-            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added <code>&quot;defer&quot;</code> permission decision to <code>PreToolUse</code> hooks — headless sessions can pause at a tool call and resume with <code>-p --resume</code> to have the hook re-evaluate</li>
-<li>Added <code>CLAUDE_CODE_NO_FLICKER=1</code> environment variable to opt into flicker-free alt-screen rendering with virtualized scrollback</li>
-<li>Added <code>PermissionDenied</code> hook that fires after auto mode classifier denials — return <code>{retry: true}</code> to tell the model it can retry</li>
-<li>Added named subagents to <code>@</code> mention typeahead suggestions</li>
-<li>Added <code>MCP_CONNECTION_NONBLOCKING=true</code> for <code>-p</code> mode to skip the MCP connection wait entirely, and bounded <code>--mcp-config</code> server connections at 5s instead of blocking on the slowest server</li>
-<li>Auto mode: denied commands now show a notification and appear in <code>/permissions</code> → Recent tab where you can retry with <code>r</code></li>
-<li>Fixed <code>Edit(//path/**)</code> and <code>Read(//path/**)</code> allow rules to check the resolved symlink target, not just the requested path</li>
-<li>Fixed voice push-to-talk not activating for some modifier-combo bindings, and voice mode on Windows failing with &quot;WebSocket upgrade rejected with HTTP 101&quot;</li>
-<li>Fixed Edit/Write tools doubling CRLF on Windows and stripping Markdown hard line breaks (two trailing spaces)</li>
-<li>Fixed <code>StructuredOutput</code> schema cache bug causing ~50% failure rate when using multiple schemas</li>
-<li>Fixed memory leak where large JSON inputs were retained as LRU cache keys in long-running sessions</li>
-<li>Fixed a crash when removing a message from very large session files (over 50MB)</li>
-<li>Fixed LSP server zombie state after crash — server now restarts on next request instead of failing until session restart</li>
-<li>Fixed prompt history entries containing CJK or emoji being silently dropped when they fall on a 4KB boundary in <code>~/.claude/history.jsonl</code></li>
-<li>Fixed <code>/stats</code> undercounting tokens by excluding subagent usage, and losing historical data beyond 30 days when the stats cache format changes</li>
-<li>Fixed <code>-p --resume</code> hangs when the deferred tool input exceeds 64KB or no deferred marker exists, and <code>-p --continue</code> not resuming deferred tools</li>
-<li>Fixed <code>claude-cli://</code> deep links not opening on macOS</li>
-<li>Fixed MCP tool errors truncating to only the first content block when the server returns multi-element error content</li>
-<li>Fixed skill reminders and other system context being dropped when sending messages with images via the SDK</li>
-<li>Fixed PreToolUse/PostToolUse hooks to receive <code>file_path</code> as an absolute path for Write/Edit/Read tools, matching the documented behavior</li>
-<li>Fixed autocompact thrash loop — now detects when context refills to the limit immediately after compacting three times in a row and stops with an actionable error instead of burning API calls</li>
-<li>Fixed prompt cache misses in long sessions caused by tool schema bytes changing mid-session</li>
-<li>Fixed nested CLAUDE.md files being re-injected dozens of times in long sessions that read many files</li>
-<li>Fixed <code>--resume</code> crash when transcript contains a tool result from an older CLI version or interrupted write</li>
-<li>Fixed misleading &quot;Rate limit reached&quot; message when the API returned an entitlement error — now shows the actual error with actionable hints</li>
-<li>Fixed hooks <code>if</code> condition filtering not matching compound commands (<code>ls &amp;&amp; git push</code>) or commands with env-var prefixes (<code>FOO=bar git push</code>)</li>
-<li>Fixed collapsed search/read group badges duplicating in terminal scrollback during heavy parallel tool use</li>
-<li>Fixed notification <code>invalidates</code> not clearing the currently-displayed notification immediately</li>
-<li>Fixed prompt briefly disappearing after submit when background messages arrived during processing</li>
-<li>Fixed Devanagari and other combining-mark text being truncated in assistant output</li>
-<li>Fixed rendering artifacts on main-screen terminals after layout shifts</li>
-<li>Fixed voice mode failing to request microphone permission on macOS Apple Silicon</li>
-<li>Fixed Shift+Enter submitting instead of inserting a newline on Windows Terminal Preview 1.25</li>
-<li>Fixed periodic UI jitter during streaming in iTerm2 when running inside tmux</li>
-<li>Fixed PowerShell tool incorrectly reporting failures when commands like <code>git push</code> wrote progress to stderr on Windows PowerShell 5.1</li>
-<li>Fixed a potential out-of-memory crash when the Edit tool was used on very large files (&gt;1 GiB)</li>
-<li>Improved collapsed tool summary to show &quot;Listed N directories&quot; for <code>ls</code>/<code>tree</code>/<code>du</code> instead of &quot;Read N files&quot;</li>
-<li>Improved Bash tool to warn when a formatter/linter command modifies files you have previously read, preventing stale-edit errors</li>
-<li>Improved <code>@</code>-mention typeahead to rank source files above MCP resources with similar names</li>
-<li>Improved PowerShell tool prompt with version-appropriate syntax guidance (5.1 vs 7+)</li>
-<li>Changed <code>Edit</code> to work on files viewed via <code>Bash</code> with <code>sed -n</code> or <code>cat</code>, without requiring a separate <code>Read</code> call first</li>
-<li>Changed hook output over 50K characters to be saved to disk with a file path + preview instead of being injected directly into context</li>
-<li>Changed <code>cleanupPeriodDays: 0</code> in settings.json to be rejected with a validation error — it previously silently disabled transcript persistence</li>
-<li>Changed thinking summaries to no longer be generated by default in interactive sessions — set <code>showThinkingSummaries: true</code> in settings.json to restore</li>
-<li>Documented <code>TaskCreated</code> hook event and its blocking behavior</li>
-<li>Preserved task notifications when backgrounding a running command with Ctrl+B</li>
-<li>PowerShell tool on Windows: external-command arguments containing both a double-quote and whitespace now prompt instead of auto-allowing (PS 5.1 argument-splitting hardening)</li>
-<li><code>/env</code> now applies to PowerShell tool commands (previously only affected Bash)</li>
-<li><code>/usage</code> now hides redundant &quot;Current week (Sonnet only)&quot; bar for Pro and Enterprise plans</li>
-<li>Image paste no longer inserts a trailing space</li>
-<li>Pasting <code>!command</code> into an empty prompt now enters bash mode, matching typed <code>!</code> behavior</li>
-<li><code>/buddy</code> is here for April 1st — hatch a small creature that watches you code</li>
 </ul>
 ]]></content:encoded>
         </item>

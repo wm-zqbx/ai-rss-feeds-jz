@@ -441,7 +441,6 @@
 <hr>
 <h2>🪟 Native Windows (Beta Continued)</h2>
 <ul>
-<li>Thin desktop installer + first-launch <code>install.ps1</code> bootstrap. (<a href="https://github.com/NousResearch/hermes-agent/pull/27822">#27822</a>)</li>
 <li>Complete Windows bootstrap — <code>dep_ensure</code> + <code>install.ps1</code> + detection. (@alt-glitch) (<a href="https://github.com/NousResearch/hermes-agent/pull/27845">#27845</a>)</li>
 <li><code>install.ps1</code>: strip BOM, <code>-Commit</code>/<code>-Tag</code> pin params, harden git ops. (@jquesnelle) (<a href="https://github.com/NousResearch/hermes-agent/pull/28169">#28169</a>)</li>
 <li>Consolidate ACP browser bootstrap into <code>install.{sh,ps1}</code>. (@alt-glitch) (<a href="https://github.com/NousResearch/hermes-agent/pull/27851">#27851</a>)</li>
@@ -450,12 +449,9 @@
 <li>Windows Docker Desktop compatible compose file. (@Sunil123135) (<a href="https://github.com/NousResearch/hermes-agent/pull/31031">#31031</a>)</li>
 </ul>
 <hr>
-<h2>🖼️ Hermes Desktop GUI</h2>
+<h2>🖥️ Web Dashboard</h2>
 <ul>
-<li><code>hermes gui</code> launcher — install + build + launch packaged Electron app. (@OutThisLife) (<a href="https://github.com/NousResearch/hermes-agent/pull/30165">#30165</a>)</li>
-<li>Desktop UI lift. (<a href="https://github.com/NousResearch/hermes-agent/pull/27227">#27227</a>)</li>
-<li><code>nix</code> package <code>.#desktop</code>. (@ethernet8023) (<a href="https://github.com/NousResearch/hermes-agent/pull/28964">#28964</a>)</li>
-<li>Hardened Slack socket recovery + Windows desktop restart dedupe. (<a href="https://github.com/NousResearch/hermes-agent/pull/28873">#28873</a>)</li>
+<li>Hardened Slack socket recovery + Windows restart dedupe. (<a href="https://github.com/NousResearch/hermes-agent/pull/28873">#28873</a>)</li>
 <li>Web dashboard: migrate checkboxes to <code>@nous-research/ui</code> + design-system polish. (@austinpickett) (<a href="https://github.com/NousResearch/hermes-agent/pull/28814">#28814</a>)</li>
 <li>Web dashboard: collapsible sidebar. (@austinpickett) (<a href="https://github.com/NousResearch/hermes-agent/pull/33421">#33421</a>)</li>
 <li>Dashboard typography &amp; contrast pass. (salvage of <a href="https://github.com/NousResearch/hermes-agent/pull/28832">#28832</a>) (<a href="https://github.com/NousResearch/hermes-agent/pull/30714">#30714</a>)</li>
@@ -567,11 +563,11 @@
 <h3>Notable salvages &amp; cherry-picks</h3>
 <ul>
 <li><strong>@benbarclay</strong> — s6-overlay container supervision (29 commits salvaged), Node 22 LTS upgrade, build-essential cleanup, <code>gateway run</code> auto-redirect in s6, tee supervised stdout to docker logs, <code>hermes update</code> Docker guidance, build-time SHA stamping</li>
-<li><strong>@OutThisLife</strong> — <code>hermes gui</code> desktop launcher, <code>mouse_tracking</code> DEC mode presets</li>
+<li><strong>@OutThisLife</strong> — <code>mouse_tracking</code> DEC mode presets</li>
 <li><strong>@jquesnelle</strong> — Windows installer hardening, <code>--branch</code> flag for <code>hermes update</code>, install.ps1 BOM strip / commit-pin</li>
 <li><strong>@alt-glitch</strong> — Windows <code>dep_ensure</code> bootstrap, Nix package variants (<code>.#messaging</code>, <code>.#full</code>), install-method stamping, ACP browser bootstrap consolidation</li>
 <li><strong>@austinpickett</strong> — <code>/update</code> slash command, dashboard checkboxes → <code>@nous-research/ui</code>, mobile dashboard polish, collapsible sidebar</li>
-<li><strong>@ethernet8023</strong> — Nix <code>.#desktop</code> packaging, CI test slicing across GH Actions jobs, TUI clipboard copy fix</li>
+<li><strong>@ethernet8023</strong> — CI test slicing across GH Actions jobs, TUI clipboard copy fix</li>
 <li><strong>@kshitijk4poor</strong> — doctor section banner + fail-and-issue helpers extraction, post-tag salvage cluster (curator-fallout, kanban SQLite hardening, install world-readable uv dirs, xAI bare-code paste)</li>
 <li><strong>@rewbs</strong> — Nous JWT inference switch + refresh-token replay fix</li>
 <li><strong>@Codename-11</strong> + <strong>@Schwartz10</strong> — session control API (REST + SSE + multimodal followup)</li>
@@ -1066,7 +1062,6 @@
 <hr>
 <h2>🪟 Native Windows (Beta Continued)</h2>
 <ul>
-<li>Thin desktop installer + first-launch <code>install.ps1</code> bootstrap. (<a href="https://github.com/NousResearch/hermes-agent/pull/27822">#27822</a>)</li>
 <li>Complete Windows bootstrap — <code>dep_ensure</code> + <code>install.ps1</code> + detection. (@alt-glitch) (<a href="https://github.com/NousResearch/hermes-agent/pull/27845">#27845</a>)</li>
 <li><code>install.ps1</code>: strip BOM, <code>-Commit</code>/<code>-Tag</code> pin params, harden git ops. (@jquesnelle) (<a href="https://github.com/NousResearch/hermes-agent/pull/28169">#28169</a>)</li>
 <li>Consolidate ACP browser bootstrap into <code>install.{sh,ps1}</code>. (@alt-glitch) (<a href="https://github.com/NousResearch/hermes-agent/pull/27851">#27851</a>)</li>
@@ -1075,12 +1070,9 @@
 <li>Windows Docker Desktop compatible compose file. (@Sunil123135) (<a href="https://github.com/NousResearch/hermes-agent/pull/31031">#31031</a>)</li>
 </ul>
 <hr>
-<h2>🖼️ Hermes Desktop GUI</h2>
+<h2>🖥️ Web Dashboard</h2>
 <ul>
-<li><code>hermes gui</code> launcher — install + build + launch packaged Electron app. (@OutThisLife) (<a href="https://github.com/NousResearch/hermes-agent/pull/30165">#30165</a>)</li>
-<li>Desktop UI lift. (<a href="https://github.com/NousResearch/hermes-agent/pull/27227">#27227</a>)</li>
-<li><code>nix</code> package <code>.#desktop</code>. (@ethernet8023) (<a href="https://github.com/NousResearch/hermes-agent/pull/28964">#28964</a>)</li>
-<li>Hardened Slack socket recovery + Windows desktop restart dedupe. (<a href="https://github.com/NousResearch/hermes-agent/pull/28873">#28873</a>)</li>
+<li>Hardened Slack socket recovery + Windows restart dedupe. (<a href="https://github.com/NousResearch/hermes-agent/pull/28873">#28873</a>)</li>
 <li>Web dashboard: migrate checkboxes to <code>@nous-research/ui</code> + design-system polish. (@austinpickett) (<a href="https://github.com/NousResearch/hermes-agent/pull/28814">#28814</a>)</li>
 <li>Web dashboard: collapsible sidebar. (@austinpickett) (<a href="https://github.com/NousResearch/hermes-agent/pull/33421">#33421</a>)</li>
 <li>Dashboard typography &amp; contrast pass. (salvage of <a href="https://github.com/NousResearch/hermes-agent/pull/28832">#28832</a>) (<a href="https://github.com/NousResearch/hermes-agent/pull/30714">#30714</a>)</li>
@@ -1192,11 +1184,11 @@
 <h3>Notable salvages &amp; cherry-picks</h3>
 <ul>
 <li><strong>@benbarclay</strong> — s6-overlay container supervision (29 commits salvaged), Node 22 LTS upgrade, build-essential cleanup, <code>gateway run</code> auto-redirect in s6, tee supervised stdout to docker logs, <code>hermes update</code> Docker guidance, build-time SHA stamping</li>
-<li><strong>@OutThisLife</strong> — <code>hermes gui</code> desktop launcher, <code>mouse_tracking</code> DEC mode presets</li>
+<li><strong>@OutThisLife</strong> — <code>mouse_tracking</code> DEC mode presets</li>
 <li><strong>@jquesnelle</strong> — Windows installer hardening, <code>--branch</code> flag for <code>hermes update</code>, install.ps1 BOM strip / commit-pin</li>
 <li><strong>@alt-glitch</strong> — Windows <code>dep_ensure</code> bootstrap, Nix package variants (<code>.#messaging</code>, <code>.#full</code>), install-method stamping, ACP browser bootstrap consolidation</li>
 <li><strong>@austinpickett</strong> — <code>/update</code> slash command, dashboard checkboxes → <code>@nous-research/ui</code>, mobile dashboard polish, collapsible sidebar</li>
-<li><strong>@ethernet8023</strong> — Nix <code>.#desktop</code> packaging, CI test slicing across GH Actions jobs, TUI clipboard copy fix</li>
+<li><strong>@ethernet8023</strong> — CI test slicing across GH Actions jobs, TUI clipboard copy fix</li>
 <li><strong>@kshitijk4poor</strong> — doctor section banner + fail-and-issue helpers extraction, post-tag salvage cluster (curator-fallout, kanban SQLite hardening, install world-readable uv dirs, xAI bare-code paste)</li>
 <li><strong>@rewbs</strong> — Nous JWT inference switch + refresh-token replay fix</li>
 <li><strong>@Codename-11</strong> + <strong>@Schwartz10</strong> — session control API (REST + SSE + multimodal followup)</li>
