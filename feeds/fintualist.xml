@@ -4,16 +4,16 @@
         <title>El Fintualist</title>
         <link>https://fintualist.com/chile/</link>
         <description>En Fintualist te contamos cada semana noticias interesantes e historias sobre economía, política, inversiones, ciencia, tecnología y finanzas.</description>
-        <lastBuildDate>Wed, 27 May 2026 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 May 2026 15:21:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>es</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/fintualist.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[📍 Mercados en vivo - Nuevo tropiezo desde Medio Oriente]]></title>
-            <link>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</link>
-            <guid>https://fintualist.com/chile/economia/mercados/actualizacion-mercado-cl/</guid>
-            <pubDate>Wed, 27 May 2026 12:00:00 GMT</pubDate>
+            <title><![CDATA[La película más rentable del año]]></title>
+            <link>https://fintualist.com/chile/newsletters/la-pelicula-mas-rentable-del-ano/</link>
+            <guid>https://fintualist.com/chile/newsletters/la-pelicula-mas-rentable-del-ano/</guid>
+            <pubDate>Thu, 28 May 2026 15:21:12 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[¿Por qué la salida a la bolsa de SpaceX es histórica?]]></title>
