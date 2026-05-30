@@ -4,22 +4,22 @@
         <title>Mekong ASEAN</title>
         <link>https://mekongasean.vn/</link>
         <description>Tạp chí điện tử MEKONG - ASEAN</description>
-        <lastBuildDate>Fri, 29 May 2026 14:00:51 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 May 2026 07:19:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>vi</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/mekongasean.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Tổng Bí thư, Chủ tịch nước thăm các cơ sở công nghệ tại Singapore]]></title>
+            <link>https://mekongasean.vn/tong-bi-thu-chu-tich-nuoc-tham-cac-co-so-cong-nghe-tai-singapore-55750.html</link>
+            <guid>https://mekongasean.vn/tong-bi-thu-chu-tich-nuoc-tham-cac-co-so-cong-nghe-tai-singapore-55750.html</guid>
+            <pubDate>Sat, 30 May 2026 07:19:30 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Tổng Bí thư, Chủ tịch nước phát biểu tại Đối thoại Shangri-La lần thứ 23]]></title>
             <link>https://mekongasean.vn/tong-bi-thu-chu-tich-nuoc-phat-bieu-tai-doi-thoai-shangri-la-lan-thu-23-55733.html</link>
             <guid>https://mekongasean.vn/tong-bi-thu-chu-tich-nuoc-phat-bieu-tai-doi-thoai-shangri-la-lan-thu-23-55733.html</guid>
             <pubDate>Fri, 29 May 2026 14:00:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Mở ra cơ hội hợp tác to lớn giữa Việt Nam và Singapore]]></title>
-            <link>https://mekongasean.vn/mo-ra-co-hoi-hop-tac-to-lon-giua-viet-nam-va-singapore-55727.html</link>
-            <guid>https://mekongasean.vn/mo-ra-co-hoi-hop-tac-to-lon-giua-viet-nam-va-singapore-55727.html</guid>
-            <pubDate>Fri, 29 May 2026 11:06:50 GMT</pubDate>
         </item>
     </channel>
 </rss>
