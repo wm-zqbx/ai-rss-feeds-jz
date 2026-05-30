@@ -10,6 +10,13 @@
         <language>zh</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/wenweipo-hongkong.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[理大夥眼視覺研究中心及科技園推「全球視覺科技培育計劃」加速視覺科研成果轉化落地]]></title>
+            <link>https://www.wenweipo.com/a/202605/31/AP6a1b3919e4b0b49ad1bd64e6.html</link>
+            <guid>https://www.wenweipo.com/a/202605/31/AP6a1b3919e4b0b49ad1bd64e6.html</guid>
+            <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[香港理工大學（理大）眼科視光學院、InnoHK眼視覺研究中心（CEVR）及理大知識轉移及創業處，聯同加拿大滑鐵盧大學眼科視光學及視覺科學學院，以及香港科技園公司（科技園公司），正式推出「全球視覺科技培育計劃」，旨在匯聚全球頂尖視覺科學研究團隊、醫療科技初創及創業人才，以香港作為科研轉化、技術驗證、企業孵化及市場拓展的重要基地，推動前沿視覺科技由實驗室走向臨床應用、市場落地及國際化發展。]]></description>
+        </item>
+        <item>
             <title><![CDATA[（有片）專訪天文台科學主任郭于庭：AI無法取代人手]]></title>
             <link>https://www.wenweipo.com/a/202605/31/AP6a1aaf7ae4b0b49ad1bd5b97.html</link>
             <guid>https://www.wenweipo.com/a/202605/31/AP6a1aaf7ae4b0b49ad1bd5b97.html</guid>
@@ -106,13 +113,6 @@
             <guid>https://www.wenweipo.com/a/202605/30/AP6a1aacd0e4b0b49ad1bd5b54.html</guid>
             <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[5月30日，廣東省人民政府官網發布公告，宣布將「港車北上」政策生效期延長5年，至2031年6月1日。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[羅便臣道火警│3男女倒臥主人房廁所和客房昏迷  現場檢獲吸食冰毒工具]]></title>
-            <link>https://www.wenweipo.com/a/202605/30/AP6a1aaad2e4b0b49ad1bd5b0b.html</link>
-            <guid>https://www.wenweipo.com/a/202605/30/AP6a1aaad2e4b0b49ad1bd5b0b.html</guid>
-            <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[港島半山羅便臣道一住宅單位今早（30日）發生火警，事件釀成3名男女昏迷。消防處表示，今早10時53分接報，指在港島半山羅便臣道5-9號薈萃苑一單位發生火警，消防人員在接報後5分鐘趕至。行動中，消防處共調派9架消防車、7架救護車、59名消防人員及救護人員，動用一條消防喉及一隊煙帽隊灌救，火勢在上午約11時17分大致被救熄。]]></description>
         </item>
     </channel>
 </rss>
