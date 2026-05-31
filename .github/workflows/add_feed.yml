@@ -33,24 +33,27 @@ jobs:
 
       - name: Add feed (smart detection)
         id: add-feed
+        shell: bash
         run: |
-          # Snapshot the newest config BEFORE running (to exclude it from diff detection)
+          set -eo pipefail
+          # Snapshot the newest config BEFORE running (to detect whether a new one is created)
           PREV=$(ls -t configs/*.json 2>/dev/null | head -1 || echo "")
-          echo "prev_config=${PREV#configs/}" >> $GITHUB_OUTPUT
-          # tee into a log file so the failure-comment step can read the real
-          # error output (pipefail still propagates a non-zero exit).
+          echo "prev_config=$PREV" >> $GITHUB_OUTPUT
           bun run src/add-smart.ts "${{ steps.url.outputs.url }}" 2>&1 | tee /tmp/add-smart.log
           OUTPUT=$(cat /tmp/add-smart.log)
           NATIVE_URL=$(echo "$OUTPUT" | grep '^native_feed_url=' | sed 's/^native_feed_url=//')
           if [ -n "$NATIVE_URL" ]; then
             echo "native_url=$NATIVE_URL" >> $GITHUB_OUTPUT
           fi
-          # Identify the config created by this run (if any)
+          # Identify the config created by this run, only if it's actually new
           NEW=$(ls -t configs/*.json 2>/dev/null | head -1 || echo "")
-          if [ -n "$NEW" ]; then
+          if [ -n "$NEW" ] && [ "$NEW" != "$PREV" ]; then
             echo "config_name=$(basename "$NEW" .json)" >> $GITHUB_OUTPUT
+            echo "Config created: $NEW"
+          elif [ -z "$NATIVE_URL" ]; then
+            echo "❌ add-smart.ts did not create a new config and no native feed was detected"
+            exit 1
           fi
-          echo "Config created: $NEW"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
 
