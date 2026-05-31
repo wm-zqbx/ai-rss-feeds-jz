@@ -30,6 +30,12 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 | [Anthropic News](https://www.anthropic.com/news) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/anthropic.xml) | ✅ 10 articles |
 | [blog.cloudflare.com](https://blog.cloudflare.com/tag/ai/) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/cloudflare-com.xml) | ✅ 20 articles |
 
+### External RSS (1)
+
+| Blog | Feed | Status |
+|------|------|--------|
+| [booking.ai](https://booking.ai/) | [Subscribe](https://booking.ai/rss) | ✅ native RSS |
+
 ### GitHub Releases (3)
 
 | Project | Feed | Status |
