@@ -4,11 +4,27 @@
         <title>claude-code Releases</title>
         <link>https://github.com/anthropics/claude-code/releases</link>
         <description>GitHub releases for anthropics/claude-code</description>
-        <lastBuildDate>Sat, 30 May 2026 02:42:16 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 31 May 2026 19:42:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/claude-code-releases.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[v2.1.159]]></title>
+            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.159</link>
+            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.159</guid>
+            <pubDate>Sun, 31 May 2026 19:42:49 GMT</pubDate>
+            <description><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Internal infrastructure improvements (no user-facing changes)</li>
+</ul>
+]]></description>
+            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Internal infrastructure improvements (no user-facing changes)</li>
+</ul>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[v2.1.158]]></title>
             <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.158</link>
@@ -3064,70 +3080,6 @@
             <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
 <ul>
 <li>Fixed Bedrock requests failing with <code>403 &quot;Authorization header is missing&quot;</code> when using <code>AWS_BEARER_TOKEN_BEDROCK</code> or <code>CLAUDE_CODE_SKIP_BEDROCK_AUTH</code> (regression in 2.1.94)</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[v2.1.94]]></title>
-            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.94</link>
-            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.94</guid>
-            <pubDate>Tue, 07 Apr 2026 21:18:51 GMT</pubDate>
-            <description><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added support for Amazon Bedrock powered by Mantle, set <code>CLAUDE_CODE_USE_MANTLE=1</code></li>
-<li>Changed default effort level from medium to high for API-key, Bedrock/Vertex/Foundry, Team, and Enterprise users (control this with <code>/effort</code>)</li>
-<li>Added compact <code>Slacked #channel</code> header with a clickable channel link for Slack MCP send-message tool calls</li>
-<li>Added <code>keep-coding-instructions</code> frontmatter field support for plugin output styles</li>
-<li>Added <code>hookSpecificOutput.sessionTitle</code> to <code>UserPromptSubmit</code> hooks for setting the session title</li>
-<li>Plugin skills declared via <code>&quot;skills&quot;: [&quot;./&quot;]</code> now use the skill&#39;s frontmatter <code>name</code> for the invocation name instead of the directory basename, giving a stable name across install methods</li>
-<li>Fixed agents appearing stuck after a 429 rate-limit response with a long Retry-After header — the error now surfaces immediately instead of silently waiting</li>
-<li>Fixed Console login on macOS silently failing with &quot;Not logged in&quot; when the login keychain is locked or its password is out of sync — the error is now surfaced and <code>claude doctor</code> diagnoses the fix</li>
-<li>Fixed plugin skill hooks defined in YAML frontmatter being silently ignored</li>
-<li>Fixed plugin hooks failing with &quot;No such file or directory&quot; when <code>CLAUDE_PLUGIN_ROOT</code> was not set</li>
-<li>Fixed <code>${CLAUDE_PLUGIN_ROOT}</code> resolving to the marketplace source directory instead of the installed cache for local-marketplace plugins on startup</li>
-<li>Fixed scrollback showing the same diff repeated and blank pages in long-running sessions</li>
-<li>Fixed multiline user prompts in the transcript indenting wrapped lines under the <code>❯</code> caret instead of under the text</li>
-<li>Fixed Shift+Space inserting the literal word &quot;space&quot; instead of a space character in search inputs</li>
-<li>Fixed hyperlinks opening two browser tabs when clicked inside tmux running in an xterm.js-based terminal (VS Code, Hyper, Tabby)</li>
-<li>Fixed an alt-screen rendering bug where content height changes mid-scroll could leave compounding ghost lines</li>
-<li>Fixed <code>FORCE_HYPERLINK</code> environment variable being ignored when set via <code>settings.json</code> <code>env</code></li>
-<li>Fixed native terminal cursor not tracking the selected tab in dialogs, so screen readers and magnifiers can follow tab navigation</li>
-<li>Fixed Bedrock invocation of Sonnet 3.5 v2 by using the <code>us.</code> inference profile ID</li>
-<li>Fixed SDK/print mode not preserving the partial assistant response in conversation history when interrupted mid-stream</li>
-<li>Improved <code>--resume</code> to resume sessions from other worktrees of the same repo directly instead of printing a <code>cd</code> command</li>
-<li>Fixed CJK and other multibyte text being corrupted with U+FFFD in stream-json input/output when chunk boundaries split a UTF-8 sequence</li>
-<li>[VSCode] Reduced cold-open subprocess work on starting a session</li>
-<li>[VSCode] Fixed dropdown menus selecting the wrong item when the mouse was over the list while typing or using arrow keys</li>
-<li>[VSCode] Added a warning banner when <code>settings.json</code> files fail to parse, so users know their permission rules are not being applied</li>
-</ul>
-]]></description>
-            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Added support for Amazon Bedrock powered by Mantle, set <code>CLAUDE_CODE_USE_MANTLE=1</code></li>
-<li>Changed default effort level from medium to high for API-key, Bedrock/Vertex/Foundry, Team, and Enterprise users (control this with <code>/effort</code>)</li>
-<li>Added compact <code>Slacked #channel</code> header with a clickable channel link for Slack MCP send-message tool calls</li>
-<li>Added <code>keep-coding-instructions</code> frontmatter field support for plugin output styles</li>
-<li>Added <code>hookSpecificOutput.sessionTitle</code> to <code>UserPromptSubmit</code> hooks for setting the session title</li>
-<li>Plugin skills declared via <code>&quot;skills&quot;: [&quot;./&quot;]</code> now use the skill&#39;s frontmatter <code>name</code> for the invocation name instead of the directory basename, giving a stable name across install methods</li>
-<li>Fixed agents appearing stuck after a 429 rate-limit response with a long Retry-After header — the error now surfaces immediately instead of silently waiting</li>
-<li>Fixed Console login on macOS silently failing with &quot;Not logged in&quot; when the login keychain is locked or its password is out of sync — the error is now surfaced and <code>claude doctor</code> diagnoses the fix</li>
-<li>Fixed plugin skill hooks defined in YAML frontmatter being silently ignored</li>
-<li>Fixed plugin hooks failing with &quot;No such file or directory&quot; when <code>CLAUDE_PLUGIN_ROOT</code> was not set</li>
-<li>Fixed <code>${CLAUDE_PLUGIN_ROOT}</code> resolving to the marketplace source directory instead of the installed cache for local-marketplace plugins on startup</li>
-<li>Fixed scrollback showing the same diff repeated and blank pages in long-running sessions</li>
-<li>Fixed multiline user prompts in the transcript indenting wrapped lines under the <code>❯</code> caret instead of under the text</li>
-<li>Fixed Shift+Space inserting the literal word &quot;space&quot; instead of a space character in search inputs</li>
-<li>Fixed hyperlinks opening two browser tabs when clicked inside tmux running in an xterm.js-based terminal (VS Code, Hyper, Tabby)</li>
-<li>Fixed an alt-screen rendering bug where content height changes mid-scroll could leave compounding ghost lines</li>
-<li>Fixed <code>FORCE_HYPERLINK</code> environment variable being ignored when set via <code>settings.json</code> <code>env</code></li>
-<li>Fixed native terminal cursor not tracking the selected tab in dialogs, so screen readers and magnifiers can follow tab navigation</li>
-<li>Fixed Bedrock invocation of Sonnet 3.5 v2 by using the <code>us.</code> inference profile ID</li>
-<li>Fixed SDK/print mode not preserving the partial assistant response in conversation history when interrupted mid-stream</li>
-<li>Improved <code>--resume</code> to resume sessions from other worktrees of the same repo directly instead of printing a <code>cd</code> command</li>
-<li>Fixed CJK and other multibyte text being corrupted with U+FFFD in stream-json input/output when chunk boundaries split a UTF-8 sequence</li>
-<li>[VSCode] Reduced cold-open subprocess work on starting a session</li>
-<li>[VSCode] Fixed dropdown menus selecting the wrong item when the mouse was over the list while typing or using arrow keys</li>
-<li>[VSCode] Added a warning banner when <code>settings.json</code> files fail to parse, so users know their permission rules are not being applied</li>
 </ul>
 ]]></content:encoded>
         </item>
