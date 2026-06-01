@@ -10,25 +10,61 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[スペースXのIPOから締め出された個人投資家、参入の道を見つける]]></title>
+            <link>https://www.youtube.com/watch?v=fJYe3xu3Pxg</link>
+            <guid>https://www.youtube.com/watch?v=fJYe3xu3Pxg</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Casey Neistatの毎日投稿ガイド | The Vergecast]]></title>
+            <link>https://www.youtube.com/watch?v=CyY-mA_IV94</link>
+            <guid>https://www.youtube.com/watch?v=CyY-mA_IV94</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[リーダーボードの順位が一致しない理由：代わりに何を使うべきか — Bertrand Charpentier, Pruna AI]]></title>
+            <link>https://www.youtube.com/watch?v=hqHC6Z_lXyo</link>
+            <guid>https://www.youtube.com/watch?v=hqHC6Z_lXyo</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AIはあなたの上司を置き換えるのか？ | オフィスアワー]]></title>
+            <link>https://www.youtube.com/watch?v=jtQM_noMaoI</link>
+            <guid>https://www.youtube.com/watch?v=jtQM_noMaoI</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[xAIの内部：3ヶ月でGrok Imagineを構築、ビデオ生成vsワールドモデル、ビデオエージェント — Ethan He]]></title>
+            <link>https://www.youtube.com/watch?v=jPtQlILfkhA</link>
+            <guid>https://www.youtube.com/watch?v=jPtQlILfkhA</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[重症熱傷治療における新技術 - ケイティ・ブッシュ医師]]></title>
+            <link>https://share.transistor.fm/s/c2711346</link>
+            <guid>https://share.transistor.fm/s/c2711346</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[もしネットワーク自体がサンドボックスだったら？ — Remy Guercio, Tailscale]]></title>
             <link>https://www.youtube.com/watch?v=BM2JX9hqsVQ</link>
             <guid>https://www.youtube.com/watch?v=BM2JX9hqsVQ</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Mercor CEO、アプリケーションレイヤーの企業に防衛力はなく、トークン支出が給与を上回ると語る]]></title>
+            <title><![CDATA[Mercor CEO: アプリケーションレイヤーの企業に堀がない理由とAI研究者を雇うコスト]]></title>
             <link>https://www.youtube.com/watch?v=CkAmq2gYtA4</link>
             <guid>https://www.youtube.com/watch?v=CkAmq2gYtA4</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[あらゆる企業に潜むAIエージェントセキュリティの悪夢]]></title>
+            <title><![CDATA[「私たちはエージェントを信用しない」— このCTOが知っているあなたが知らないこと]]></title>
             <link>https://www.youtube.com/watch?v=SjrejHEAdeg</link>
             <guid>https://www.youtube.com/watch?v=SjrejHEAdeg</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[How to talk to statues — Joe Reeve, ElevenLabs]]></title>
+            <title><![CDATA[彫像との対話方法 — Joe Reeve, ElevenLabs]]></title>
             <link>https://www.youtube.com/watch?v=u-rJwPPU3QA</link>
             <guid>https://www.youtube.com/watch?v=u-rJwPPU3QA</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -40,13 +76,13 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[エソス・キャピタルにおけるオペレーター主導型プライベートエクイティ - エリック・ブルックス]]></title>
+            <title><![CDATA[忍耐が60億ドルの価値を持つ理由 - Erik Brooks]]></title>
             <link>https://www.youtube.com/watch?v=3NGzD95VscY</link>
             <guid>https://www.youtube.com/watch?v=3NGzD95VscY</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Zcashがビットコインのヘッジとなる理由]]></title>
+            <title><![CDATA[Zcash’s Fight to Make Crypto Private Again]]></title>
             <link>https://www.youtube.com/watch?v=AxNgzo2FbmM</link>
             <guid>https://www.youtube.com/watch?v=AxNgzo2FbmM</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -58,7 +94,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[テック内部告発者: 残り3年しかない、その時が来る前に！ - モー・ガワット]]></title>
+            <title><![CDATA[Ex-Google Officer: You Only Have 3 Years Left Before It Hits! - Mo Gawdat]]></title>
             <link>https://www.youtube.com/watch?v=RwlgFC6S-OE</link>
             <guid>https://www.youtube.com/watch?v=RwlgFC6S-OE</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -91,42 +127,6 @@
             <title><![CDATA[LLMはエンタープライズ品質のコードを生成できるか？ — Prasenjit Sarkar, Sonar]]></title>
             <link>https://www.youtube.com/watch?v=NuePCNMpWGc</link>
             <guid>https://www.youtube.com/watch?v=NuePCNMpWGc</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[ASCO 2026：IPOを果たしたばかりのEikon Therapeutics、会長兼CEO Roger Perlmutterが同社の科学的アイデアを説明し、主要プログラムを解説]]></title>
-            <link>https://podcasters.spotify.com/pod/show/biotechtv4/episodes/ASCO-2026-Fresh-off-an-IPO--Eikon-Therapeutics-Chairman--CEO-Roger-Perlmutter-describes-the-scientific-idea-behind-the-company--and-walks-us-through-the-leading-programs-e3k5275</link>
-            <guid>https://podcasters.spotify.com/pod/show/biotechtv4/episodes/ASCO-2026-Fresh-off-an-IPO--Eikon-Therapeutics-Chairman--CEO-Roger-Perlmutter-describes-the-scientific-idea-behind-the-company--and-walks-us-through-the-leading-programs-e3k5275</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[月3万ドル稼ぐアプリを構築した方法：私の正確なプロセス]]></title>
-            <link>https://www.youtube.com/watch?v=P4QodeA_lQ0</link>
-            <guid>https://www.youtube.com/watch?v=P4QodeA_lQ0</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[500msが崖：発信者を逃さない音声エージェントのエンジニアリング — Rishabh Bhargava, Together AI]]></title>
-            <link>https://www.youtube.com/watch?v=N7b1PJc7SFc</link>
-            <guid>https://www.youtube.com/watch?v=N7b1PJc7SFc</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[市場は生きたシステムになりつつあるのか？ | Systematic Investor | 第402回]]></title>
-            <link>https://www.youtube.com/watch?v=lLTAEltrLrU</link>
-            <guid>https://www.youtube.com/watch?v=lLTAEltrLrU</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[仕様駆動型テストによるエージェントの検証——頭脳は惑星サイズでも——Steven Willmott（SafeIntelligence）]]></title>
-            <link>https://www.youtube.com/watch?v=UQKg0td-Bf4</link>
-            <guid>https://www.youtube.com/watch?v=UQKg0td-Bf4</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[今年最も合理的なAI論を聞ける | ベネディクト・エバンス]]></title>
-            <link>https://www.youtube.com/watch?v=BD3vLtWhT5A</link>
-            <guid>https://www.youtube.com/watch?v=BD3vLtWhT5A</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
