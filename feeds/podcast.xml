@@ -10,13 +10,37 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Why your RL training data is producing noise — Kobie Crawdord, Snorkel]]></title>
+            <title><![CDATA[Nvidiaが新たなチップ戦争を開始 | The Vergecast]]></title>
+            <link>https://www.youtube.com/watch?v=qX8VoXyGO_E</link>
+            <guid>https://www.youtube.com/watch?v=qX8VoXyGO_E</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[タービン：冶金技術の魔法の内側]]></title>
+            <link>https://podcasters.spotify.com/pod/show/jon83/episodes/Turbines-Inside-the-Magic-of-Metallurgy-e3k02pc</link>
+            <guid>https://podcasters.spotify.com/pod/show/jon83/episodes/Turbines-Inside-the-Magic-of-Metallurgy-e3k02pc</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[決算！マーベル、シノプシス、デル、そしてさらなるテーゼの時間]]></title>
+            <link>https://www.youtube.com/watch?v=MTps36JbEug</link>
+            <guid>https://www.youtube.com/watch?v=MTps36JbEug</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[APIのその先にあるもの — Benjamin Cowen, Modal]]></title>
+            <link>https://www.youtube.com/watch?v=HvZXAOZ3iv8</link>
+            <guid>https://www.youtube.com/watch?v=HvZXAOZ3iv8</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Same compute, 5x better results — Kobie Crawdord, Snorkel]]></title>
             <link>https://www.youtube.com/watch?v=YYH0DMQr30A</link>
             <guid>https://www.youtube.com/watch?v=YYH0DMQr30A</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[This Company Is Reprogramming Your Cells to Be Young Again]]></title>
+            <title><![CDATA[These Drunk Mice Don't Get Hangovers Or Liver Disease]]></title>
             <link>https://www.youtube.com/watch?v=xA3-1iXv5Hk</link>
             <guid>https://www.youtube.com/watch?v=xA3-1iXv5Hk</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -28,13 +52,13 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[What Happens When 80% of PRs Come From Agents? — Kyle Daigle, GitHub COO]]></title>
+            <title><![CDATA[GitHub Is Being Rebuilt for AI Agents — Kyle Daigle on Copilot, Actions, Open Source, & Microsoft]]></title>
             <link>https://www.youtube.com/watch?v=LEwlSyR0cXA</link>
             <guid>https://www.youtube.com/watch?v=LEwlSyR0cXA</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[How Lovable taught its agent to surface its own blockers — Benjamin Verbeek, Lovable]]></title>
+            <title><![CDATA[自分でバグ報告をするエージェント — Benjamin Verbeek（Lovable）]]></title>
             <link>https://www.youtube.com/watch?v=KA5kPbdkK2E</link>
             <guid>https://www.youtube.com/watch?v=KA5kPbdkK2E</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -64,7 +88,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[YouTube is Already 20% AI Slop]]></title>
+            <title><![CDATA[YouTubeはすでに20%がAIゴミ]]></title>
             <link>https://www.youtube.com/watch?v=s_JwjjNNQ_E</link>
             <guid>https://www.youtube.com/watch?v=s_JwjjNNQ_E</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -88,7 +112,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[This 18 year old sold his company for $50M. Here’s what he’s building next]]></title>
+            <title><![CDATA[This dumb phone startup might be a $100M business!?]]></title>
             <link>https://www.youtube.com/watch?v=5P6k92gr96c</link>
             <guid>https://www.youtube.com/watch?v=5P6k92gr96c</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -103,30 +127,6 @@
             <title><![CDATA[中国はNvidiaに取って代われるか？ | China Decode]]></title>
             <link>https://www.youtube.com/watch?v=wXvIMIGHJGE</link>
             <guid>https://www.youtube.com/watch?v=wXvIMIGHJGE</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Ep. 369 - ASCOの進展、中国のイノベーション、そして脅威にさらされる米国の科学]]></title>
-            <link>https://www.youtube.com/watch?v=44JphsQy2uo</link>
-            <guid>https://www.youtube.com/watch?v=44JphsQy2uo</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Ep. 013 - AWSの利益率が10%上昇、AzureとGCPは横ばい（トークノミクス）]]></title>
-            <link>https://www.youtube.com/watch?v=3zGmZfZnChs</link>
-            <guid>https://www.youtube.com/watch?v=3zGmZfZnChs</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[スペースXのIPOから締め出された個人投資家、参入の道を見つける]]></title>
-            <link>https://www.youtube.com/watch?v=fJYe3xu3Pxg</link>
-            <guid>https://www.youtube.com/watch?v=fJYe3xu3Pxg</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Casey Neistatの毎日投稿ガイド | The Vergecast]]></title>
-            <link>https://www.youtube.com/watch?v=CyY-mA_IV94</link>
-            <guid>https://www.youtube.com/watch?v=CyY-mA_IV94</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>

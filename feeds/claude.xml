@@ -16,6 +16,12 @@
             <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[A harness for every task: dynamic workflows in Claude Code]]></title>
+            <link>https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</link>
+            <guid>https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</guid>
+            <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Introducing dynamic workflows in Claude Code]]></title>
             <link>https://claude.com/blog/introducing-dynamic-workflows-in-claude-code</link>
             <guid>https://claude.com/blog/introducing-dynamic-workflows-in-claude-code</guid>
@@ -91,12 +97,6 @@
             <title><![CDATA[The founder's playbook: Building an AI-native startup]]></title>
             <link>https://claude.com/blog/the-founders-playbook</link>
             <guid>https://claude.com/blog/the-founders-playbook</guid>
-            <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How Claude Code works in large codebases: Best practices and where to start]]></title>
-            <link>https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start</link>
-            <guid>https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start</guid>
             <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
