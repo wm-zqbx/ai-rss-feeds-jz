@@ -14,8 +14,7 @@
             <link>https://github.com/openclaw/openclaw/releases/tag/v2026.6.1-beta.2</link>
             <guid>https://github.com/openclaw/openclaw/releases/tag/v2026.6.1-beta.2</guid>
             <pubDate>Mon, 01 Jun 2026 21:56:19 GMT</pubDate>
-            <description><![CDATA[<h2>2026.6.1</h2>
-<h3>Highlights</h3>
+            <description><![CDATA[<h3>Highlights</h3>
 <ul>
 <li>Agents and CLI-backed runtimes recover more cleanly from interrupted tool calls, stale session bindings, compaction handoffs, and media delivery retries. (#88129, #88136, #88141, #88162, #88182)</li>
 <li>Channels and mobile delivery are steadier across Telegram, WhatsApp, iMessage, Slack, Discord, Microsoft Teams, Google Chat, Google Meet, and iOS realtime Talk. (#88096, #88105, #88183, #88231)</li>
@@ -127,10 +126,23 @@
 <li>Performance: prebuild QA runtime probes with generated plugin assets but without CLI startup metadata.</li>
 <li>Performance: skip declaration bundling for runtime-only CLI startup and gateway watch build profiles.</li>
 <li>Performance: reuse prepared provider handles, strict tool schemas, gateway runtime metadata, session maintenance config, plugin metadata, bundled skill allowlists, package-local plugin artifacts, single-entry store writes, and validated/serialized session prompt blobs.</li>
+</ul>
+<h3>Release verification</h3>
+<ul>
+<li>npm package: <a href="https://www.npmjs.com/package/openclaw/v/2026.6.1-beta.2">https://www.npmjs.com/package/openclaw/v/2026.6.1-beta.2</a></li>
+<li>registry tarball: <a href="https://registry.npmjs.org/openclaw/-/openclaw-2026.6.1-beta.2.tgz">https://registry.npmjs.org/openclaw/-/openclaw-2026.6.1-beta.2.tgz</a></li>
+<li>integrity: <code>sha512-Y/16HB3wOhW+riellKXHF+vp+ZlXAKBK20bn/54dTMQy1YSz8aoDbhTPw+wDtXqLRPJTAmEf4QvkqZ2ofHzSVQ==</code></li>
+<li>full release CI report: <a href="https://github.com/openclaw/releases/blob/main/evidence/2026.6.1-beta.2/release-evidence.md">https://github.com/openclaw/releases/blob/main/evidence/2026.6.1-beta.2/release-evidence.md</a></li>
+<li>release publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26827904731">https://github.com/openclaw/openclaw/actions/runs/26827904731</a></li>
+<li>npm preflight: <a href="https://github.com/openclaw/openclaw/actions/runs/26824750728">https://github.com/openclaw/openclaw/actions/runs/26824750728</a></li>
+<li>full release validation: <a href="https://github.com/openclaw/openclaw/actions/runs/26824750752">https://github.com/openclaw/openclaw/actions/runs/26824750752</a></li>
+<li>plugin npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828187422">https://github.com/openclaw/openclaw/actions/runs/26828187422</a></li>
+<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828193587">https://github.com/openclaw/openclaw/actions/runs/26828193587</a></li>
+<li>OpenClaw npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828804274">https://github.com/openclaw/openclaw/actions/runs/26828804274</a></li>
+<li>npm Telegram beta E2E: <a href="https://github.com/openclaw/openclaw/actions/runs/26825363156">https://github.com/openclaw/openclaw/actions/runs/26825363156</a></li>
 </ul>
 ]]></description>
-            <content:encoded><![CDATA[<h2>2026.6.1</h2>
-<h3>Highlights</h3>
+            <content:encoded><![CDATA[<h3>Highlights</h3>
 <ul>
 <li>Agents and CLI-backed runtimes recover more cleanly from interrupted tool calls, stale session bindings, compaction handoffs, and media delivery retries. (#88129, #88136, #88141, #88162, #88182)</li>
 <li>Channels and mobile delivery are steadier across Telegram, WhatsApp, iMessage, Slack, Discord, Microsoft Teams, Google Chat, Google Meet, and iOS realtime Talk. (#88096, #88105, #88183, #88231)</li>
@@ -242,6 +254,20 @@
 <li>Performance: prebuild QA runtime probes with generated plugin assets but without CLI startup metadata.</li>
 <li>Performance: skip declaration bundling for runtime-only CLI startup and gateway watch build profiles.</li>
 <li>Performance: reuse prepared provider handles, strict tool schemas, gateway runtime metadata, session maintenance config, plugin metadata, bundled skill allowlists, package-local plugin artifacts, single-entry store writes, and validated/serialized session prompt blobs.</li>
+</ul>
+<h3>Release verification</h3>
+<ul>
+<li>npm package: <a href="https://www.npmjs.com/package/openclaw/v/2026.6.1-beta.2">https://www.npmjs.com/package/openclaw/v/2026.6.1-beta.2</a></li>
+<li>registry tarball: <a href="https://registry.npmjs.org/openclaw/-/openclaw-2026.6.1-beta.2.tgz">https://registry.npmjs.org/openclaw/-/openclaw-2026.6.1-beta.2.tgz</a></li>
+<li>integrity: <code>sha512-Y/16HB3wOhW+riellKXHF+vp+ZlXAKBK20bn/54dTMQy1YSz8aoDbhTPw+wDtXqLRPJTAmEf4QvkqZ2ofHzSVQ==</code></li>
+<li>full release CI report: <a href="https://github.com/openclaw/releases/blob/main/evidence/2026.6.1-beta.2/release-evidence.md">https://github.com/openclaw/releases/blob/main/evidence/2026.6.1-beta.2/release-evidence.md</a></li>
+<li>release publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26827904731">https://github.com/openclaw/openclaw/actions/runs/26827904731</a></li>
+<li>npm preflight: <a href="https://github.com/openclaw/openclaw/actions/runs/26824750728">https://github.com/openclaw/openclaw/actions/runs/26824750728</a></li>
+<li>full release validation: <a href="https://github.com/openclaw/openclaw/actions/runs/26824750752">https://github.com/openclaw/openclaw/actions/runs/26824750752</a></li>
+<li>plugin npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828187422">https://github.com/openclaw/openclaw/actions/runs/26828187422</a></li>
+<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828193587">https://github.com/openclaw/openclaw/actions/runs/26828193587</a></li>
+<li>OpenClaw npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/26828804274">https://github.com/openclaw/openclaw/actions/runs/26828804274</a></li>
+<li>npm Telegram beta E2E: <a href="https://github.com/openclaw/openclaw/actions/runs/26825363156">https://github.com/openclaw/openclaw/actions/runs/26825363156</a></li>
 </ul>
 ]]></content:encoded>
         </item>
