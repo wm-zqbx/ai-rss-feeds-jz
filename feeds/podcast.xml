@@ -10,6 +10,18 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Satya Nadella's massive bet on Agents:  @NoPriorsPodcast   x Latent Space Crossover Special]]></title>
+            <link>https://www.youtube.com/watch?v=cFNI2FORAc0</link>
+            <guid>https://www.youtube.com/watch?v=cFNI2FORAc0</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[抗体医薬品設計のルールを書き換える]]></title>
+            <link>https://www.youtube.com/watch?v=zlVOPKhukFI</link>
+            <guid>https://www.youtube.com/watch?v=zlVOPKhukFI</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Snap CEO：Snapchatの構築とコミュニケーションの未来 | ポッドキャスト | In Good Company]]></title>
             <link>https://www.youtube.com/watch?v=i4LjivMgK9w</link>
             <guid>https://www.youtube.com/watch?v=i4LjivMgK9w</guid>
@@ -115,18 +127,6 @@
             <title><![CDATA[なぜImpulseが宇宙で物を動かすために5億ドルを調達したのか | 社長兼COOエリック・ロモ]]></title>
             <link>https://www.youtube.com/watch?v=42035XPxgbA</link>
             <guid>https://www.youtube.com/watch?v=42035XPxgbA</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[顧客のニーズを常に把握する：Listen LabsのAlfred Wahlforss]]></title>
-            <link>https://www.youtube.com/watch?v=Rumft-rsEu4</link>
-            <guid>https://www.youtube.com/watch?v=Rumft-rsEu4</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[ファンダメンタルリサーチにおけるAIエージェントによるアルファ創出 | S3E6]]></title>
-            <link>https://www.youtube.com/watch?v=VkWg7p4NMoY</link>
-            <guid>https://www.youtube.com/watch?v=VkWg7p4NMoY</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
