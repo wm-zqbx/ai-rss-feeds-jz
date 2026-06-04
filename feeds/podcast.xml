@@ -10,7 +10,31 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[インパルス・スペースの工場内部：創業者トム・ミュラーによる完全ツアー]]></title>
+            <title><![CDATA[エージェントベンチマークの技術と芸術 — Vincent Chen（Snorkel AI）2026-06-05 00:01]]></title>
+            <link>https://www.youtube.com/watch?v=iNkFlCiij0U</link>
+            <guid>https://www.youtube.com/watch?v=iNkFlCiij0U</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[トークン予算パニックが米国企業を襲う｜Cognitionが260億ドル評価で10億ドル調達]]></title>
+            <link>https://www.youtube.com/watch?v=jPBG1F2Y8Mw</link>
+            <guid>https://www.youtube.com/watch?v=jPBG1F2Y8Mw</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Conductor CEO Charlie HoltzがAIエージェントチームを編成する方法]]></title>
+            <link>https://www.youtube.com/watch?v=fQmlML9Lay4</link>
+            <guid>https://www.youtube.com/watch?v=fQmlML9Lay4</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[SWE-rebench: コーディングエージェント評価からの教訓 — Ibragim Badertdinov（Nebius）]]></title>
+            <link>https://www.youtube.com/watch?v=wcUJWP6WpGM</link>
+            <guid>https://www.youtube.com/watch?v=wcUJWP6WpGM</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tom Mueller：SpaceXのMerlin Engineを支えた第一人者エンジニア｜Impulse Spaceの創業者兼CEO]]></title>
             <link>https://www.youtube.com/watch?v=WIORHdlPWAI</link>
             <guid>https://www.youtube.com/watch?v=WIORHdlPWAI</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -22,13 +46,13 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[暗号資産のキャピトルヒル戦記——すべてを見てきたロビイストの証言]]></title>
+            <title><![CDATA[SBF、Gensler、Warrenと暗号資産のワシントン争奪戦]]></title>
             <link>https://www.youtube.com/watch?v=_zYm7fda4p0</link>
             <guid>https://www.youtube.com/watch?v=_zYm7fda4p0</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[イーロン・マスクやパーマー・ラッキーのように、あらゆる業界に侵攻し支配する方法]]></title>
+            <title><![CDATA[馬鹿指数：Elon Muskに数十億をもたらした驚くほどシンプルな計算]]></title>
             <link>https://www.youtube.com/watch?v=t3HWIey2lh8</link>
             <guid>https://www.youtube.com/watch?v=t3HWIey2lh8</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -103,30 +127,6 @@
             <title><![CDATA[コンポーネントを超えて：MCPアプリのためのGenerative UIデザイン — Ruben Casas, Postman]]></title>
             <link>https://www.youtube.com/watch?v=hCMrEfPG2Yg</link>
             <guid>https://www.youtube.com/watch?v=hCMrEfPG2Yg</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[スコット・ギャロウェイ：億万長者を悪者扱いするのではなく課税せよ | Office Hours]]></title>
-            <link>https://www.youtube.com/watch?v=slwZv435jtc</link>
-            <guid>https://www.youtube.com/watch?v=slwZv435jtc</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Figma幹部が語るSaaSアポカリプス、AIエージェント、そして10億人の開発者]]></title>
-            <link>https://www.youtube.com/watch?v=kYKebKB3-d0</link>
-            <guid>https://www.youtube.com/watch?v=kYKebKB3-d0</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Claude Codeにおけるセマンティックコード検索のベンチマーキング — Kuba Rogut, Turbopuffer]]></title>
-            <link>https://www.youtube.com/watch?v=zKk7sDMGDEQ</link>
-            <guid>https://www.youtube.com/watch?v=zKk7sDMGDEQ</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[AIサービスのプレイブック：ゼロからの会社設立]]></title>
-            <link>https://www.youtube.com/watch?v=gSNFJbgoaHI</link>
-            <guid>https://www.youtube.com/watch?v=gSNFJbgoaHI</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
