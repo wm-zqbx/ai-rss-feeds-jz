@@ -10,13 +10,19 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[ダン・ローブ：失われた空売りの技術、そして銘柄選択が再び重要に]]></title>
+            <link>https://www.youtube.com/watch?v=i8OI8CNdZgU</link>
+            <guid>https://www.youtube.com/watch?v=i8OI8CNdZgU</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[ジョー・ローガン・エクスペリエンス #2510 - デボン・ララット]]></title>
             <link>https://www.youtube.com/watch?v=ZmejzHXudq0</link>
             <guid>https://www.youtube.com/watch?v=ZmejzHXudq0</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google]]></title>
+            <title><![CDATA[エージェントインターフェースの構築：Chrome DevTools (MCP)からエージェントへの教訓 — Michael Hablich, Google]]></title>
             <link>https://www.youtube.com/watch?v=_B4Pv9ttFgY</link>
             <guid>https://www.youtube.com/watch?v=_B4Pv9ttFgY</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -28,7 +34,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw]]></title>
+            <title><![CDATA[ダークファクトリー：OpenClawはDiffを読むより速く出荷する — Vincent Koc, OpenClaw]]></title>
             <link>https://www.youtube.com/watch?v=pmoDeA3RBZY</link>
             <guid>https://www.youtube.com/watch?v=pmoDeA3RBZY</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -46,7 +52,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Speaker diarization: the part of your voice stack that isn't working — Hervé Bredin, pyannoteAI]]></title>
+            <title><![CDATA[スピーカー・ダイアリゼーション：あなたの音声スタックで機能していない部分 — Hervé Bredin, pyannoteAI]]></title>
             <link>https://www.youtube.com/watch?v=mFLlVpnGpds</link>
             <guid>https://www.youtube.com/watch?v=mFLlVpnGpds</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -121,12 +127,6 @@
             <title><![CDATA[エージェントのベンチマーキングの技術と科学 — スノークルAI ヴィンセント・チェン]]></title>
             <link>https://www.youtube.com/watch?v=iNkFlCiij0U</link>
             <guid>https://www.youtube.com/watch?v=iNkFlCiij0U</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Anthropicが上場申請 | Cognitionが260億ドルの評価額で10億ドル調達 | 996労働倫理]]></title>
-            <link>https://www.youtube.com/watch?v=jPBG1F2Y8Mw</link>
-            <guid>https://www.youtube.com/watch?v=jPBG1F2Y8Mw</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
