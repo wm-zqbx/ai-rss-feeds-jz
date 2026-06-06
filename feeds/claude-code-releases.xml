@@ -4,11 +4,27 @@
         <title>claude-code Releases</title>
         <link>https://github.com/anthropics/claude-code/releases</link>
         <description>GitHub releases for anthropics/claude-code</description>
-        <lastBuildDate>Sat, 06 Jun 2026 01:33:35 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 06 Jun 2026 23:41:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
         <language>en</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/claude-code-releases.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[v2.1.168]]></title>
+            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.168</link>
+            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.168</guid>
+            <pubDate>Sat, 06 Jun 2026 23:41:53 GMT</pubDate>
+            <description><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Bug fixes and reliability improvements</li>
+</ul>
+]]></description>
+            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
+<ul>
+<li>Bug fixes and reliability improvements</li>
+</ul>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[v2.1.167]]></title>
             <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.167</link>
@@ -2946,22 +2962,6 @@
 <li>Fixed transcript write failures (e.g., disk full) being silently dropped instead of being logged</li>
 <li>Fixed diacritical marks (accents, umlauts, cedillas) being dropped from responses when the <code>language</code> setting is configured</li>
 <li>Fixed policy-managed plugins never auto-updating when running from a different project than where they were first installed</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[v2.1.107]]></title>
-            <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.107</link>
-            <guid>https://github.com/anthropics/claude-code/releases/tag/v2.1.107</guid>
-            <pubDate>Tue, 14 Apr 2026 06:11:20 GMT</pubDate>
-            <description><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Show thinking hints sooner during long operations</li>
-</ul>
-]]></description>
-            <content:encoded><![CDATA[<h2>What&#39;s changed</h2>
-<ul>
-<li>Show thinking hints sooner during long operations</li>
 </ul>
 ]]></content:encoded>
         </item>
