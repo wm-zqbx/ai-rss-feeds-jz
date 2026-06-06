@@ -63,13 +63,18 @@
 <li>standalone performance: <a href="https://github.com/openclaw/openclaw/actions/runs/27051518773">https://github.com/openclaw/openclaw/actions/runs/27051518773</a></li>
 <li>plugin npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057329829">https://github.com/openclaw/openclaw/actions/runs/27057329829</a></li>
 <li>OpenClaw npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057520224">https://github.com/openclaw/openclaw/actions/runs/27057520224</a></li>
-<li>release publish parent: <a href="https://github.com/openclaw/openclaw/actions/runs/27057243331">https://github.com/openclaw/openclaw/actions/runs/27057243331</a> (npm published; parent timed out waiting for ClawHub preview approval)</li>
-<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057331151">https://github.com/openclaw/openclaw/actions/runs/27057331151</a> (still in progress at proof update time)</li>
+<li>release publish parent: <a href="https://github.com/openclaw/openclaw/actions/runs/27057243331">https://github.com/openclaw/openclaw/actions/runs/27057243331</a> (npm and plugin npm published; parent timed out before ClawHub approval/proof append)</li>
+<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27058679788">https://github.com/openclaw/openclaw/actions/runs/27058679788</a></li>
 <li>npm postpublish verifier: <code>node --import tsx scripts/openclaw-npm-postpublish-verify.ts 2026.6.5-beta.1</code> passed</li>
+<li>published package smoke: <code>npm exec --yes --package openclaw@2026.6.5-beta.1 -- openclaw --version</code> returned <code>OpenClaw 2026.6.5-beta.1 (e386e60)</code>; <code>openclaw plugins --help</code> loaded</li>
 <li>plugin registry check: 34 publishable plugin packages resolved at <code>2026.6.5-beta.1</code></li>
+<li>ClawHub live install proof: <code>openclaw plugins install clawhub:@openclaw/matrix@2026.6.5-beta.1 --pin</code> installed <code>matrix</code></li>
 <li>dependency evidence asset: <code>openclaw-2026.6.5-beta.1-dependency-evidence.zip</code></li>
-<li>Parallels install/update validation: blocked locally because <code>OPENAI_API_KEY</code> and <code>ANTHROPIC_API_KEY</code> are not available in this shell</li>
-<li>macOS app preflight: <a href="https://github.com/openclaw/releases/actions/runs/27057695610">https://github.com/openclaw/releases/actions/runs/27057695610</a> (in progress at proof update time)</li>
+<li>macOS app preflight: <a href="https://github.com/openclaw/releases/actions/runs/27057695610">https://github.com/openclaw/releases/actions/runs/27057695610</a></li>
+<li>macOS app validation: <a href="https://github.com/openclaw/releases/actions/runs/27058583792">https://github.com/openclaw/releases/actions/runs/27058583792</a></li>
+<li>macOS app publish: <a href="https://github.com/openclaw/releases/actions/runs/27058730659">https://github.com/openclaw/releases/actions/runs/27058730659</a></li>
+<li>macOS release assets: <code>OpenClaw-2026.6.5-beta.1.zip</code>, <code>OpenClaw-2026.6.5-beta.1.dmg</code>, and <code>OpenClaw-2026.6.5-beta.1.dSYM.zip</code> uploaded; stable <code>appcast.xml</code> unchanged</li>
+<li>Parallels install/update validation: blocked locally because provider keys are not available to this shell; 1Password CLI has configured accounts but is not signed in</li>
 <li>npm Telegram beta E2E: not supplied</li>
 </ul>
 ]]></description>
@@ -122,13 +127,18 @@
 <li>standalone performance: <a href="https://github.com/openclaw/openclaw/actions/runs/27051518773">https://github.com/openclaw/openclaw/actions/runs/27051518773</a></li>
 <li>plugin npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057329829">https://github.com/openclaw/openclaw/actions/runs/27057329829</a></li>
 <li>OpenClaw npm publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057520224">https://github.com/openclaw/openclaw/actions/runs/27057520224</a></li>
-<li>release publish parent: <a href="https://github.com/openclaw/openclaw/actions/runs/27057243331">https://github.com/openclaw/openclaw/actions/runs/27057243331</a> (npm published; parent timed out waiting for ClawHub preview approval)</li>
-<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27057331151">https://github.com/openclaw/openclaw/actions/runs/27057331151</a> (still in progress at proof update time)</li>
+<li>release publish parent: <a href="https://github.com/openclaw/openclaw/actions/runs/27057243331">https://github.com/openclaw/openclaw/actions/runs/27057243331</a> (npm and plugin npm published; parent timed out before ClawHub approval/proof append)</li>
+<li>plugin ClawHub publish: <a href="https://github.com/openclaw/openclaw/actions/runs/27058679788">https://github.com/openclaw/openclaw/actions/runs/27058679788</a></li>
 <li>npm postpublish verifier: <code>node --import tsx scripts/openclaw-npm-postpublish-verify.ts 2026.6.5-beta.1</code> passed</li>
+<li>published package smoke: <code>npm exec --yes --package openclaw@2026.6.5-beta.1 -- openclaw --version</code> returned <code>OpenClaw 2026.6.5-beta.1 (e386e60)</code>; <code>openclaw plugins --help</code> loaded</li>
 <li>plugin registry check: 34 publishable plugin packages resolved at <code>2026.6.5-beta.1</code></li>
+<li>ClawHub live install proof: <code>openclaw plugins install clawhub:@openclaw/matrix@2026.6.5-beta.1 --pin</code> installed <code>matrix</code></li>
 <li>dependency evidence asset: <code>openclaw-2026.6.5-beta.1-dependency-evidence.zip</code></li>
-<li>Parallels install/update validation: blocked locally because <code>OPENAI_API_KEY</code> and <code>ANTHROPIC_API_KEY</code> are not available in this shell</li>
-<li>macOS app preflight: <a href="https://github.com/openclaw/releases/actions/runs/27057695610">https://github.com/openclaw/releases/actions/runs/27057695610</a> (in progress at proof update time)</li>
+<li>macOS app preflight: <a href="https://github.com/openclaw/releases/actions/runs/27057695610">https://github.com/openclaw/releases/actions/runs/27057695610</a></li>
+<li>macOS app validation: <a href="https://github.com/openclaw/releases/actions/runs/27058583792">https://github.com/openclaw/releases/actions/runs/27058583792</a></li>
+<li>macOS app publish: <a href="https://github.com/openclaw/releases/actions/runs/27058730659">https://github.com/openclaw/releases/actions/runs/27058730659</a></li>
+<li>macOS release assets: <code>OpenClaw-2026.6.5-beta.1.zip</code>, <code>OpenClaw-2026.6.5-beta.1.dmg</code>, and <code>OpenClaw-2026.6.5-beta.1.dSYM.zip</code> uploaded; stable <code>appcast.xml</code> unchanged</li>
+<li>Parallels install/update validation: blocked locally because provider keys are not available to this shell; 1Password CLI has configured accounts but is not signed in</li>
 <li>npm Telegram beta E2E: not supplied</li>
 </ul>
 ]]></content:encoded>
