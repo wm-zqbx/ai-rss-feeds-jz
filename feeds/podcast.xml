@@ -10,6 +10,30 @@
         <language>ja</language>
         <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/podcast.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[WeRide、グローバルでWaymoに追いつく]]></title>
+            <link>https://www.youtube.com/watch?v=PpVXS1NVF7c</link>
+            <guid>https://www.youtube.com/watch?v=PpVXS1NVF7c</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[自律経済のための安全な決済インフラの構築 — Steve Kaliski（Stripe）]]></title>
+            <link>https://www.youtube.com/watch?v=KLSuFPj2ld0</link>
+            <guid>https://www.youtube.com/watch?v=KLSuFPj2ld0</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[トークン最大化がエンタープライズスタートアップを失敗させる理由 | Legora CTO]]></title>
+            <link>https://www.youtube.com/watch?v=UkERw3cBEAo</link>
+            <guid>https://www.youtube.com/watch?v=UkERw3cBEAo</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Emergent：6か月の試行錯誤が1億ドルARR企業を生むまで]]></title>
+            <link>https://www.youtube.com/watch?v=yyXCQHX55N4</link>
+            <guid>https://www.youtube.com/watch?v=yyXCQHX55N4</guid>
+            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[⚡️DeepSeek v4 が Taste で Opus 4.7 を凌ぐ方法 — @Ahmad Awais , CommandCode.ai]]></title>
             <link>https://www.youtube.com/watch?v=-rIAVuaRjOg</link>
             <guid>https://www.youtube.com/watch?v=-rIAVuaRjOg</guid>
@@ -52,7 +76,7 @@
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Week: AI, GLP-1s, and Scott's Iran War Reversal]]></title>
+            <title><![CDATA[今週：AI、GLP-1、そしてスコットのイラン戦争方針転換]]></title>
             <link>https://www.youtube.com/watch?v=uWB-o07A36s</link>
             <guid>https://www.youtube.com/watch?v=uWB-o07A36s</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
@@ -103,30 +127,6 @@
             <title><![CDATA[第200回特別編：Joachim Eeckhoutが語るLabiotechの構築とバイオテクメディアの未来]]></title>
             <link>https://www.youtube.com/watch?v=C-ZAD6RpoIY</link>
             <guid>https://www.youtube.com/watch?v=C-ZAD6RpoIY</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[マイクロソフトのAI追従計画 | The Vergecast]]></title>
-            <link>https://www.youtube.com/watch?v=4UW16coIloM</link>
-            <guid>https://www.youtube.com/watch?v=4UW16coIloM</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[トーマス・ラフォン：4兆ドルのAI新規公開ラッシュが来る…かつてない規模だ]]></title>
-            <link>https://www.youtube.com/watch?v=UIoV8rG_25s</link>
-            <guid>https://www.youtube.com/watch?v=UIoV8rG_25s</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[ジョー・ローガン・エクスペリエンス #2509 - ケイレブ・ハマー]]></title>
-            <link>https://www.youtube.com/watch?v=wt2sI8OdmWs</link>
-            <guid>https://www.youtube.com/watch?v=wt2sI8OdmWs</guid>
-            <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[AIから富を獲得するのは誰か？ – Alex ImasとPhil Trammell]]></title>
-            <link>https://www.youtube.com/watch?v=Jj-kBHzUohs</link>
-            <guid>https://www.youtube.com/watch?v=Jj-kBHzUohs</guid>
             <pubDate>Wed, 20 May 2026 17:27:51 GMT</pubDate>
         </item>
     </channel>
