@@ -41,7 +41,7 @@ jobs:
           echo "prev_config=$PREV" >> $GITHUB_OUTPUT
           bun run src/add-smart.ts "${{ steps.url.outputs.url }}" 2>&1 | tee /tmp/add-smart.log
           OUTPUT=$(cat /tmp/add-smart.log)
-          NATIVE_URL=$(echo "$OUTPUT" | grep '^native_feed_url=' | sed 's/^native_feed_url=//')
+          NATIVE_URL=$(echo "$OUTPUT" | grep '^native_feed_url=' | sed 's/^native_feed_url=//' || true)
           if [ -n "$NATIVE_URL" ]; then
             echo "native_url=$NATIVE_URL" >> $GITHUB_OUTPUT
           fi
