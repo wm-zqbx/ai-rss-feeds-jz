@@ -8,11 +8,12 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 
 <!-- FEEDS_TABLE_START -->
 
-### Blogs (1)
+### Blogs (2)
 
 | Blog | Feed | Status |
 |------|------|--------|
 | [住房和城乡建设部信息中心建设要闻](https://www.mohurdic.org.cn/xw/jsyw/index.html) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml) | ✅ 15 articles |
+| [豆瓣读书 Top 250](https://book.douban.com/top250) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/douban-top250.xml) | ✅ 20 articles |
 <!-- FEEDS_TABLE_END -->
 
 ## 🚀 Quick Start

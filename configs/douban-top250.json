@@ -1,0 +1,20 @@
+{
+  "name": "douban-top250",
+  "url": "https://book.douban.com/top250",
+  "feed": {
+    "title": "豆瓣读书 Top 250",
+    "description": "豆瓣读书 Top 250 榜单",
+    "language": "zh-CN",
+    "author": "豆瓣读书"
+  },
+  "selectors": {
+    "articleList": "tr.item",
+    "title": "div.pl2 a[title]",
+    "description": "p.quote .inq",
+    "link": {
+      "source": "attr:href"
+    }
+  },
+  "parserMode": "css",
+  "createdAt": "2026-06-09T00:00:00Z"
+}
