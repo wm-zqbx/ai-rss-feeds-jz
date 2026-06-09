@@ -1,0 +1,25 @@
+{
+  "name": "mohurdic-jsyw",
+  "url": "https://www.mohurdic.org.cn/xw/jsyw/index.html",
+  "fetchUrl": "https://www.mohurdic.org.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=bulidstatic&webId=6bed77a9992b46838140d3f8502fce2a&tplSetId=fdddace5c173409eae69d6a384b00f2f&pageType=column&tagId=%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E4%BA%8C%E7%BA%A7%E9%A1%B5%E9%9D%A2list-con&editType=null&pageId=601e659c52a446518915fa26b0bb06f3",
+  "feed": {
+    "title": "住房和城乡建设部信息中心建设要闻",
+    "description": "住房和城乡建设部信息中心建设要闻",
+    "language": "zh-CN",
+    "author": "住房和城乡建设部信息中心"
+  },
+  "selectors": {
+    "articleList": "ul.list1-data",
+    "title": "a",
+    "date": "span",
+    "link": {
+      "source": "attr:href"
+    }
+  },
+  "parserMode": "json-html",
+  "jsonHtmlExtraction": {
+    "dataPath": "data.html"
+  },
+  "dateFormat": "yyyy-MM-dd",
+  "createdAt": "2026-06-09T00:00:00Z"
+}
