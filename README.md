@@ -8,6 +8,11 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 
 <!-- FEEDS_TABLE_START -->
 
+### GitHub Releases (1)
+
+| Project | Feed | Status |
+|---------|------|--------|
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/hyperframes-releases.xml) | ✅ 50 releases |
 <!-- FEEDS_TABLE_END -->
 
 ## 🚀 Quick Start

@@ -1,0 +1,25 @@
+{
+  "name": "hyperframes-releases",
+  "url": "https://github.com/heygen-com/hyperframes/releases",
+  "feed": {
+    "title": "hyperframes Releases",
+    "description": "GitHub releases for heygen-com/hyperframes",
+    "language": "en",
+    "author": "heygen-com"
+  },
+  "selectors": {
+    "articleList": "",
+    "title": "",
+    "link": {
+      "source": ""
+    }
+  },
+  "parserMode": "github-releases",
+  "githubReleasesExtraction": {
+    "owner": "heygen-com",
+    "repo": "hyperframes",
+    "includePrerelease": false,
+    "limit": 50
+  },
+  "createdAt": "2026-06-09T05:03:17.917Z"
+}
