@@ -1,5 +1,7 @@
 node_modules/
 dist/
 cache/
+.codex/
+AGENTS.md
 *.log
 .DS_Store
