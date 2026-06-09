@@ -6,9 +6,9 @@
         <description>GitHub releases for heygen-com/hyperframes</description>
         <lastBuildDate>Tue, 09 Jun 2026 01:32:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)</generator>
+        <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>en</language>
-        <atom:link href="https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/hyperframes-releases.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/hyperframes-releases.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[v0.6.84]]></title>
             <link>https://github.com/heygen-com/hyperframes/releases/tag/v0.6.84</link>

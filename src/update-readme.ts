@@ -13,7 +13,7 @@ const CONFIGS_DIR = join(ROOT, "configs");
 const FEEDS_DIR = join(ROOT, "feeds");
 const README_PATH = join(ROOT, "README.md");
 
-const REPO = "leontloveless/ai-rss-feeds";
+const REPO = "wm-zqbx/ai-rss-feeds";
 
 // Markers in README for auto-generated sections
 const START_MARKER = "<!-- FEEDS_TABLE_START -->";

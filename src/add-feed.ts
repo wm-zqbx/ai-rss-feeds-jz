@@ -110,7 +110,7 @@ async function main() {
   console.log(`   Feed:   feeds/${config.name}.xml`);
   console.log(`   Items:  ${articles.length}`);
   console.log(
-    `\n📖 Subscribe: https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/${config.name}.xml`
+    `\n📖 Subscribe: https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/${config.name}.xml`
   );
 }
 

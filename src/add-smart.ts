@@ -132,7 +132,7 @@ async function addGitHubReleasesFeed(info: GitHubInfo): Promise<void> {
   console.log(`   Feed:   feeds/${name}.xml`);
   console.log(`   Items:  ${articles.length}`);
   console.log(
-    `\n📖 Subscribe: https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/${name}.xml`
+    `\n📖 Subscribe: https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/${name}.xml`
   );
 }
 
@@ -338,7 +338,7 @@ async function addRssMirrorFeed(originalUrl: string, feedUrl: string): Promise<v
   console.log(`   Feed:   feeds/${name}.xml`);
   console.log(`   Items:  ${articles.length}`);
   console.log(
-    `\n📖 Subscribe: https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/${name}.xml`
+    `\n📖 Subscribe: https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/${name}.xml`
   );
 }
 

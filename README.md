@@ -8,17 +8,18 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 
 <!-- FEEDS_TABLE_START -->
 
-### Blogs (1)
+### Blogs (2)
 
 | Blog | Feed | Status |
 |------|------|--------|
-| [Essays](https://www.paulgraham.com/articles.html) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/paulgraham.xml) | ✅ 50 articles |
+| [Essays](https://www.paulgraham.com/articles.html) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/paulgraham.xml) | ✅ 20 articles |
+| [豆瓣读书 Top 250](https://book.douban.com/top250) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/douban-top250.xml) | ✅ 20 articles |
 
 ### GitHub Releases (1)
 
 | Project | Feed | Status |
 |---------|------|--------|
-| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | [Subscribe](https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/hyperframes-releases.xml) | ✅ 50 releases |
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/hyperframes-releases.xml) | ✅ 50 releases |
 <!-- FEEDS_TABLE_END -->
 
 ## 🚀 Quick Start
@@ -26,12 +27,12 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 Add any feed URL to your RSS reader:
 
 ```
-https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/{name}.xml
+https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/{name}.xml
 ```
 
 ## ➕ Add a Feed
 
-1. [Open a new issue](https://github.com/leontloveless/ai-rss-feeds/issues/new?template=new_feed.yml)
+1. [Open a new issue](https://github.com/wm-zqbx/ai-rss-feeds/issues/new?template=new_feed.yml)
 2. Paste the blog URL
 3. Wait ~2 minutes
 4. Done! The feed is generated automatically

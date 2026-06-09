@@ -6,10 +6,11 @@ import { Feed } from "feed";
 import type { Article, FeedConfig } from "./types.js";
 
 const MAX_ITEMS = 50; // Limit RSS feed to 50 most recent items
+const REPO = "wm-zqbx/ai-rss-feeds";
 
 export function generateRSS(articles: Article[], config: FeedConfig): string {
   const siteUrl = config.url;
-  const feedUrl = `https://raw.githubusercontent.com/leontloveless/ai-rss-feeds/main/feeds/${config.name}.xml`;
+  const feedUrl = `https://raw.githubusercontent.com/${REPO}/main/feeds/${config.name}.xml`;
 
   // Stable fallback date for articles without dates — avoids generating
   // a new timestamp on every CI run which causes meaningless diffs.
@@ -38,7 +39,7 @@ export function generateRSS(articles: Article[], config: FeedConfig): string {
       ? { name: config.feed.author }
       : undefined,
     updated: latestDate,
-    generator: "ai-rss-feeds (https://github.com/leontloveless/ai-rss-feeds)",
+    generator: `ai-rss-feeds (https://github.com/${REPO})`,
   });
 
   for (const article of limited) {

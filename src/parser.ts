@@ -46,7 +46,7 @@ function resolveUrl(raw: string, prefix?: string, baseUrl?: string): string {
  */
 function extractText($el: cheerio.Cheerio<any>, selector: string): string {
   const target = selector === "." ? $el : $el.find(selector);
-  return target.first().text().trim();
+  return target.first().text().replace(/\s+/g, " ").trim();
 }
 
 /**
