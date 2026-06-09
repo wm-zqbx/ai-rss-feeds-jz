@@ -8,19 +8,6 @@ Many popular tech blogs don't offer RSS feeds. This project uses AI to analyze b
 
 <!-- FEEDS_TABLE_START -->
 
-### Blogs (3)
-
-| Blog | Feed | Status |
-|------|------|--------|
-| [Essays](https://www.paulgraham.com/articles.html) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/paulgraham.xml) | ✅ 20 articles |
-| [住房城乡建设部建设要闻](https://www.mohurd.gov.cn/xinwen/gzdt/index.html) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurd-gzdt.xml) | ✅ 20 articles |
-| [豆瓣读书 Top 250](https://book.douban.com/top250) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/douban-top250.xml) | ✅ 20 articles |
-
-### GitHub Releases (1)
-
-| Project | Feed | Status |
-|---------|------|--------|
-| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | [Subscribe](https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/hyperframes-releases.xml) | ✅ 50 releases |
 <!-- FEEDS_TABLE_END -->
 
 ## 🚀 Quick Start
