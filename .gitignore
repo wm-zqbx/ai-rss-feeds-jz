@@ -3,5 +3,6 @@ dist/
 cache/
 .codex/
 AGENTS.md
+备份/
 *.log
 .DS_Store
