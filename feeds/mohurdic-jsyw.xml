@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Mon, 06 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[向雨而行 住建担当 | 住房城乡建设部协调应急排水队伍装备支援广西排涝抢险]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1531457433.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1531457433.html</guid>
+            <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[住房城乡建设大讲堂第二十七期开讲]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1241360058.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1701907274.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1701907274.html</guid>
             <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[广西：AI赋能千行百业超级联赛（A超）—“智慧城市”建设创新应用大赛技术交流大会在南宁举办]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_415084276.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_415084276.html</guid>
-            <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
