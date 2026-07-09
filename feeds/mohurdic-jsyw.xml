@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[住房城乡建设部深入学习贯彻习近平总书记重要指示批示精神 专题部署城市排水防涝工作]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</guid>
+            <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[中国“预制房”，全球爆单！]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1678396393.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1496588815.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1496588815.html</guid>
             <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[2026年“数据要素×”大赛将举办 设置城市治理等16个行业赛道和1个专业赛道]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1910734086.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1910734086.html</guid>
-            <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
