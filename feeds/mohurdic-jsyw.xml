@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Fri, 17 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[中共住房和城乡建设部党组传达学习习近平总书记在上海考察时的重要指示精神]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_2003389224.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_2003389224.html</guid>
+            <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[住房城乡建设部召开“两优一先”表彰大会]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_185191000.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1479684490.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1479684490.html</guid>
             <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[坚持以人民为中心，深入推进垃圾分类，推动形成绿色低碳生活方式——全国城市生活垃圾分类工作现场会在京召开]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1494826972.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1494826972.html</guid>
-            <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
