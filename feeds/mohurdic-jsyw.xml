@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Mon, 27 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[倪虹会见欧盟委员会能源与住房委员丹·约恩森]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_987216630.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_987216630.html</guid>
+            <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[坚守合规底线 践行诚信经营 助力房地产市场平稳发展 全国150家房地产经纪机构、住房租赁企业及网络平台公开作出十项承诺]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1770942058.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1965042815.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1965042815.html</guid>
             <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[住房城乡建设部部长倪虹在长沙考察调研]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_2015702464.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_2015702464.html</guid>
-            <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
