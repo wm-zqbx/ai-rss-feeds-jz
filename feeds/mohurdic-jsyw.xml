@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Sat, 01 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[新华网民生观察丨物业服务探索向“服务于人”延伸]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_653496197.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_653496197.html</guid>
+            <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[中国落实《新城市议程》国家报告]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1844579843.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_528691339.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_528691339.html</guid>
             <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[倪虹为住房城乡建设部党员干部讲专题党课]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_926617220.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_926617220.html</guid>
-            <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
