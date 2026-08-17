@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Wed, 05 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[各地创新举措 推进完整社区建设]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_612593668.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_612593668.html</guid>
+            <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[新华网民生观察丨物业服务探索向“服务于人”延伸]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_653496197.html</link>
@@ -91,12 +97,6 @@
             <title><![CDATA[住房城乡建设大讲堂第二十七期开讲]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1241360058.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1241360058.html</guid>
-            <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[住房城乡建设部党组认真学习习近平总书记在庆祝中国共产党成立105周年大会上的重要讲话精神]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_528691339.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_528691339.html</guid>
             <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
