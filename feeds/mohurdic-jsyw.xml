@@ -4,11 +4,23 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Wed, 26 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 29 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[住房城乡建设部召开树立和践行正确政绩观学习教育总结会]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1720785741.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1720785741.html</guid>
+            <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[陈绍旺会见联合国人居署区域项目司司长帕特里克]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_988545686.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_988545686.html</guid>
+            <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[倪虹到湖北调研城市更新工作]]></title>
             <link>https://www.mohurd.gov.cn/xinwen/jsyw/art/2026/art_b096692ef43243949ca128c579dac4c2.html</link>
@@ -86,18 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</guid>
             <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[中国“预制房”，全球爆单！]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1678396393.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1678396393.html</guid>
-            <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[向雨而行 住建担当 | 住房城乡建设部协调应急排水队伍装备支援广西排涝抢险]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1531457433.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1531457433.html</guid>
-            <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
