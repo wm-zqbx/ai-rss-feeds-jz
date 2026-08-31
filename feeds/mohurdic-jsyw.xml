@@ -4,11 +4,23 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Sat, 29 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 31 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[如何实现“所见即所得” 专家解读住房销售制度改革]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1050132160.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1050132160.html</guid>
+            <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[商品房推行现房销售，有何考虑？对购房人有何利好？]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_205653905.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_205653905.html</guid>
+            <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[住房城乡建设部召开树立和践行正确政绩观学习教育总结会]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1720785741.html</link>
@@ -86,18 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_832030883.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_832030883.html</guid>
             <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[住房城乡建设部协调国家供水应急基地紧急驰援广西贵港]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_491861874.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_491861874.html</guid>
-            <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[住房城乡建设部深入学习贯彻习近平总书记重要指示批示精神 专题部署城市排水防涝工作]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_31707423.html</guid>
-            <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
