@@ -4,11 +4,23 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Wed, 30 Sep 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[关于中央第一生态环境保护督察组作风纪律监督举报方式的公告]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_193043759.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_193043759.html</guid>
+            <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[中央第一生态环境保护督察组督察住房城乡建设部动员会在北京召开]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_487989943.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_487989943.html</guid>
+            <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[住房城乡建设部举行升国旗仪式 庆祝中华人民共和国成立77周年]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_911266996.html</link>
@@ -86,18 +98,6 @@
             <link>https://www.mohurd.gov.cn/xinwen/jsyw/art/2026/art_b096692ef43243949ca128c579dac4c2.html</link>
             <guid>https://www.mohurd.gov.cn/xinwen/jsyw/art/2026/art_b096692ef43243949ca128c579dac4c2.html</guid>
             <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[各地创新举措 推进完整社区建设]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_612593668.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_612593668.html</guid>
-            <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[新华网民生观察丨物业服务探索向“服务于人”延伸]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_653496197.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_653496197.html</guid>
-            <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
