@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[第二十九期住房城乡建设大讲堂暨第一期数智住建大讲堂开讲]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_322652687.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_322652687.html</guid>
+            <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[关于中央第一生态环境保护督察组作风纪律监督举报方式的公告]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_193043759.html</link>
@@ -92,12 +98,6 @@
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_988545686.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_988545686.html</guid>
             <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[倪虹到湖北调研城市更新工作]]></title>
-            <link>https://www.mohurd.gov.cn/xinwen/jsyw/art/2026/art_b096692ef43243949ca128c579dac4c2.html</link>
-            <guid>https://www.mohurd.gov.cn/xinwen/jsyw/art/2026/art_b096692ef43243949ca128c579dac4c2.html</guid>
-            <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
