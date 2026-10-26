@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[2026年“数据要素×”大赛全国总决赛颁奖仪式在青岛顺利举办]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_482494381.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_482494381.html</guid>
+            <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[推进数字家庭场景培育 激发万亿消费市场潜力]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_813886342.html</link>
@@ -91,12 +97,6 @@
             <title><![CDATA[如何实现“所见即所得” 专家解读住房销售制度改革]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1050132160.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1050132160.html</guid>
-            <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[商品房推行现房销售，有何考虑？对购房人有何利好？]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_205653905.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_205653905.html</guid>
             <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
