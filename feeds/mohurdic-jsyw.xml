@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Wed, 04 Nov 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[倪虹到同济大学调研交流]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1040325751.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1040325751.html</guid>
+            <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[住房城乡建设部党组传达学习党的二十届五中全会精神]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1740516208.html</link>
@@ -91,12 +97,6 @@
             <title><![CDATA[倪虹会见卡塔尔市政大臣阿提亚]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1405480252.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1405480252.html</guid>
-            <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[倪虹到中国动物园协会调研]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1003793490.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1003793490.html</guid>
             <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
