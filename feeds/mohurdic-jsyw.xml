@@ -4,11 +4,17 @@
         <title>住房和城乡建设部信息中心建设要闻</title>
         <link>https://www.mohurdic.org.cn/xw/jsyw/index.html</link>
         <description>住房和城乡建设部信息中心建设要闻</description>
-        <lastBuildDate>Mon, 16 Nov 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>ai-rss-feeds (https://github.com/wm-zqbx/ai-rss-feeds)</generator>
         <language>zh-CN</language>
         <atom:link href="https://raw.githubusercontent.com/wm-zqbx/ai-rss-feeds/main/feeds/mohurdic-jsyw.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[住房城乡建设部举行学习贯彻党的二十届五中全会精神宣讲报告会]]></title>
+            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1119898875.html</link>
+            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1119898875.html</guid>
+            <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[董建国出席COP31“韧性城市与建成环境”主题日活动]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_1949297971.html</link>
@@ -91,12 +97,6 @@
             <title><![CDATA[关于中央第一生态环境保护督察组作风纪律监督举报方式的公告]]></title>
             <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_193043759.html</link>
             <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_193043759.html</guid>
-            <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[中央第一生态环境保护督察组督察住房城乡建设部动员会在北京召开]]></title>
-            <link>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_487989943.html</link>
-            <guid>https://www.mohurdic.org.cn/xw/jsyw/art/2026/art_487989943.html</guid>
             <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
         </item>
     </channel>
